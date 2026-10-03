@@ -1,0 +1,82 @@
+@import '@fontsource/space-grotesk/latin-500.css';
+@import '@fontsource/space-grotesk/latin-600.css';
+@import '@fontsource/space-grotesk/latin-700.css';
+@import '@fontsource/public-sans/latin-400.css';
+@import '@fontsource/public-sans/latin-500.css';
+@import '@fontsource/public-sans/latin-600.css';
+@import '@fontsource/public-sans/latin-700.css';
+@import 'tailwindcss';
+
+/*
+ * Tokens de diseño. Los colores son los del tema "azul" (default, evita parpadeo en el primer
+ * render); `applyTheme()` (config/themes.ts) los reemplaza en tiempo de ejecución.
+ * themes.test.ts verifica que estos valores coincidan con el tema azul.
+ */
+@theme static {
+  --color-primary: #1d5fc1;
+  --color-primary-hover: #164a99;
+  --color-dark: #0c2851;
+  --color-light: #e4ecf8;
+  --color-bg: #f4f8fc;
+  --color-text: #101b2d;
+  --color-muted: #3c5578;
+  --color-subtle: #8a97aa;
+  --color-on-dark: #c9d9ef;
+  --color-on-dark-muted: #9fb4d6;
+  --color-on-dark-link: #9fc1ee;
+  --color-footer-copy: #8fa6c9;
+  --color-hero-text: #d6e4f7;
+
+  --font-heading: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Public Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 8px;
+  --radius-control: 6px;
+  --radius-search: 8px;
+  --radius-pill: 20px;
+  --radius-hero: 14px;
+
+  --shadow-card-hover: 0 8px 20px rgba(12, 40, 81, 0.1);
+}
+
+@layer base {
+  html {
+    background: var(--color-bg);
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-dark);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
