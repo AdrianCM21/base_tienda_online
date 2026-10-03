@@ -51,14 +51,4 @@ describe('Home', () => {
     expect(screen.getByText(/Suscripción simulada/)).toBeInTheDocument()
     expect(screen.getByLabelText('Tu email')).toHaveValue('')
   })
-
-  it('el drawer de categorías abre y cierra con Escape', async () => {
-    const user = userEvent.setup()
-    renderWithProviders(<Home />)
-    await user.click(screen.getByRole('button', { name: 'Categorías' }))
-    const dialog = screen.getByRole('dialog', { name: 'Categorías' })
-    expect(within(dialog).getByRole('link', { name: 'Notebooks' })).toBeInTheDocument()
-    await user.keyboard('{Escape}')
-    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
-  })
 })

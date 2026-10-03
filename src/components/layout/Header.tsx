@@ -6,6 +6,7 @@ import { paths } from '@/config/routes'
 import { useCart } from '@/hooks/useCart'
 import { useToast } from '@/hooks/useToast'
 import { MiniCart } from '../cart/MiniCart'
+import { MobileMenu } from './MobileMenu'
 import { SearchBox } from './SearchBox'
 
 export function Header() {
@@ -14,13 +15,16 @@ export function Header() {
   const [cartOpen, setCartOpen] = useState(false)
   const closeCart = useCallback(() => setCartOpen(false), [])
   return (
-    <header className="flex flex-wrap items-center gap-4 sm:flex-nowrap bg-dark px-6 py-[18px] sm:gap-7">
-      <Link
-        to={paths.home}
-        className="shrink-0 font-heading text-[22px] font-bold tracking-[0.5px] text-white hover:text-white sm:text-[28px]"
-      >
-        {brand.logoText}
-      </Link>
+    <header className="flex flex-wrap items-center gap-4 bg-dark px-6 py-[18px] sm:flex-nowrap sm:gap-7">
+      <div className="flex shrink-0 items-center gap-2.5">
+        <MobileMenu />
+        <Link
+          to={paths.home}
+          className="shrink-0 font-heading text-[22px] font-bold tracking-[0.5px] text-white hover:text-white sm:text-[28px]"
+        >
+          {brand.logoText}
+        </Link>
+      </div>
       <SearchBox />
       <button
         type="button"
