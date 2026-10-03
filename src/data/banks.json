@@ -1,0 +1,21 @@
+[
+  {
+    "id": "banco-meridiano",
+    "name": "Banco Meridiano",
+    "benefit": "15% OFF",
+    "condition": "Los martes, tope Gs. 300.000"
+  },
+  {
+    "id": "coop-union-paraguaya",
+    "name": "Coop. Unión Paraguaya",
+    "benefit": "12 cuotas",
+    "condition": "Sin interés todos los días"
+  },
+  { "id": "banco-sol", "name": "Banco Sol", "benefit": "10% OFF", "condition": "Fines de semana" },
+  {
+    "id": "banco-prisma",
+    "name": "Banco Prisma",
+    "benefit": "18 cuotas",
+    "condition": "Sin interés en informática"
+  }
+]

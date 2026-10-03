@@ -1,0 +1,488 @@
+[
+  {
+    "id": "informatica",
+    "slug": "informatica",
+    "name": "Informática",
+    "icon": "Laptop",
+    "groups": [
+      {
+        "title": "Notebooks y Equipos",
+        "items": [
+          {
+            "id": "notebooks",
+            "slug": "notebooks",
+            "name": "Notebooks",
+            "filterSpecs": ["Procesador", "Memoria RAM", "Almacenamiento"]
+          },
+          {
+            "id": "notebooks-gamer",
+            "slug": "notebooks-gamer",
+            "name": "Notebooks Gamer",
+            "filterSpecs": ["Procesador", "Memoria RAM", "Almacenamiento"]
+          },
+          {
+            "id": "all-in-one",
+            "slug": "all-in-one",
+            "name": "All in One"
+          },
+          {
+            "id": "mini-pc",
+            "slug": "mini-pc",
+            "name": "Mini PC"
+          }
+        ]
+      },
+      {
+        "title": "Componentes",
+        "items": [
+          {
+            "id": "placas-de-video",
+            "slug": "placas-de-video",
+            "name": "Placas de Video"
+          },
+          {
+            "id": "procesadores",
+            "slug": "procesadores",
+            "name": "Procesadores"
+          },
+          {
+            "id": "memorias-ram",
+            "slug": "memorias-ram",
+            "name": "Memorias RAM"
+          },
+          {
+            "id": "discos-y-ssd",
+            "slug": "discos-y-ssd",
+            "name": "Discos y SSD"
+          }
+        ]
+      },
+      {
+        "title": "Periféricos",
+        "items": [
+          {
+            "id": "monitores",
+            "slug": "monitores",
+            "name": "Monitores"
+          },
+          {
+            "id": "teclados-y-mouses",
+            "slug": "teclados-y-mouses",
+            "name": "Teclados y Mouses"
+          },
+          {
+            "id": "impresoras",
+            "slug": "impresoras",
+            "name": "Impresoras"
+          },
+          {
+            "id": "sillas-gamer",
+            "slug": "sillas-gamer",
+            "name": "Sillas Gamer"
+          }
+        ]
+      },
+      {
+        "title": "Accesorios",
+        "items": [
+          {
+            "id": "mochilas-y-fundas",
+            "slug": "mochilas-y-fundas",
+            "name": "Mochilas y Fundas"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "electronica",
+    "slug": "electronica",
+    "name": "Electrónica",
+    "icon": "Tv",
+    "groups": [
+      {
+        "title": "Imagen y Sonido",
+        "items": [
+          {
+            "id": "smart-tv",
+            "slug": "smart-tv",
+            "name": "Smart TV",
+            "filterSpecs": ["Tamaño de pantalla", "Resolución"]
+          },
+          {
+            "id": "audio-y-parlantes",
+            "slug": "audio-y-parlantes",
+            "name": "Audio y Parlantes"
+          },
+          {
+            "id": "auriculares",
+            "slug": "auriculares",
+            "name": "Auriculares"
+          }
+        ]
+      },
+      {
+        "title": "Celulares y Tablets",
+        "items": [
+          {
+            "id": "celulares",
+            "slug": "celulares",
+            "name": "Celulares",
+            "filterSpecs": ["Almacenamiento"]
+          },
+          {
+            "id": "tablets",
+            "slug": "tablets",
+            "name": "Tablets"
+          },
+          {
+            "id": "smartwatch",
+            "slug": "smartwatch",
+            "name": "Smartwatch"
+          }
+        ]
+      },
+      {
+        "title": "Gaming",
+        "items": [
+          {
+            "id": "consolas",
+            "slug": "consolas",
+            "name": "Consolas"
+          },
+          {
+            "id": "joysticks",
+            "slug": "joysticks",
+            "name": "Joysticks"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "electrodomesticos",
+    "slug": "electrodomesticos",
+    "name": "Electrodomésticos",
+    "icon": "Refrigerator",
+    "groups": [
+      {
+        "title": "Línea Blanca",
+        "items": [
+          {
+            "id": "heladeras",
+            "slug": "heladeras",
+            "name": "Heladeras",
+            "filterSpecs": ["Capacidad"]
+          },
+          {
+            "id": "lavarropas",
+            "slug": "lavarropas",
+            "name": "Lavarropas",
+            "filterSpecs": ["Capacidad"]
+          },
+          {
+            "id": "cocinas",
+            "slug": "cocinas",
+            "name": "Cocinas"
+          }
+        ]
+      },
+      {
+        "title": "Climatización",
+        "items": [
+          {
+            "id": "aires-acondicionados",
+            "slug": "aires-acondicionados",
+            "name": "Aires Acondicionados"
+          },
+          {
+            "id": "ventiladores",
+            "slug": "ventiladores",
+            "name": "Ventiladores"
+          }
+        ]
+      },
+      {
+        "title": "Cocina",
+        "items": [
+          {
+            "id": "microondas-y-freidoras",
+            "slug": "microondas-y-freidoras",
+            "name": "Microondas y Freidoras"
+          },
+          {
+            "id": "licuadoras-y-batidoras",
+            "slug": "licuadoras-y-batidoras",
+            "name": "Licuadoras y Batidoras"
+          }
+        ]
+      },
+      {
+        "title": "Limpieza",
+        "items": [
+          {
+            "id": "aspiradoras",
+            "slug": "aspiradoras",
+            "name": "Aspiradoras"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fotografia-y-filmacion",
+    "slug": "fotografia-y-filmacion",
+    "name": "Fotografía y Filmación",
+    "icon": "Camera",
+    "groups": [
+      {
+        "title": "Cámaras",
+        "items": [
+          {
+            "id": "camaras-mirrorless",
+            "slug": "camaras-mirrorless",
+            "name": "Cámaras Mirrorless"
+          },
+          {
+            "id": "camaras-compactas",
+            "slug": "camaras-compactas",
+            "name": "Cámaras Compactas"
+          }
+        ]
+      },
+      {
+        "title": "Accesorios",
+        "items": [
+          {
+            "id": "tripodes",
+            "slug": "tripodes",
+            "name": "Trípodes"
+          },
+          {
+            "id": "lentes",
+            "slug": "lentes",
+            "name": "Lentes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "perfumeria-y-belleza",
+    "slug": "perfumeria-y-belleza",
+    "name": "Perfumería y Belleza",
+    "icon": "Sparkles",
+    "groups": [
+      {
+        "title": "Perfumería",
+        "items": [
+          {
+            "id": "perfumes-femeninos",
+            "slug": "perfumes-femeninos",
+            "name": "Perfumes Femeninos"
+          },
+          {
+            "id": "perfumes-masculinos",
+            "slug": "perfumes-masculinos",
+            "name": "Perfumes Masculinos"
+          }
+        ]
+      },
+      {
+        "title": "Cuidado personal",
+        "items": [
+          {
+            "id": "cuidado-de-la-piel",
+            "slug": "cuidado-de-la-piel",
+            "name": "Cuidado de la Piel"
+          },
+          {
+            "id": "cuidado-del-cabello",
+            "slug": "cuidado-del-cabello",
+            "name": "Cuidado del Cabello"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hogar-y-jardin",
+    "slug": "hogar-y-jardin",
+    "name": "Hogar y Jardín",
+    "icon": "House",
+    "groups": [
+      {
+        "title": "Jardín",
+        "items": [
+          {
+            "id": "cortadoras-de-cesped",
+            "slug": "cortadoras-de-cesped",
+            "name": "Cortadoras de Césped"
+          },
+          {
+            "id": "herramientas-de-jardin",
+            "slug": "herramientas-de-jardin",
+            "name": "Herramientas de Jardín"
+          }
+        ]
+      },
+      {
+        "title": "Hogar",
+        "items": [
+          {
+            "id": "ropa-de-cama",
+            "slug": "ropa-de-cama",
+            "name": "Ropa de Cama"
+          },
+          {
+            "id": "decoracion",
+            "slug": "decoracion",
+            "name": "Decoración"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ferreteria-y-construccion",
+    "slug": "ferreteria-y-construccion",
+    "name": "Ferretería y Construcción",
+    "icon": "Hammer",
+    "groups": [
+      {
+        "title": "Herramientas",
+        "items": [
+          {
+            "id": "taladros-y-atornilladores",
+            "slug": "taladros-y-atornilladores",
+            "name": "Taladros y Atornilladores"
+          },
+          {
+            "id": "herramientas-manuales",
+            "slug": "herramientas-manuales",
+            "name": "Herramientas Manuales"
+          }
+        ]
+      },
+      {
+        "title": "Construcción",
+        "items": [
+          {
+            "id": "pinturas",
+            "slug": "pinturas",
+            "name": "Pinturas"
+          },
+          {
+            "id": "electricidad",
+            "slug": "electricidad",
+            "name": "Electricidad"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "automotriz-y-motos",
+    "slug": "automotriz-y-motos",
+    "name": "Automotriz y Motos",
+    "icon": "Car",
+    "groups": [
+      {
+        "title": "Motos",
+        "items": [
+          {
+            "id": "cascos-y-protecciones",
+            "slug": "cascos-y-protecciones",
+            "name": "Cascos y Protecciones"
+          }
+        ]
+      },
+      {
+        "title": "Autos",
+        "items": [
+          {
+            "id": "accesorios-para-autos",
+            "slug": "accesorios-para-autos",
+            "name": "Accesorios para Autos"
+          },
+          {
+            "id": "audio-para-autos",
+            "slug": "audio-para-autos",
+            "name": "Audio para Autos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "moda",
+    "slug": "moda",
+    "name": "Moda",
+    "icon": "Shirt",
+    "groups": [
+      {
+        "title": "Calzado",
+        "items": [
+          {
+            "id": "zapatillas",
+            "slug": "zapatillas",
+            "name": "Zapatillas"
+          }
+        ]
+      },
+      {
+        "title": "Indumentaria",
+        "items": [
+          {
+            "id": "camperas",
+            "slug": "camperas",
+            "name": "Camperas"
+          },
+          {
+            "id": "remeras",
+            "slug": "remeras",
+            "name": "Remeras"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "muebles",
+    "slug": "muebles",
+    "name": "Muebles",
+    "icon": "Sofa",
+    "groups": [
+      {
+        "title": "Living",
+        "items": [
+          {
+            "id": "sillones",
+            "slug": "sillones",
+            "name": "Sillones"
+          },
+          {
+            "id": "racks-y-mesas-tv",
+            "slug": "racks-y-mesas-tv",
+            "name": "Racks y Mesas TV"
+          }
+        ]
+      },
+      {
+        "title": "Oficina",
+        "items": [
+          {
+            "id": "escritorios",
+            "slug": "escritorios",
+            "name": "Escritorios"
+          },
+          {
+            "id": "sillas-de-oficina",
+            "slug": "sillas-de-oficina",
+            "name": "Sillas de Oficina"
+          }
+        ]
+      }
+    ]
+  }
+]

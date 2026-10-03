@@ -225,33 +225,33 @@ Cada fase termina en algo ejecutable y verificable. Estimaciones orientativas pa
 - Estructura de carpetas, `AppLayout`, rutas vacías, foco visible global.
 - **Hecho cuando:** `npm run dev` muestra el layout vacío y cambiar `brand.name` cambia el nombre en toda la app.
 
-### Fase 2 — Datos y servicios (1–1,5 días)
+### Fase 2 — Datos y servicios (1–1,5 días) ✅ completa
 - Tipos, `categories.json`, script generador, `products.json` (~60 con variantes).
 - `catalogService` (listar, filtrar, ordenar, paginar, buscar, relacionados) + `utils/` (formato de precio/moneda, slug, filtros, sort, storage).
 - Tests unitarios de formato, filtros, orden y búsqueda.
 - **Hecho cuando:** los tests pasan y los conteos de filtros salen de los datos.
 
-### Fase 3 — Componentes compartidos (1,5 días)
+### Fase 3 — Componentes compartidos (1,5 días) ✅ completa
 - TopBar, Header (buscador con sugerencias, cuenta, carrito), Footer, `CategorySidebar` (acordeón), `ProductCard` (con swatches), `ProductImage`, `Badge`, `Button`, `Pagination`, `Breadcrumb`, `Toast`.
 - `CurrencyContext` y `CartContext` (persistidos en `localStorage`, línea = producto + color).
 - **Hecho cuando:** los componentes se ven iguales a los mockups en una página de prueba (Storybook opcional).
 
-### Fase 4 — Home (1 día)
+### Fase 4 — Home (1 día) ✅ completa
 - Hero, Beneficios con banco, Destacados (desde `destacado`), franja de envío, newsletter (simulado, con confirmación).
 - **Hecho cuando:** `/` coincide con el mockup y los destacados salen del JSON.
 
-### Fase 5 — Categoría y búsqueda (2 días)
+### Fase 5 — Categoría y búsqueda (2 días) ✅ completa
 - Sidebar de filtros (marca, precio con doble slider, color, filtros por especificación), orden, paginación, estado en URL, estados vacíos.
 - Drawer de filtros en móvil, chips de filtros activos, botón "Limpiar".
 - Página `/buscar`.
 - **Hecho cuando:** todos los filtros combinados dan resultados correctos, el contador "Mostrando X–Y de N" es real y la URL reproduce el estado.
 
-### Fase 6 — Detalle de producto (1,5–2 días)
+### Fase 6 — Detalle de producto (1,5–2 días) ✅ completa
 - Galería con miniaturas, selector de color y cantidad, caja de precio/ahorro/cuotas, stock por variante, specs, tabs funcionales, relacionados, "Comprar ahora".
 - Opiniones: lista ficticia determinista por producto.
 - **Hecho cuando:** cambiar de color actualiza galería, SKU, stock y precio; producto inexistente muestra 404.
 
-### Fase 7 — Carrito y checkout simulados (2 días)
+### Fase 7 — Carrito y checkout simulados (2 días) ✅ completa
 - Mini-carrito (drawer) + `/carrito`: cantidades, quitar, subtotal, envío gratis sobre Gs. 500.000.
 - Checkout en 2 pasos con validación (teléfono, tarjeta con Luhn de prueba, vencimiento), opciones tarjeta/transferencia/efectivo, resumen dinámico.
 - "Confirmar pedido" → pantalla `/pedido/:id` con número de pedido, resumen y aviso "Esto es una demostración, no se realizó ningún cobro". El pedido se guarda en `localStorage`.

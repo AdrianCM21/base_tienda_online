@@ -1,0 +1,26 @@
+[
+  {
+    "id": "asuncion-centro",
+    "name": "Asunción Centro",
+    "address": "Av. Mariscal López 1234, Asunción",
+    "hours": "Lun a Sáb 8:00 a 20:00"
+  },
+  {
+    "id": "san-lorenzo",
+    "name": "San Lorenzo",
+    "address": "Ruta 2 km 12, San Lorenzo",
+    "hours": "Lun a Sáb 8:00 a 19:00"
+  },
+  {
+    "id": "ciudad-del-este",
+    "name": "Ciudad del Este",
+    "address": "Av. San Blas 560, Ciudad del Este",
+    "hours": "Lun a Sáb 8:00 a 19:00"
+  },
+  {
+    "id": "encarnacion",
+    "name": "Encarnación",
+    "address": "Av. Irrazábal 890, Encarnación",
+    "hours": "Lun a Sáb 8:30 a 18:30"
+  }
+]

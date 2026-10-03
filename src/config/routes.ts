@@ -6,6 +6,8 @@ export const paths = {
   search: (q = '') => (q ? `/buscar?q=${encodeURIComponent(q)}` : '/buscar'),
   product: (slug: string, color?: string) =>
     color ? `/producto/${slug}?color=${encodeURIComponent(color)}` : `/producto/${slug}`,
+  /** Todos los productos en oferta (la búsqueda interpreta `ofertas=1`). */
+  offers: '/buscar?ofertas=1',
   cart: '/carrito',
   checkout: '/checkout',
   order: (id: string) => `/pedido/${id}`,

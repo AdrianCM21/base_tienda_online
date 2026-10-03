@@ -1,0 +1,3227 @@
+[
+  {
+    "id": "p001",
+    "sku": "TD-4021",
+    "slug": "notebook-lenovo-ideapad-3-15-ryzen-5-8gb-256gb-ssd",
+    "name": "Notebook Lenovo IdeaPad 3 15\" Ryzen 5 8GB 256GB SSD",
+    "brand": "Lenovo",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 4590000,
+    "oldPrice": 5190000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 53,
+    "shortDescription": "Lenovo · AMD Ryzen 5 · 8 GB · 256 GB SSD",
+    "description": "Notebook Lenovo IdeaPad 3 15\" Ryzen 5 8GB 256GB SSD de Lenovo. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: AMD Ryzen 5; Memoria RAM: 8 GB; Almacenamiento: 256 GB SSD; Pantalla: 15.6\" Full HD.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Azul Abismo",
+        "hex": "#1F4E8C",
+        "sku": "TD-4021-AZU",
+        "stock": 23
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4021-NEG",
+        "stock": 23
+      },
+      {
+        "name": "Gris Grafito",
+        "hex": "#4B5563",
+        "sku": "TD-4021-GRI",
+        "stock": 7
+      }
+    ],
+    "specs": {
+      "Procesador": "AMD Ryzen 5",
+      "Memoria RAM": "8 GB",
+      "Almacenamiento": "256 GB SSD",
+      "Pantalla": "15.6\" Full HD",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: AMD Ryzen 5",
+      "Memoria RAM: 8 GB",
+      "Almacenamiento: 256 GB SSD",
+      "Pantalla: 15.6\" Full HD"
+    ],
+    "tags": ["destacado", "oferta", "envio-gratis"],
+    "rating": 4.6,
+    "reviewCount": 128,
+    "warranty": "12 meses",
+    "createdAt": "2026-02-27",
+    "status": "activo"
+  },
+  {
+    "id": "p002",
+    "sku": "TD-4022",
+    "slug": "notebook-asus-vivobook-15-intel-i5-8gb-512gb-ssd",
+    "name": "Notebook ASUS Vivobook 15 Intel i5 8GB 512GB SSD",
+    "brand": "ASUS",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 5190000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 21,
+    "shortDescription": "ASUS · Intel Core i5 · 8 GB · 512 GB SSD",
+    "description": "Notebook ASUS Vivobook 15 Intel i5 8GB 512GB SSD de ASUS. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i5; Memoria RAM: 8 GB; Almacenamiento: 512 GB SSD; Pantalla: 15.6\" Full HD.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Plata",
+        "hex": "#C0C4CC",
+        "sku": "TD-4022-PLA",
+        "stock": 21
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i5",
+      "Memoria RAM": "8 GB",
+      "Almacenamiento": "512 GB SSD",
+      "Pantalla": "15.6\" Full HD",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: Intel Core i5",
+      "Memoria RAM: 8 GB",
+      "Almacenamiento: 512 GB SSD",
+      "Pantalla: 15.6\" Full HD"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4.7,
+    "reviewCount": 375,
+    "warranty": "12 meses",
+    "createdAt": "2026-04-12",
+    "status": "activo"
+  },
+  {
+    "id": "p003",
+    "sku": "TD-4023",
+    "slug": "notebook-hp-250-g9-intel-i3-8gb-256gb-ssd",
+    "name": "Notebook HP 250 G9 Intel i3 8GB 256GB SSD",
+    "brand": "HP",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 3690000,
+    "oldPrice": 4090000,
+    "installments": {
+      "count": 10,
+      "interestFree": true
+    },
+    "stock": 17,
+    "shortDescription": "HP · Intel Core i3 · 8 GB · 256 GB SSD",
+    "description": "Notebook HP 250 G9 Intel i3 8GB 256GB SSD de HP. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i3; Memoria RAM: 8 GB; Almacenamiento: 256 GB SSD; Pantalla: 15.6\" HD.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Gris Grafito",
+        "hex": "#4B5563",
+        "sku": "TD-4023-GRI",
+        "stock": 17
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i3",
+      "Memoria RAM": "8 GB",
+      "Almacenamiento": "256 GB SSD",
+      "Pantalla": "15.6\" HD",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: Intel Core i3",
+      "Memoria RAM: 8 GB",
+      "Almacenamiento: 256 GB SSD",
+      "Pantalla: 15.6\" HD"
+    ],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 4.4,
+    "reviewCount": 102,
+    "warranty": "12 meses",
+    "createdAt": "2026-03-29",
+    "status": "activo"
+  },
+  {
+    "id": "p004",
+    "sku": "TD-4024",
+    "slug": "notebook-dell-inspiron-15-intel-i7-16gb-512gb-ssd",
+    "name": "Notebook Dell Inspiron 15 Intel i7 16GB 512GB SSD",
+    "brand": "Dell",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 7890000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 36,
+    "shortDescription": "Dell · Intel Core i7 · 16 GB · 512 GB SSD",
+    "description": "Notebook Dell Inspiron 15 Intel i7 16GB 512GB SSD de Dell. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i7; Memoria RAM: 16 GB; Almacenamiento: 512 GB SSD; Pantalla: 15.6\" Full HD.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Azul Abismo",
+        "hex": "#1F4E8C",
+        "sku": "TD-4024-AZU",
+        "stock": 23
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4024-NEG",
+        "stock": 13
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i7",
+      "Memoria RAM": "16 GB",
+      "Almacenamiento": "512 GB SSD",
+      "Pantalla": "15.6\" Full HD",
+      "Sistema operativo": "Windows 11 Pro"
+    },
+    "highlights": [
+      "Procesador: Intel Core i7",
+      "Memoria RAM: 16 GB",
+      "Almacenamiento: 512 GB SSD",
+      "Pantalla: 15.6\" Full HD"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4,
+    "reviewCount": 259,
+    "warranty": "12 meses",
+    "createdAt": "2026-07-07",
+    "status": "activo"
+  },
+  {
+    "id": "p005",
+    "sku": "TD-4025",
+    "slug": "notebook-acer-aspire-5-ryzen-5-8gb-256gb-ssd",
+    "name": "Notebook Acer Aspire 5 Ryzen 5 8GB 256GB SSD",
+    "brand": "Acer",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 4290000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 21,
+    "shortDescription": "Acer · AMD Ryzen 5 · 8 GB · 256 GB SSD",
+    "description": "Notebook Acer Aspire 5 Ryzen 5 8GB 256GB SSD de Acer. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: AMD Ryzen 5; Memoria RAM: 8 GB; Almacenamiento: 256 GB SSD; Pantalla: 15.6\" Full HD.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Plata",
+        "hex": "#C0C4CC",
+        "sku": "TD-4025-PLA",
+        "stock": 5
+      },
+      {
+        "name": "Azul Abismo",
+        "hex": "#1F4E8C",
+        "sku": "TD-4025-AZU",
+        "stock": 16
+      }
+    ],
+    "specs": {
+      "Procesador": "AMD Ryzen 5",
+      "Memoria RAM": "8 GB",
+      "Almacenamiento": "256 GB SSD",
+      "Pantalla": "15.6\" Full HD",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: AMD Ryzen 5",
+      "Memoria RAM: 8 GB",
+      "Almacenamiento: 256 GB SSD",
+      "Pantalla: 15.6\" Full HD"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4.2,
+    "reviewCount": 391,
+    "warranty": "12 meses",
+    "createdAt": "2026-03-06",
+    "status": "activo"
+  },
+  {
+    "id": "p006",
+    "sku": "TD-4026",
+    "slug": "notebook-lenovo-loq-gamer-intel-i5-rtx-16gb-512gb",
+    "name": "Notebook Lenovo LOQ Gamer Intel i5 RTX 16GB 512GB",
+    "brand": "Lenovo",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 9490000,
+    "oldPrice": 10290000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 10,
+    "shortDescription": "Lenovo · Intel Core i5 · 16 GB · 512 GB SSD",
+    "description": "Notebook Lenovo LOQ Gamer Intel i5 RTX 16GB 512GB de Lenovo. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i5; Memoria RAM: 16 GB; Almacenamiento: 512 GB SSD; Pantalla: 15.6\" Full HD 144Hz.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Rojo Fuego",
+        "hex": "#B91C1C",
+        "sku": "TD-4026-ROJ",
+        "stock": 10
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i5",
+      "Memoria RAM": "16 GB",
+      "Almacenamiento": "512 GB SSD",
+      "Pantalla": "15.6\" Full HD 144Hz",
+      "Placa de video": "NVIDIA RTX 4050",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: Intel Core i5",
+      "Memoria RAM: 16 GB",
+      "Almacenamiento: 512 GB SSD",
+      "Pantalla: 15.6\" Full HD 144Hz"
+    ],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 4.4,
+    "reviewCount": 214,
+    "warranty": "12 meses",
+    "createdAt": "2026-02-13",
+    "status": "activo"
+  },
+  {
+    "id": "p007",
+    "sku": "TD-4027",
+    "slug": "notebook-asus-rog-strix-gamer-ryzen-7-16gb-1tb",
+    "name": "Notebook ASUS ROG Strix Gamer Ryzen 7 16GB 1TB",
+    "brand": "ASUS",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 12900000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 27,
+    "shortDescription": "ASUS · AMD Ryzen 7 · 16 GB · 1 TB SSD",
+    "description": "Notebook ASUS ROG Strix Gamer Ryzen 7 16GB 1TB de ASUS. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: AMD Ryzen 7; Memoria RAM: 16 GB; Almacenamiento: 1 TB SSD; Pantalla: 15.6\" Full HD 165Hz.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Gris Carbón",
+        "hex": "#374151",
+        "sku": "TD-4027-GRI",
+        "stock": 7
+      },
+      {
+        "name": "Rojo Fuego",
+        "hex": "#B91C1C",
+        "sku": "TD-4027-ROJ",
+        "stock": 20
+      }
+    ],
+    "specs": {
+      "Procesador": "AMD Ryzen 7",
+      "Memoria RAM": "16 GB",
+      "Almacenamiento": "1 TB SSD",
+      "Pantalla": "15.6\" Full HD 165Hz",
+      "Placa de video": "NVIDIA RTX 4060",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: AMD Ryzen 7",
+      "Memoria RAM: 16 GB",
+      "Almacenamiento: 1 TB SSD",
+      "Pantalla: 15.6\" Full HD 165Hz"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 3.9,
+    "reviewCount": 183,
+    "warranty": "12 meses",
+    "createdAt": "2026-02-26",
+    "status": "activo"
+  },
+  {
+    "id": "p008",
+    "sku": "TD-4028",
+    "slug": "notebook-hp-pavilion-14-intel-i5-8gb-256gb-ssd",
+    "name": "Notebook HP Pavilion 14 Intel i5 8GB 256GB SSD",
+    "brand": "HP",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 5590000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 22,
+    "shortDescription": "HP · Intel Core i5 · 8 GB · 256 GB SSD",
+    "description": "Notebook HP Pavilion 14 Intel i5 8GB 256GB SSD de HP. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i5; Memoria RAM: 8 GB; Almacenamiento: 256 GB SSD; Pantalla: 14\" Full HD.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Plata",
+        "hex": "#C0C4CC",
+        "sku": "TD-4028-PLA",
+        "stock": 22
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i5",
+      "Memoria RAM": "8 GB",
+      "Almacenamiento": "256 GB SSD",
+      "Pantalla": "14\" Full HD",
+      "Sistema operativo": "Windows 11 Pro"
+    },
+    "highlights": [
+      "Procesador: Intel Core i5",
+      "Memoria RAM: 8 GB",
+      "Almacenamiento: 256 GB SSD",
+      "Pantalla: 14\" Full HD"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 3.9,
+    "reviewCount": 359,
+    "warranty": "12 meses",
+    "createdAt": "2026-07-19",
+    "status": "activo"
+  },
+  {
+    "id": "p009",
+    "sku": "TD-4029",
+    "slug": "notebook-dell-latitude-14-intel-i5-16gb-256gb-ssd",
+    "name": "Notebook Dell Latitude 14 Intel i5 16GB 256GB SSD",
+    "brand": "Dell",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 6290000,
+    "oldPrice": 6890000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 47,
+    "shortDescription": "Dell · Intel Core i5 · 16 GB · 256 GB SSD",
+    "description": "Notebook Dell Latitude 14 Intel i5 16GB 256GB SSD de Dell. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i5; Memoria RAM: 16 GB; Almacenamiento: 256 GB SSD; Pantalla: 14\" Full HD.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Plata",
+        "hex": "#C0C4CC",
+        "sku": "TD-4029-PLA",
+        "stock": 9
+      },
+      {
+        "name": "Azul Abismo",
+        "hex": "#1F4E8C",
+        "sku": "TD-4029-AZU",
+        "stock": 13
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4029-NEG",
+        "stock": 25
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i5",
+      "Memoria RAM": "16 GB",
+      "Almacenamiento": "256 GB SSD",
+      "Pantalla": "14\" Full HD",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: Intel Core i5",
+      "Memoria RAM: 16 GB",
+      "Almacenamiento: 256 GB SSD",
+      "Pantalla: 14\" Full HD"
+    ],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 3.8,
+    "reviewCount": 197,
+    "warranty": "12 meses",
+    "createdAt": "2026-07-13",
+    "status": "activo"
+  },
+  {
+    "id": "p010",
+    "sku": "TD-4030",
+    "slug": "notebook-acer-aspire-3-intel-i3-4gb-128gb-ssd",
+    "name": "Notebook Acer Aspire 3 Intel i3 4GB 128GB SSD",
+    "brand": "Acer",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 2890000,
+    "installments": {
+      "count": 10,
+      "interestFree": true
+    },
+    "stock": 21,
+    "shortDescription": "Acer · Intel Core i3 · 4 GB · 128 GB SSD",
+    "description": "Notebook Acer Aspire 3 Intel i3 4GB 128GB SSD de Acer. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i3; Memoria RAM: 4 GB; Almacenamiento: 128 GB SSD; Pantalla: 15.6\" HD.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Plata",
+        "hex": "#C0C4CC",
+        "sku": "TD-4030-PLA",
+        "stock": 15
+      },
+      {
+        "name": "Azul Abismo",
+        "hex": "#1F4E8C",
+        "sku": "TD-4030-AZU",
+        "stock": 6
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4030-NEG",
+        "stock": 0
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i3",
+      "Memoria RAM": "4 GB",
+      "Almacenamiento": "128 GB SSD",
+      "Pantalla": "15.6\" HD",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: Intel Core i3",
+      "Memoria RAM: 4 GB",
+      "Almacenamiento: 128 GB SSD",
+      "Pantalla: 15.6\" HD"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4.4,
+    "reviewCount": 199,
+    "warranty": "12 meses",
+    "createdAt": "2026-07-18",
+    "status": "activo"
+  },
+  {
+    "id": "p011",
+    "sku": "TD-4031",
+    "slug": "notebook-lenovo-ideapad-1-intel-i3-8gb-256gb-ssd",
+    "name": "Notebook Lenovo IdeaPad 1 Intel i3 8GB 256GB SSD",
+    "brand": "Lenovo",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 3390000,
+    "oldPrice": 3790000,
+    "installments": {
+      "count": 10,
+      "interestFree": true
+    },
+    "stock": 52,
+    "shortDescription": "Lenovo · Intel Core i3 · 8 GB · 256 GB SSD",
+    "description": "Notebook Lenovo IdeaPad 1 Intel i3 8GB 256GB SSD de Lenovo. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i3; Memoria RAM: 8 GB; Almacenamiento: 256 GB SSD; Pantalla: 15.6\" Full HD.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Azul Abismo",
+        "hex": "#1F4E8C",
+        "sku": "TD-4031-AZU",
+        "stock": 24
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4031-NEG",
+        "stock": 12
+      },
+      {
+        "name": "Gris Grafito",
+        "hex": "#4B5563",
+        "sku": "TD-4031-GRI",
+        "stock": 16
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i3",
+      "Memoria RAM": "8 GB",
+      "Almacenamiento": "256 GB SSD",
+      "Pantalla": "15.6\" Full HD",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: Intel Core i3",
+      "Memoria RAM: 8 GB",
+      "Almacenamiento: 256 GB SSD",
+      "Pantalla: 15.6\" Full HD"
+    ],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 3.9,
+    "reviewCount": 366,
+    "warranty": "12 meses",
+    "createdAt": "2026-05-14",
+    "status": "activo"
+  },
+  {
+    "id": "p012",
+    "sku": "TD-4032",
+    "slug": "notebook-hp-245-g10-ryzen-5-16gb-512gb-ssd",
+    "name": "Notebook HP 245 G10 Ryzen 5 16GB 512GB SSD",
+    "brand": "HP",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 5790000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 38,
+    "shortDescription": "HP · AMD Ryzen 5 · 16 GB · 512 GB SSD",
+    "description": "Notebook HP 245 G10 Ryzen 5 16GB 512GB SSD de HP. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: AMD Ryzen 5; Memoria RAM: 16 GB; Almacenamiento: 512 GB SSD; Pantalla: 14\" Full HD.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Plata",
+        "hex": "#C0C4CC",
+        "sku": "TD-4032-PLA",
+        "stock": 23
+      },
+      {
+        "name": "Azul Abismo",
+        "hex": "#1F4E8C",
+        "sku": "TD-4032-AZU",
+        "stock": 15,
+        "priceDelta": 100000
+      }
+    ],
+    "specs": {
+      "Procesador": "AMD Ryzen 5",
+      "Memoria RAM": "16 GB",
+      "Almacenamiento": "512 GB SSD",
+      "Pantalla": "14\" Full HD",
+      "Sistema operativo": "Windows 11 Pro"
+    },
+    "highlights": [
+      "Procesador: AMD Ryzen 5",
+      "Memoria RAM: 16 GB",
+      "Almacenamiento: 512 GB SSD",
+      "Pantalla: 14\" Full HD"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4.1,
+    "reviewCount": 276,
+    "warranty": "12 meses",
+    "createdAt": "2026-05-02",
+    "status": "activo"
+  },
+  {
+    "id": "p013",
+    "sku": "TD-4033",
+    "slug": "notebook-asus-vivobook-go-15-ryzen-5-8gb-512gb-ssd",
+    "name": "Notebook ASUS Vivobook Go 15 Ryzen 5 8GB 512GB SSD",
+    "brand": "ASUS",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 4690000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 3,
+    "shortDescription": "ASUS · AMD Ryzen 5 · 8 GB · 512 GB SSD",
+    "description": "Notebook ASUS Vivobook Go 15 Ryzen 5 8GB 512GB SSD de ASUS. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: AMD Ryzen 5; Memoria RAM: 8 GB; Almacenamiento: 512 GB SSD; Pantalla: 15.6\" Full HD.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4033-NEG",
+        "stock": 3
+      }
+    ],
+    "specs": {
+      "Procesador": "AMD Ryzen 5",
+      "Memoria RAM": "8 GB",
+      "Almacenamiento": "512 GB SSD",
+      "Pantalla": "15.6\" Full HD",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: AMD Ryzen 5",
+      "Memoria RAM: 8 GB",
+      "Almacenamiento: 512 GB SSD",
+      "Pantalla: 15.6\" Full HD"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4.5,
+    "reviewCount": 15,
+    "warranty": "12 meses",
+    "createdAt": "2026-04-29",
+    "status": "activo"
+  },
+  {
+    "id": "p014",
+    "sku": "TD-4034",
+    "slug": "notebook-dell-vostro-3520-intel-i5-8gb-256gb-ssd",
+    "name": "Notebook Dell Vostro 3520 Intel i5 8GB 256GB SSD",
+    "brand": "Dell",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 5190000,
+    "oldPrice": 5690000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 26,
+    "shortDescription": "Dell · Intel Core i5 · 8 GB · 256 GB SSD",
+    "description": "Notebook Dell Vostro 3520 Intel i5 8GB 256GB SSD de Dell. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i5; Memoria RAM: 8 GB; Almacenamiento: 256 GB SSD; Pantalla: 15.6\" Full HD.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Gris Grafito",
+        "hex": "#4B5563",
+        "sku": "TD-4034-GRI",
+        "stock": 14
+      },
+      {
+        "name": "Plata",
+        "hex": "#C0C4CC",
+        "sku": "TD-4034-PLA",
+        "stock": 12,
+        "priceDelta": 100000
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i5",
+      "Memoria RAM": "8 GB",
+      "Almacenamiento": "256 GB SSD",
+      "Pantalla": "15.6\" Full HD",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: Intel Core i5",
+      "Memoria RAM: 8 GB",
+      "Almacenamiento: 256 GB SSD",
+      "Pantalla: 15.6\" Full HD"
+    ],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 4.6,
+    "reviewCount": 382,
+    "warranty": "12 meses",
+    "createdAt": "2026-06-30",
+    "status": "activo"
+  },
+  {
+    "id": "p015",
+    "sku": "TD-4035",
+    "slug": "notebook-lenovo-thinkpad-e14-intel-i7-16gb-512gb-ssd",
+    "name": "Notebook Lenovo ThinkPad E14 Intel i7 16GB 512GB SSD",
+    "brand": "Lenovo",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 9790000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 29,
+    "shortDescription": "Lenovo · Intel Core i7 · 16 GB · 512 GB SSD",
+    "description": "Notebook Lenovo ThinkPad E14 Intel i7 16GB 512GB SSD de Lenovo. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i7; Memoria RAM: 16 GB; Almacenamiento: 512 GB SSD; Pantalla: 14\" WUXGA.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Gris Grafito",
+        "hex": "#4B5563",
+        "sku": "TD-4035-GRI",
+        "stock": 19
+      },
+      {
+        "name": "Plata",
+        "hex": "#C0C4CC",
+        "sku": "TD-4035-PLA",
+        "stock": 10,
+        "priceDelta": 100000
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i7",
+      "Memoria RAM": "16 GB",
+      "Almacenamiento": "512 GB SSD",
+      "Pantalla": "14\" WUXGA",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: Intel Core i7",
+      "Memoria RAM: 16 GB",
+      "Almacenamiento: 512 GB SSD",
+      "Pantalla: 14\" WUXGA"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4.8,
+    "reviewCount": 113,
+    "warranty": "12 meses",
+    "createdAt": "2026-05-17",
+    "status": "activo"
+  },
+  {
+    "id": "p016",
+    "sku": "TD-4036",
+    "slug": "notebook-acer-swift-go-14-intel-i7-16gb-1tb-ssd",
+    "name": "Notebook Acer Swift Go 14 Intel i7 16GB 1TB SSD",
+    "brand": "Acer",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 8990000,
+    "oldPrice": 9590000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 44,
+    "shortDescription": "Acer · Intel Core i7 · 16 GB · 1 TB SSD",
+    "description": "Notebook Acer Swift Go 14 Intel i7 16GB 1TB SSD de Acer. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i7; Memoria RAM: 16 GB; Almacenamiento: 1 TB SSD; Pantalla: 14\" 2.8K OLED.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Gris Grafito",
+        "hex": "#4B5563",
+        "sku": "TD-4036-GRI",
+        "stock": 23
+      },
+      {
+        "name": "Plata",
+        "hex": "#C0C4CC",
+        "sku": "TD-4036-PLA",
+        "stock": 6
+      },
+      {
+        "name": "Azul Abismo",
+        "hex": "#1F4E8C",
+        "sku": "TD-4036-AZU",
+        "stock": 15
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i7",
+      "Memoria RAM": "16 GB",
+      "Almacenamiento": "1 TB SSD",
+      "Pantalla": "14\" 2.8K OLED",
+      "Sistema operativo": "Windows 11 Pro"
+    },
+    "highlights": [
+      "Procesador: Intel Core i7",
+      "Memoria RAM: 16 GB",
+      "Almacenamiento: 1 TB SSD",
+      "Pantalla: 14\" 2.8K OLED"
+    ],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 4.7,
+    "reviewCount": 391,
+    "warranty": "12 meses",
+    "createdAt": "2026-08-16",
+    "status": "activo"
+  },
+  {
+    "id": "p017",
+    "sku": "TD-4037",
+    "slug": "notebook-hp-envy-x360-ryzen-7-16gb-512gb-ssd",
+    "name": "Notebook HP Envy x360 Ryzen 7 16GB 512GB SSD",
+    "brand": "HP",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 8490000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 8,
+    "shortDescription": "HP · AMD Ryzen 7 · 16 GB · 512 GB SSD",
+    "description": "Notebook HP Envy x360 Ryzen 7 16GB 512GB SSD de HP. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: AMD Ryzen 7; Memoria RAM: 16 GB; Almacenamiento: 512 GB SSD; Pantalla: 15.6\" Full HD táctil.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Plata",
+        "hex": "#C0C4CC",
+        "sku": "TD-4037-PLA",
+        "stock": 8
+      }
+    ],
+    "specs": {
+      "Procesador": "AMD Ryzen 7",
+      "Memoria RAM": "16 GB",
+      "Almacenamiento": "512 GB SSD",
+      "Pantalla": "15.6\" Full HD táctil",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: AMD Ryzen 7",
+      "Memoria RAM: 16 GB",
+      "Almacenamiento: 512 GB SSD",
+      "Pantalla: 15.6\" Full HD táctil"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 3.9,
+    "reviewCount": 277,
+    "warranty": "12 meses",
+    "createdAt": "2026-08-17",
+    "status": "activo"
+  },
+  {
+    "id": "p018",
+    "sku": "TD-4038",
+    "slug": "notebook-asus-zenbook-14-intel-i7-16gb-1tb-ssd",
+    "name": "Notebook ASUS Zenbook 14 Intel i7 16GB 1TB SSD",
+    "brand": "ASUS",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 10990000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 16,
+    "shortDescription": "ASUS · Intel Core i7 · 16 GB · 1 TB SSD",
+    "description": "Notebook ASUS Zenbook 14 Intel i7 16GB 1TB SSD de ASUS. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i7; Memoria RAM: 16 GB; Almacenamiento: 1 TB SSD; Pantalla: 14\" 2.8K OLED.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4038-NEG",
+        "stock": 16
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i7",
+      "Memoria RAM": "16 GB",
+      "Almacenamiento": "1 TB SSD",
+      "Pantalla": "14\" 2.8K OLED",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: Intel Core i7",
+      "Memoria RAM: 16 GB",
+      "Almacenamiento: 1 TB SSD",
+      "Pantalla: 14\" 2.8K OLED"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4.7,
+    "reviewCount": 256,
+    "warranty": "12 meses",
+    "createdAt": "2026-02-26",
+    "status": "activo"
+  },
+  {
+    "id": "p019",
+    "sku": "TD-4039",
+    "slug": "notebook-dell-xps-13-intel-i7-32gb-1tb-ssd",
+    "name": "Notebook Dell XPS 13 Intel i7 32GB 1TB SSD",
+    "brand": "Dell",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks",
+    "price": 15900000,
+    "oldPrice": 16900000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 17,
+    "shortDescription": "Dell · Intel Core i7 · 32 GB · 1 TB SSD",
+    "description": "Notebook Dell XPS 13 Intel i7 32GB 1TB SSD de Dell. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i7; Memoria RAM: 32 GB; Almacenamiento: 1 TB SSD; Pantalla: 13.4\" 3.5K OLED.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Plata",
+        "hex": "#C0C4CC",
+        "sku": "TD-4039-PLA",
+        "stock": 17
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i7",
+      "Memoria RAM": "32 GB",
+      "Almacenamiento": "1 TB SSD",
+      "Pantalla": "13.4\" 3.5K OLED",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: Intel Core i7",
+      "Memoria RAM: 32 GB",
+      "Almacenamiento: 1 TB SSD",
+      "Pantalla: 13.4\" 3.5K OLED"
+    ],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 4.8,
+    "reviewCount": 322,
+    "warranty": "12 meses",
+    "createdAt": "2026-08-25",
+    "status": "activo"
+  },
+  {
+    "id": "p020",
+    "sku": "TD-4040",
+    "slug": "notebook-lenovo-legion-5-ryzen-7-16gb-1tb-rtx",
+    "name": "Notebook Lenovo Legion 5 Ryzen 7 16GB 1TB RTX",
+    "brand": "Lenovo",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks-gamer",
+    "price": 13490000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 43,
+    "shortDescription": "Lenovo · AMD Ryzen 7 · 16 GB · 1 TB SSD",
+    "description": "Notebook Lenovo Legion 5 Ryzen 7 16GB 1TB RTX de Lenovo. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: AMD Ryzen 7; Memoria RAM: 16 GB; Almacenamiento: 1 TB SSD; Pantalla: 15.6\" WQHD 165Hz.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Rojo Fuego",
+        "hex": "#B91C1C",
+        "sku": "TD-4040-ROJ",
+        "stock": 25
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4040-NEG",
+        "stock": 18
+      },
+      {
+        "name": "Gris Carbón",
+        "hex": "#374151",
+        "sku": "TD-4040-GRI",
+        "stock": 0
+      }
+    ],
+    "specs": {
+      "Procesador": "AMD Ryzen 7",
+      "Memoria RAM": "16 GB",
+      "Almacenamiento": "1 TB SSD",
+      "Pantalla": "15.6\" WQHD 165Hz",
+      "Placa de video": "NVIDIA RTX 4060",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: AMD Ryzen 7",
+      "Memoria RAM: 16 GB",
+      "Almacenamiento: 1 TB SSD",
+      "Pantalla: 15.6\" WQHD 165Hz"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4.8,
+    "reviewCount": 154,
+    "warranty": "12 meses",
+    "createdAt": "2026-02-26",
+    "status": "activo"
+  },
+  {
+    "id": "p021",
+    "sku": "TD-4041",
+    "slug": "notebook-acer-nitro-v-intel-i5-16gb-512gb-rtx",
+    "name": "Notebook Acer Nitro V Intel i5 16GB 512GB RTX",
+    "brand": "Acer",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks-gamer",
+    "price": 8990000,
+    "oldPrice": 9490000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 30,
+    "shortDescription": "Acer · Intel Core i5 · 16 GB · 512 GB SSD",
+    "description": "Notebook Acer Nitro V Intel i5 16GB 512GB RTX de Acer. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i5; Memoria RAM: 16 GB; Almacenamiento: 512 GB SSD; Pantalla: 15.6\" Full HD 144Hz.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Rojo Fuego",
+        "hex": "#B91C1C",
+        "sku": "TD-4041-ROJ",
+        "stock": 13
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4041-NEG",
+        "stock": 17,
+        "priceDelta": 100000
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i5",
+      "Memoria RAM": "16 GB",
+      "Almacenamiento": "512 GB SSD",
+      "Pantalla": "15.6\" Full HD 144Hz",
+      "Placa de video": "NVIDIA RTX 4050",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: Intel Core i5",
+      "Memoria RAM: 16 GB",
+      "Almacenamiento: 512 GB SSD",
+      "Pantalla: 15.6\" Full HD 144Hz"
+    ],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 3.9,
+    "reviewCount": 294,
+    "warranty": "12 meses",
+    "createdAt": "2026-07-01",
+    "status": "activo"
+  },
+  {
+    "id": "p022",
+    "sku": "TD-4042",
+    "slug": "notebook-hp-victus-15-ryzen-5-16gb-512gb-rtx",
+    "name": "Notebook HP Victus 15 Ryzen 5 16GB 512GB RTX",
+    "brand": "HP",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks-gamer",
+    "price": 7390000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 17,
+    "shortDescription": "HP · AMD Ryzen 5 · 16 GB · 512 GB SSD",
+    "description": "Notebook HP Victus 15 Ryzen 5 16GB 512GB RTX de HP. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: AMD Ryzen 5; Memoria RAM: 16 GB; Almacenamiento: 512 GB SSD; Pantalla: 15.6\" Full HD 144Hz.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Gris Carbón",
+        "hex": "#374151",
+        "sku": "TD-4042-GRI",
+        "stock": 17
+      }
+    ],
+    "specs": {
+      "Procesador": "AMD Ryzen 5",
+      "Memoria RAM": "16 GB",
+      "Almacenamiento": "512 GB SSD",
+      "Pantalla": "15.6\" Full HD 144Hz",
+      "Placa de video": "NVIDIA RTX 3050",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: AMD Ryzen 5",
+      "Memoria RAM: 16 GB",
+      "Almacenamiento: 512 GB SSD",
+      "Pantalla: 15.6\" Full HD 144Hz"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4.2,
+    "reviewCount": 330,
+    "warranty": "12 meses",
+    "createdAt": "2026-03-27",
+    "status": "activo"
+  },
+  {
+    "id": "p023",
+    "sku": "TD-4043",
+    "slug": "notebook-msi-thin-gf63-intel-i5-16gb-512gb-gtx",
+    "name": "Notebook MSI Thin GF63 Intel i5 16GB 512GB GTX",
+    "brand": "MSI",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks-gamer",
+    "price": 6890000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 26,
+    "shortDescription": "MSI · Intel Core i5 · 16 GB · 512 GB SSD",
+    "description": "Notebook MSI Thin GF63 Intel i5 16GB 512GB GTX de MSI. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i5; Memoria RAM: 16 GB; Almacenamiento: 512 GB SSD; Pantalla: 15.6\" Full HD 144Hz.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Rojo Fuego",
+        "hex": "#B91C1C",
+        "sku": "TD-4043-ROJ",
+        "stock": 2
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4043-NEG",
+        "stock": 24
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i5",
+      "Memoria RAM": "16 GB",
+      "Almacenamiento": "512 GB SSD",
+      "Pantalla": "15.6\" Full HD 144Hz",
+      "Placa de video": "NVIDIA GTX 1650",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: Intel Core i5",
+      "Memoria RAM: 16 GB",
+      "Almacenamiento: 512 GB SSD",
+      "Pantalla: 15.6\" Full HD 144Hz"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 3.8,
+    "reviewCount": 36,
+    "warranty": "12 meses",
+    "createdAt": "2026-03-17",
+    "status": "activo"
+  },
+  {
+    "id": "p024",
+    "sku": "TD-4044",
+    "slug": "notebook-asus-tuf-gaming-f15-intel-i7-16gb-512gb",
+    "name": "Notebook ASUS TUF Gaming F15 Intel i7 16GB 512GB",
+    "brand": "ASUS",
+    "categoryId": "informatica",
+    "subcategoryId": "notebooks-gamer",
+    "price": 10490000,
+    "oldPrice": 11290000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 6,
+    "shortDescription": "ASUS · Intel Core i7 · 16 GB · 512 GB SSD",
+    "description": "Notebook ASUS TUF Gaming F15 Intel i7 16GB 512GB de ASUS. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Procesador: Intel Core i7; Memoria RAM: 16 GB; Almacenamiento: 512 GB SSD; Pantalla: 15.6\" Full HD 144Hz.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Rojo Fuego",
+        "hex": "#B91C1C",
+        "sku": "TD-4044-ROJ",
+        "stock": 2
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4044-NEG",
+        "stock": 4
+      }
+    ],
+    "specs": {
+      "Procesador": "Intel Core i7",
+      "Memoria RAM": "16 GB",
+      "Almacenamiento": "512 GB SSD",
+      "Pantalla": "15.6\" Full HD 144Hz",
+      "Placa de video": "NVIDIA RTX 4060",
+      "Sistema operativo": "Windows 11 Home"
+    },
+    "highlights": [
+      "Procesador: Intel Core i7",
+      "Memoria RAM: 16 GB",
+      "Almacenamiento: 512 GB SSD",
+      "Pantalla: 15.6\" Full HD 144Hz"
+    ],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 4.7,
+    "reviewCount": 334,
+    "warranty": "12 meses",
+    "createdAt": "2026-06-20",
+    "status": "activo"
+  },
+  {
+    "id": "p025",
+    "sku": "TD-4045",
+    "slug": "smart-tv-55-4k-uhd",
+    "name": "Smart TV 55\" 4K UHD",
+    "brand": "Samsung",
+    "categoryId": "electronica",
+    "subcategoryId": "smart-tv",
+    "price": 3290000,
+    "installments": {
+      "count": 10,
+      "interestFree": true
+    },
+    "stock": 15,
+    "shortDescription": "Samsung · 55\" · 4K UHD · Tizen",
+    "description": "Smart TV 55\" 4K UHD de Samsung. Tecnología de última generación para tu entretenimiento diario.\n\nCaracterísticas principales: Tamaño de pantalla: 55\"; Resolución: 4K UHD; Sistema operativo: Tizen; Conectividad: Wi-Fi, Bluetooth, HDMI x3.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Tamaño de pantalla": "55\"",
+      "Resolución": "4K UHD",
+      "Sistema operativo": "Tizen",
+      "Conectividad": "Wi-Fi, Bluetooth, HDMI x3"
+    },
+    "highlights": [
+      "Tamaño de pantalla: 55\"",
+      "Resolución: 4K UHD",
+      "Sistema operativo: Tizen",
+      "Conectividad: Wi-Fi, Bluetooth, HDMI x3"
+    ],
+    "tags": ["destacado", "envio-gratis"],
+    "rating": 4,
+    "reviewCount": 308,
+    "warranty": "12 meses",
+    "createdAt": "2026-05-27",
+    "status": "activo"
+  },
+  {
+    "id": "p026",
+    "sku": "TD-4046",
+    "slug": "smart-tv-43-full-hd",
+    "name": "Smart TV 43\" Full HD",
+    "brand": "LG",
+    "categoryId": "electronica",
+    "subcategoryId": "smart-tv",
+    "price": 2190000,
+    "installments": {
+      "count": 10,
+      "interestFree": true
+    },
+    "stock": 29,
+    "shortDescription": "LG · 43\" · Full HD · webOS",
+    "description": "Smart TV 43\" Full HD de LG. Tecnología de última generación para tu entretenimiento diario.\n\nCaracterísticas principales: Tamaño de pantalla: 43\"; Resolución: Full HD; Sistema operativo: webOS; Conectividad: Wi-Fi, Bluetooth, HDMI x2.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Tamaño de pantalla": "43\"",
+      "Resolución": "Full HD",
+      "Sistema operativo": "webOS",
+      "Conectividad": "Wi-Fi, Bluetooth, HDMI x2"
+    },
+    "highlights": [
+      "Tamaño de pantalla: 43\"",
+      "Resolución: Full HD",
+      "Sistema operativo: webOS",
+      "Conectividad: Wi-Fi, Bluetooth, HDMI x2"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4.6,
+    "reviewCount": 323,
+    "warranty": "12 meses",
+    "createdAt": "2026-06-12",
+    "status": "activo"
+  },
+  {
+    "id": "p027",
+    "sku": "TD-4047",
+    "slug": "smart-tv-65-qled-4k",
+    "name": "Smart TV 65\" QLED 4K",
+    "brand": "Samsung",
+    "categoryId": "electronica",
+    "subcategoryId": "smart-tv",
+    "price": 6890000,
+    "oldPrice": 7490000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 39,
+    "shortDescription": "Samsung · 65\" · 4K UHD · Tizen",
+    "description": "Smart TV 65\" QLED 4K de Samsung. Tecnología de última generación para tu entretenimiento diario.\n\nCaracterísticas principales: Tamaño de pantalla: 65\"; Resolución: 4K UHD; Sistema operativo: Tizen; Conectividad: Wi-Fi, Bluetooth, HDMI x4.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Tamaño de pantalla": "65\"",
+      "Resolución": "4K UHD",
+      "Sistema operativo": "Tizen",
+      "Conectividad": "Wi-Fi, Bluetooth, HDMI x4"
+    },
+    "highlights": [
+      "Tamaño de pantalla: 65\"",
+      "Resolución: 4K UHD",
+      "Sistema operativo: Tizen",
+      "Conectividad: Wi-Fi, Bluetooth, HDMI x4"
+    ],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 4.4,
+    "reviewCount": 396,
+    "warranty": "12 meses",
+    "createdAt": "2026-05-19",
+    "status": "activo"
+  },
+  {
+    "id": "p028",
+    "sku": "TD-4048",
+    "slug": "soundbar-2-1-con-subwoofer-200w",
+    "name": "Soundbar 2.1 con Subwoofer 200W",
+    "brand": "LG",
+    "categoryId": "electronica",
+    "subcategoryId": "audio-y-parlantes",
+    "price": 790000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 18,
+    "shortDescription": "LG · 200 W · 2.1 · Bluetooth, HDMI ARC",
+    "description": "Soundbar 2.1 con Subwoofer 200W de LG. Tecnología de última generación para tu entretenimiento diario.\n\nCaracterísticas principales: Potencia: 200 W; Canales: 2.1; Conectividad: Bluetooth, HDMI ARC.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Potencia": "200 W",
+      "Canales": "2.1",
+      "Conectividad": "Bluetooth, HDMI ARC"
+    },
+    "highlights": ["Potencia: 200 W", "Canales: 2.1", "Conectividad: Bluetooth, HDMI ARC"],
+    "tags": ["envio-gratis"],
+    "rating": 4.7,
+    "reviewCount": 328,
+    "warranty": "12 meses",
+    "createdAt": "2026-06-10",
+    "status": "activo"
+  },
+  {
+    "id": "p029",
+    "sku": "TD-4049",
+    "slug": "parlante-bluetooth-portatil-resistente-al-agua",
+    "name": "Parlante Bluetooth Portátil Resistente al Agua",
+    "brand": "JBL",
+    "categoryId": "electronica",
+    "subcategoryId": "audio-y-parlantes",
+    "price": 390000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 22,
+    "shortDescription": "JBL · 12 horas · IPX7 · Bluetooth 5.3",
+    "description": "Parlante Bluetooth Portátil Resistente al Agua de JBL. Tecnología de última generación para tu entretenimiento diario.\n\nCaracterísticas principales: Autonomía: 12 horas; Resistencia: IPX7; Conectividad: Bluetooth 5.3.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4049-NEG",
+        "stock": 9
+      },
+      {
+        "name": "Blanco",
+        "hex": "#F9FAFB",
+        "sku": "TD-4049-BLA",
+        "stock": 8
+      },
+      {
+        "name": "Azul",
+        "hex": "#2563EB",
+        "sku": "TD-4049-AZU",
+        "stock": 5
+      }
+    ],
+    "specs": {
+      "Autonomía": "12 horas",
+      "Resistencia": "IPX7",
+      "Conectividad": "Bluetooth 5.3"
+    },
+    "highlights": ["Autonomía: 12 horas", "Resistencia: IPX7", "Conectividad: Bluetooth 5.3"],
+    "tags": [],
+    "rating": 4.6,
+    "reviewCount": 334,
+    "warranty": "12 meses",
+    "createdAt": "2026-07-02",
+    "status": "activo"
+  },
+  {
+    "id": "p030",
+    "sku": "TD-4050",
+    "slug": "auriculares-inalambricos-con-cancelacion-de-ruido",
+    "name": "Auriculares Inalámbricos con Cancelación de Ruido",
+    "brand": "Sony",
+    "categoryId": "electronica",
+    "subcategoryId": "auriculares",
+    "price": 890000,
+    "oldPrice": 990000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 28,
+    "shortDescription": "Sony · 30 horas · Activa · Bluetooth 5.2",
+    "description": "Auriculares Inalámbricos con Cancelación de Ruido de Sony. Tecnología de última generación para tu entretenimiento diario.\n\nCaracterísticas principales: Autonomía: 30 horas; Cancelación de ruido: Activa; Conectividad: Bluetooth 5.2.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Azul",
+        "hex": "#2563EB",
+        "sku": "TD-4050-AZU",
+        "stock": 11
+      },
+      {
+        "name": "Rojo",
+        "hex": "#DC2626",
+        "sku": "TD-4050-ROJ",
+        "stock": 3
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4050-NEG",
+        "stock": 14
+      }
+    ],
+    "specs": {
+      "Autonomía": "30 horas",
+      "Cancelación de ruido": "Activa",
+      "Conectividad": "Bluetooth 5.2"
+    },
+    "highlights": [
+      "Autonomía: 30 horas",
+      "Cancelación de ruido: Activa",
+      "Conectividad: Bluetooth 5.2"
+    ],
+    "tags": ["oferta", "nuevo", "envio-gratis"],
+    "rating": 4.1,
+    "reviewCount": 179,
+    "warranty": "12 meses",
+    "createdAt": "2026-09-10",
+    "status": "activo"
+  },
+  {
+    "id": "p031",
+    "sku": "TD-4051",
+    "slug": "celular-128gb-6gb-ram-camara-50mp",
+    "name": "Celular 128GB 6GB RAM Cámara 50MP",
+    "brand": "Samsung",
+    "categoryId": "electronica",
+    "subcategoryId": "celulares",
+    "price": 2490000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 33,
+    "shortDescription": "Samsung · 128 GB · 6 GB · 6.6\" AMOLED",
+    "description": "Celular 128GB 6GB RAM Cámara 50MP de Samsung. Tecnología de última generación para tu entretenimiento diario.\n\nCaracterísticas principales: Almacenamiento: 128 GB; Memoria RAM: 6 GB; Pantalla: 6.6\" AMOLED; Cámara principal: 50 MP.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Titanio",
+        "hex": "#A8A29E",
+        "sku": "TD-4051-TIT",
+        "stock": 23
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4051-NEG",
+        "stock": 6
+      },
+      {
+        "name": "Blanco Perla",
+        "hex": "#F3F4F6",
+        "sku": "TD-4051-BLA",
+        "stock": 4
+      }
+    ],
+    "specs": {
+      "Almacenamiento": "128 GB",
+      "Memoria RAM": "6 GB",
+      "Pantalla": "6.6\" AMOLED",
+      "Cámara principal": "50 MP"
+    },
+    "highlights": [
+      "Almacenamiento: 128 GB",
+      "Memoria RAM: 6 GB",
+      "Pantalla: 6.6\" AMOLED",
+      "Cámara principal: 50 MP"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4.8,
+    "reviewCount": 221,
+    "warranty": "12 meses",
+    "createdAt": "2026-08-07",
+    "status": "activo"
+  },
+  {
+    "id": "p032",
+    "sku": "TD-4052",
+    "slug": "celular-gama-alta-256gb-12gb-ram-5g",
+    "name": "Celular Gama Alta 256GB 12GB RAM 5G",
+    "brand": "Apple",
+    "categoryId": "electronica",
+    "subcategoryId": "celulares",
+    "price": 7490000,
+    "oldPrice": 7990000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 71,
+    "shortDescription": "Apple · 256 GB · 8 GB · 6.1\" OLED",
+    "description": "Celular Gama Alta 256GB 12GB RAM 5G de Apple. Tecnología de última generación para tu entretenimiento diario.\n\nCaracterísticas principales: Almacenamiento: 256 GB; Memoria RAM: 8 GB; Pantalla: 6.1\" OLED; Cámara principal: 48 MP.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Azul",
+        "hex": "#2563EB",
+        "sku": "TD-4052-AZU",
+        "stock": 12
+      },
+      {
+        "name": "Verde Salvia",
+        "hex": "#7C9A7E",
+        "sku": "TD-4052-VER",
+        "stock": 20
+      },
+      {
+        "name": "Titanio",
+        "hex": "#A8A29E",
+        "sku": "TD-4052-TIT",
+        "stock": 20
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4052-NEG",
+        "stock": 19,
+        "priceDelta": 100000
+      }
+    ],
+    "specs": {
+      "Almacenamiento": "256 GB",
+      "Memoria RAM": "8 GB",
+      "Pantalla": "6.1\" OLED",
+      "Cámara principal": "48 MP"
+    },
+    "highlights": [
+      "Almacenamiento: 256 GB",
+      "Memoria RAM: 8 GB",
+      "Pantalla: 6.1\" OLED",
+      "Cámara principal: 48 MP"
+    ],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 4.5,
+    "reviewCount": 339,
+    "warranty": "12 meses",
+    "createdAt": "2026-07-12",
+    "status": "activo"
+  },
+  {
+    "id": "p033",
+    "sku": "TD-4053",
+    "slug": "celular-64gb-4gb-ram-bateria-5000mah",
+    "name": "Celular 64GB 4GB RAM Batería 5000mAh",
+    "brand": "Xiaomi",
+    "categoryId": "electronica",
+    "subcategoryId": "celulares",
+    "price": 1290000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 17,
+    "shortDescription": "Xiaomi · 64 GB · 4 GB · 6.5\" IPS",
+    "description": "Celular 64GB 4GB RAM Batería 5000mAh de Xiaomi. Tecnología de última generación para tu entretenimiento diario.\n\nCaracterísticas principales: Almacenamiento: 64 GB; Memoria RAM: 4 GB; Pantalla: 6.5\" IPS; Cámara principal: 13 MP.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4053-NEG",
+        "stock": 17
+      }
+    ],
+    "specs": {
+      "Almacenamiento": "64 GB",
+      "Memoria RAM": "4 GB",
+      "Pantalla": "6.5\" IPS",
+      "Cámara principal": "13 MP"
+    },
+    "highlights": [
+      "Almacenamiento: 64 GB",
+      "Memoria RAM: 4 GB",
+      "Pantalla: 6.5\" IPS",
+      "Cámara principal: 13 MP"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4,
+    "reviewCount": 230,
+    "warranty": "12 meses",
+    "createdAt": "2026-02-14",
+    "status": "activo"
+  },
+  {
+    "id": "p034",
+    "sku": "TD-4054",
+    "slug": "tablet-10-64gb-wi-fi",
+    "name": "Tablet 10\" 64GB Wi-Fi",
+    "brand": "Samsung",
+    "categoryId": "electronica",
+    "subcategoryId": "tablets",
+    "price": 1490000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 33,
+    "shortDescription": "Samsung · 10.1\" · 64 GB · Wi-Fi",
+    "description": "Tablet 10\" 64GB Wi-Fi de Samsung. Tecnología de última generación para tu entretenimiento diario.\n\nCaracterísticas principales: Pantalla: 10.1\"; Almacenamiento: 64 GB; Conectividad: Wi-Fi.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Rojo",
+        "hex": "#DC2626",
+        "sku": "TD-4054-ROJ",
+        "stock": 25
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4054-NEG",
+        "stock": 8,
+        "priceDelta": 100000
+      }
+    ],
+    "specs": {
+      "Pantalla": "10.1\"",
+      "Almacenamiento": "64 GB",
+      "Conectividad": "Wi-Fi"
+    },
+    "highlights": ["Pantalla: 10.1\"", "Almacenamiento: 64 GB", "Conectividad: Wi-Fi"],
+    "tags": ["nuevo", "envio-gratis"],
+    "rating": 4.7,
+    "reviewCount": 103,
+    "warranty": "12 meses",
+    "createdAt": "2026-09-07",
+    "status": "activo"
+  },
+  {
+    "id": "p035",
+    "sku": "TD-4055",
+    "slug": "smartwatch-deportivo-con-gps",
+    "name": "Smartwatch Deportivo con GPS",
+    "brand": "Xiaomi",
+    "categoryId": "electronica",
+    "subcategoryId": "smartwatch",
+    "price": 690000,
+    "oldPrice": 790000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 8,
+    "shortDescription": "Xiaomi · 1.4\" AMOLED · 14 días · 5 ATM",
+    "description": "Smartwatch Deportivo con GPS de Xiaomi. Tecnología de última generación para tu entretenimiento diario.\n\nCaracterísticas principales: Pantalla: 1.4\" AMOLED; Autonomía: 14 días; Resistencia: 5 ATM.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Azul",
+        "hex": "#2563EB",
+        "sku": "TD-4055-AZU",
+        "stock": 8
+      }
+    ],
+    "specs": {
+      "Pantalla": "1.4\" AMOLED",
+      "Autonomía": "14 días",
+      "Resistencia": "5 ATM"
+    },
+    "highlights": ["Pantalla: 1.4\" AMOLED", "Autonomía: 14 días", "Resistencia: 5 ATM"],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 4.9,
+    "reviewCount": 346,
+    "warranty": "12 meses",
+    "createdAt": "2026-02-06",
+    "status": "activo"
+  },
+  {
+    "id": "p036",
+    "sku": "TD-4056",
+    "slug": "joystick-inalambrico-para-consola",
+    "name": "Joystick Inalámbrico para Consola",
+    "brand": "Sony",
+    "categoryId": "electronica",
+    "subcategoryId": "joysticks",
+    "price": 590000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 0,
+    "shortDescription": "Sony · Bluetooth · 12 horas · Consola y PC",
+    "description": "Joystick Inalámbrico para Consola de Sony. Tecnología de última generación para tu entretenimiento diario.\n\nCaracterísticas principales: Conectividad: Bluetooth; Autonomía: 12 horas; Compatibilidad: Consola y PC.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Blanco",
+        "hex": "#F9FAFB",
+        "sku": "TD-4056-BLA",
+        "stock": 0
+      },
+      {
+        "name": "Azul",
+        "hex": "#2563EB",
+        "sku": "TD-4056-AZU",
+        "stock": 0
+      },
+      {
+        "name": "Rojo",
+        "hex": "#DC2626",
+        "sku": "TD-4056-ROJ",
+        "stock": 0,
+        "priceDelta": 100000
+      }
+    ],
+    "specs": {
+      "Conectividad": "Bluetooth",
+      "Autonomía": "12 horas",
+      "Compatibilidad": "Consola y PC"
+    },
+    "highlights": [
+      "Conectividad: Bluetooth",
+      "Autonomía: 12 horas",
+      "Compatibilidad: Consola y PC"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4.5,
+    "reviewCount": 266,
+    "warranty": "12 meses",
+    "createdAt": "2026-03-02",
+    "status": "activo"
+  },
+  {
+    "id": "p037",
+    "sku": "TD-4057",
+    "slug": "heladera-no-frost-380l-inverter",
+    "name": "Heladera No Frost 380L Inverter",
+    "brand": "Whirlpool",
+    "categoryId": "electrodomesticos",
+    "subcategoryId": "heladeras",
+    "price": 5990000,
+    "oldPrice": 6590000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 44,
+    "shortDescription": "Whirlpool · 380 L · No Frost · Inverter",
+    "description": "Heladera No Frost 380L Inverter de Whirlpool. Eficiencia y confort para tu hogar, con la garantía de siempre.\n\nCaracterísticas principales: Capacidad: 380 L; Tipo de enfriamiento: No Frost; Compresor: Inverter; Eficiencia: A+.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Blanco",
+        "hex": "#FFFFFF",
+        "sku": "TD-4057-BLA",
+        "stock": 19
+      },
+      {
+        "name": "Negro",
+        "hex": "#1F2937",
+        "sku": "TD-4057-NEG",
+        "stock": 25,
+        "priceDelta": 100000
+      }
+    ],
+    "specs": {
+      "Capacidad": "380 L",
+      "Tipo de enfriamiento": "No Frost",
+      "Compresor": "Inverter",
+      "Eficiencia": "A+"
+    },
+    "highlights": [
+      "Capacidad: 380 L",
+      "Tipo de enfriamiento: No Frost",
+      "Compresor: Inverter",
+      "Eficiencia: A+"
+    ],
+    "tags": ["destacado", "oferta", "envio-gratis"],
+    "rating": 4.1,
+    "reviewCount": 119,
+    "warranty": "12 meses",
+    "createdAt": "2026-03-07",
+    "status": "activo"
+  },
+  {
+    "id": "p038",
+    "sku": "TD-4058",
+    "slug": "heladera-280l-frio-seco",
+    "name": "Heladera 280L Frío Seco",
+    "brand": "Electrolux",
+    "categoryId": "electrodomesticos",
+    "subcategoryId": "heladeras",
+    "price": 3490000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 17,
+    "shortDescription": "Electrolux · 280 L · Frío seco · Convencional",
+    "description": "Heladera 280L Frío Seco de Electrolux. Eficiencia y confort para tu hogar, con la garantía de siempre.\n\nCaracterísticas principales: Capacidad: 280 L; Tipo de enfriamiento: Frío seco; Compresor: Convencional; Eficiencia: A.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Blanco",
+        "hex": "#FFFFFF",
+        "sku": "TD-4058-BLA",
+        "stock": 6
+      },
+      {
+        "name": "Negro",
+        "hex": "#1F2937",
+        "sku": "TD-4058-NEG",
+        "stock": 11
+      },
+      {
+        "name": "Inox",
+        "hex": "#B8BCC4",
+        "sku": "TD-4058-INO",
+        "stock": 0
+      }
+    ],
+    "specs": {
+      "Capacidad": "280 L",
+      "Tipo de enfriamiento": "Frío seco",
+      "Compresor": "Convencional",
+      "Eficiencia": "A"
+    },
+    "highlights": [
+      "Capacidad: 280 L",
+      "Tipo de enfriamiento: Frío seco",
+      "Compresor: Convencional",
+      "Eficiencia: A"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4.7,
+    "reviewCount": 58,
+    "warranty": "12 meses",
+    "createdAt": "2026-07-06",
+    "status": "activo"
+  },
+  {
+    "id": "p039",
+    "sku": "TD-4059",
+    "slug": "lavarropas-automatico-8kg",
+    "name": "Lavarropas Automático 8kg",
+    "brand": "LG",
+    "categoryId": "electrodomesticos",
+    "subcategoryId": "lavarropas",
+    "price": 2890000,
+    "installments": {
+      "count": 10,
+      "interestFree": true
+    },
+    "stock": 16,
+    "shortDescription": "LG · 8 kg · Frontal · 1200 rpm",
+    "description": "Lavarropas Automático 8kg de LG. Eficiencia y confort para tu hogar, con la garantía de siempre.\n\nCaracterísticas principales: Capacidad: 8 kg; Carga: Frontal; Centrifugado: 1200 rpm.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Blanco",
+        "hex": "#FFFFFF",
+        "sku": "TD-4059-BLA",
+        "stock": 5
+      },
+      {
+        "name": "Negro",
+        "hex": "#1F2937",
+        "sku": "TD-4059-NEG",
+        "stock": 11
+      },
+      {
+        "name": "Inox",
+        "hex": "#B8BCC4",
+        "sku": "TD-4059-INO",
+        "stock": 0,
+        "priceDelta": 100000
+      }
+    ],
+    "specs": {
+      "Capacidad": "8 kg",
+      "Carga": "Frontal",
+      "Centrifugado": "1200 rpm"
+    },
+    "highlights": ["Capacidad: 8 kg", "Carga: Frontal", "Centrifugado: 1200 rpm"],
+    "tags": ["envio-gratis"],
+    "rating": 4.3,
+    "reviewCount": 105,
+    "warranty": "12 meses",
+    "createdAt": "2026-03-26",
+    "status": "activo"
+  },
+  {
+    "id": "p040",
+    "sku": "TD-4060",
+    "slug": "lavarropas-automatico-11kg-inverter",
+    "name": "Lavarropas Automático 11kg Inverter",
+    "brand": "Samsung",
+    "categoryId": "electrodomesticos",
+    "subcategoryId": "lavarropas",
+    "price": 4190000,
+    "oldPrice": 4590000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 21,
+    "shortDescription": "Samsung · 11 kg · Frontal · 1400 rpm",
+    "description": "Lavarropas Automático 11kg Inverter de Samsung. Eficiencia y confort para tu hogar, con la garantía de siempre.\n\nCaracterísticas principales: Capacidad: 11 kg; Carga: Frontal; Centrifugado: 1400 rpm.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Inox",
+        "hex": "#B8BCC4",
+        "sku": "TD-4060-INO",
+        "stock": 11
+      },
+      {
+        "name": "Blanco",
+        "hex": "#FFFFFF",
+        "sku": "TD-4060-BLA",
+        "stock": 10
+      }
+    ],
+    "specs": {
+      "Capacidad": "11 kg",
+      "Carga": "Frontal",
+      "Centrifugado": "1400 rpm"
+    },
+    "highlights": ["Capacidad: 11 kg", "Carga: Frontal", "Centrifugado: 1400 rpm"],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 4.6,
+    "reviewCount": 235,
+    "warranty": "12 meses",
+    "createdAt": "2026-03-31",
+    "status": "activo"
+  },
+  {
+    "id": "p041",
+    "sku": "TD-4061",
+    "slug": "aire-acondicionado-12000-btu-inverter-frio-calor",
+    "name": "Aire Acondicionado 12000 BTU Inverter Frío/Calor",
+    "brand": "Midea",
+    "categoryId": "electrodomesticos",
+    "subcategoryId": "aires-acondicionados",
+    "price": 3190000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 9,
+    "shortDescription": "Midea · 12000 BTU · Inverter · Frío/Calor",
+    "description": "Aire Acondicionado 12000 BTU Inverter Frío/Calor de Midea. Eficiencia y confort para tu hogar, con la garantía de siempre.\n\nCaracterísticas principales: Capacidad: 12000 BTU; Tecnología: Inverter; Modo: Frío/Calor.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Capacidad": "12000 BTU",
+      "Tecnología": "Inverter",
+      "Modo": "Frío/Calor"
+    },
+    "highlights": ["Capacidad: 12000 BTU", "Tecnología: Inverter", "Modo: Frío/Calor"],
+    "tags": ["envio-gratis"],
+    "rating": 4.5,
+    "reviewCount": 339,
+    "warranty": "12 meses",
+    "createdAt": "2026-06-17",
+    "status": "activo"
+  },
+  {
+    "id": "p042",
+    "sku": "TD-4062",
+    "slug": "aire-acondicionado-18000-btu-inverter-frio-calor",
+    "name": "Aire Acondicionado 18000 BTU Inverter Frío/Calor",
+    "brand": "LG",
+    "categoryId": "electrodomesticos",
+    "subcategoryId": "aires-acondicionados",
+    "price": 4490000,
+    "oldPrice": 4890000,
+    "installments": {
+      "count": 18,
+      "interestFree": true
+    },
+    "stock": 30,
+    "shortDescription": "LG · 18000 BTU · Inverter · Frío/Calor",
+    "description": "Aire Acondicionado 18000 BTU Inverter Frío/Calor de LG. Eficiencia y confort para tu hogar, con la garantía de siempre.\n\nCaracterísticas principales: Capacidad: 18000 BTU; Tecnología: Inverter; Modo: Frío/Calor.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Capacidad": "18000 BTU",
+      "Tecnología": "Inverter",
+      "Modo": "Frío/Calor"
+    },
+    "highlights": ["Capacidad: 18000 BTU", "Tecnología: Inverter", "Modo: Frío/Calor"],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 4.6,
+    "reviewCount": 339,
+    "warranty": "12 meses",
+    "createdAt": "2026-08-24",
+    "status": "activo"
+  },
+  {
+    "id": "p043",
+    "sku": "TD-4063",
+    "slug": "microondas-28l-con-grill",
+    "name": "Microondas 28L con Grill",
+    "brand": "Panasonic",
+    "categoryId": "electrodomesticos",
+    "subcategoryId": "microondas-y-freidoras",
+    "price": 790000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 6,
+    "shortDescription": "Panasonic · 28 L · 900 W · Grill",
+    "description": "Microondas 28L con Grill de Panasonic. Eficiencia y confort para tu hogar, con la garantía de siempre.\n\nCaracterísticas principales: Capacidad: 28 L; Potencia: 900 W; Función: Grill.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Inox",
+        "hex": "#B8BCC4",
+        "sku": "TD-4063-INO",
+        "stock": 3
+      },
+      {
+        "name": "Blanco",
+        "hex": "#FFFFFF",
+        "sku": "TD-4063-BLA",
+        "stock": 3
+      }
+    ],
+    "specs": {
+      "Capacidad": "28 L",
+      "Potencia": "900 W",
+      "Función": "Grill"
+    },
+    "highlights": ["Capacidad: 28 L", "Potencia: 900 W", "Función: Grill"],
+    "tags": ["envio-gratis"],
+    "rating": 4,
+    "reviewCount": 259,
+    "warranty": "12 meses",
+    "createdAt": "2026-03-19",
+    "status": "activo"
+  },
+  {
+    "id": "p044",
+    "sku": "TD-4064",
+    "slug": "freidora-de-aire-5l-digital",
+    "name": "Freidora de Aire 5L Digital",
+    "brand": "Philips",
+    "categoryId": "electrodomesticos",
+    "subcategoryId": "microondas-y-freidoras",
+    "price": 690000,
+    "oldPrice": 790000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 7,
+    "shortDescription": "Philips · 5 L · 1700 W · Digital",
+    "description": "Freidora de Aire 5L Digital de Philips. Eficiencia y confort para tu hogar, con la garantía de siempre.\n\nCaracterísticas principales: Capacidad: 5 L; Potencia: 1700 W; Control: Digital.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Inox",
+        "hex": "#B8BCC4",
+        "sku": "TD-4064-INO",
+        "stock": 7
+      }
+    ],
+    "specs": {
+      "Capacidad": "5 L",
+      "Potencia": "1700 W",
+      "Control": "Digital"
+    },
+    "highlights": ["Capacidad: 5 L", "Potencia: 1700 W", "Control: Digital"],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 4.8,
+    "reviewCount": 48,
+    "warranty": "12 meses",
+    "createdAt": "2026-04-04",
+    "status": "activo"
+  },
+  {
+    "id": "p045",
+    "sku": "TD-4065",
+    "slug": "cocina-5-hornallas-con-horno-a-gas",
+    "name": "Cocina 5 Hornallas con Horno a Gas",
+    "brand": "Atma",
+    "categoryId": "electrodomesticos",
+    "subcategoryId": "cocinas",
+    "price": 2390000,
+    "installments": {
+      "count": 10,
+      "interestFree": true
+    },
+    "stock": 19,
+    "shortDescription": "Atma · 5 · Eléctrico · 76 cm",
+    "description": "Cocina 5 Hornallas con Horno a Gas de Atma. Eficiencia y confort para tu hogar, con la garantía de siempre.\n\nCaracterísticas principales: Hornallas: 5; Encendido: Eléctrico; Ancho: 76 cm.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Inox",
+        "hex": "#B8BCC4",
+        "sku": "TD-4065-INO",
+        "stock": 5
+      },
+      {
+        "name": "Blanco",
+        "hex": "#FFFFFF",
+        "sku": "TD-4065-BLA",
+        "stock": 14
+      }
+    ],
+    "specs": {
+      "Hornallas": "5",
+      "Encendido": "Eléctrico",
+      "Ancho": "76 cm"
+    },
+    "highlights": ["Hornallas: 5", "Encendido: Eléctrico", "Ancho: 76 cm"],
+    "tags": ["envio-gratis"],
+    "rating": 4.2,
+    "reviewCount": 292,
+    "warranty": "12 meses",
+    "createdAt": "2026-04-05",
+    "status": "activo"
+  },
+  {
+    "id": "p046",
+    "sku": "TD-4066",
+    "slug": "licuadora-de-vaso-1200w",
+    "name": "Licuadora de Vaso 1200W",
+    "brand": "Oster",
+    "categoryId": "electrodomesticos",
+    "subcategoryId": "licuadoras-y-batidoras",
+    "price": 590000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 17,
+    "shortDescription": "Oster · 1200 W · 1.5 L · 5",
+    "description": "Licuadora de Vaso 1200W de Oster. Eficiencia y confort para tu hogar, con la garantía de siempre.\n\nCaracterísticas principales: Potencia: 1200 W; Capacidad: 1.5 L; Velocidades: 5.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Inox",
+        "hex": "#B8BCC4",
+        "sku": "TD-4066-INO",
+        "stock": 17
+      }
+    ],
+    "specs": {
+      "Potencia": "1200 W",
+      "Capacidad": "1.5 L",
+      "Velocidades": "5"
+    },
+    "highlights": ["Potencia: 1200 W", "Capacidad: 1.5 L", "Velocidades: 5"],
+    "tags": ["envio-gratis"],
+    "rating": 4,
+    "reviewCount": 102,
+    "warranty": "12 meses",
+    "createdAt": "2026-05-27",
+    "status": "activo"
+  },
+  {
+    "id": "p047",
+    "sku": "TD-4067",
+    "slug": "aspiradora-robot-con-mapeo",
+    "name": "Aspiradora Robot con Mapeo",
+    "brand": "Xiaomi",
+    "categoryId": "electrodomesticos",
+    "subcategoryId": "aspiradoras",
+    "price": 1890000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 6,
+    "shortDescription": "Xiaomi · 4000 Pa · 120 min · App móvil",
+    "description": "Aspiradora Robot con Mapeo de Xiaomi. Eficiencia y confort para tu hogar, con la garantía de siempre.\n\nCaracterísticas principales: Succión: 4000 Pa; Autonomía: 120 min; Control: App móvil.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Blanco",
+        "hex": "#F9FAFB",
+        "sku": "TD-4067-BLA",
+        "stock": 6
+      }
+    ],
+    "specs": {
+      "Succión": "4000 Pa",
+      "Autonomía": "120 min",
+      "Control": "App móvil"
+    },
+    "highlights": ["Succión: 4000 Pa", "Autonomía: 120 min", "Control: App móvil"],
+    "tags": ["envio-gratis"],
+    "rating": 4.7,
+    "reviewCount": 213,
+    "warranty": "12 meses",
+    "createdAt": "2026-03-29",
+    "status": "activo"
+  },
+  {
+    "id": "p048",
+    "sku": "TD-4068",
+    "slug": "ventilador-de-pie-18-silencioso",
+    "name": "Ventilador de Pie 18\" Silencioso",
+    "brand": "Liliana",
+    "categoryId": "electrodomesticos",
+    "subcategoryId": "ventiladores",
+    "price": 390000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 13,
+    "shortDescription": "Liliana · 18\" · 3 · Regulable",
+    "description": "Ventilador de Pie 18\" Silencioso de Liliana. Eficiencia y confort para tu hogar, con la garantía de siempre.\n\nCaracterísticas principales: Tamaño: 18\"; Velocidades: 3; Altura: Regulable.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Blanco",
+        "hex": "#F3F4F6",
+        "sku": "TD-4068-BLA",
+        "stock": 13
+      }
+    ],
+    "specs": {
+      "Tamaño": "18\"",
+      "Velocidades": "3",
+      "Altura": "Regulable"
+    },
+    "highlights": ["Tamaño: 18\"", "Velocidades: 3", "Altura: Regulable"],
+    "tags": [],
+    "rating": 4.1,
+    "reviewCount": 220,
+    "warranty": "12 meses",
+    "createdAt": "2026-08-29",
+    "status": "activo"
+  },
+  {
+    "id": "p049",
+    "sku": "TD-4069",
+    "slug": "mouse-inalambrico-ergonomico",
+    "name": "Mouse Inalámbrico Ergonómico",
+    "brand": "Logitech",
+    "categoryId": "informatica",
+    "subcategoryId": "teclados-y-mouses",
+    "price": 189000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 32,
+    "shortDescription": "Logitech · Inalámbrico 2.4 GHz · 4000 DPI · 18 meses",
+    "description": "Mouse Inalámbrico Ergonómico de Logitech. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Conectividad: Inalámbrico 2.4 GHz; Sensor: 4000 DPI; Autonomía: 18 meses.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Gris",
+        "hex": "#6B7280",
+        "sku": "TD-4069-GRI",
+        "stock": 24
+      },
+      {
+        "name": "Blanco",
+        "hex": "#F3F4F6",
+        "sku": "TD-4069-BLA",
+        "stock": 8
+      }
+    ],
+    "specs": {
+      "Conectividad": "Inalámbrico 2.4 GHz",
+      "Sensor": "4000 DPI",
+      "Autonomía": "18 meses"
+    },
+    "highlights": ["Conectividad: Inalámbrico 2.4 GHz", "Sensor: 4000 DPI", "Autonomía: 18 meses"],
+    "tags": [],
+    "rating": 4.6,
+    "reviewCount": 116,
+    "warranty": "12 meses",
+    "createdAt": "2026-08-09",
+    "status": "activo"
+  },
+  {
+    "id": "p050",
+    "sku": "TD-4070",
+    "slug": "mochila-porta-notebook-15-6",
+    "name": "Mochila Porta Notebook 15.6\"",
+    "brand": "Targus",
+    "categoryId": "informatica",
+    "subcategoryId": "mochilas-y-fundas",
+    "price": 249000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 72,
+    "shortDescription": "Targus · Notebooks hasta 15.6\" · Poliéster resistente al agua · 3",
+    "description": "Mochila Porta Notebook 15.6\" de Targus. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Compatible con: Notebooks hasta 15.6\"; Material: Poliéster resistente al agua; Compartimentos: 3.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Gris",
+        "hex": "#6B7280",
+        "sku": "TD-4070-GRI",
+        "stock": 13
+      },
+      {
+        "name": "Azul Marino",
+        "hex": "#1E3A5F",
+        "sku": "TD-4070-AZU",
+        "stock": 10
+      },
+      {
+        "name": "Verde Oliva",
+        "hex": "#556B2F",
+        "sku": "TD-4070-VER",
+        "stock": 25
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4070-NEG",
+        "stock": 24,
+        "priceDelta": 100000
+      }
+    ],
+    "specs": {
+      "Compatible con": "Notebooks hasta 15.6\"",
+      "Material": "Poliéster resistente al agua",
+      "Compartimentos": "3"
+    },
+    "highlights": [
+      "Compatible con: Notebooks hasta 15.6\"",
+      "Material: Poliéster resistente al agua",
+      "Compartimentos: 3"
+    ],
+    "tags": [],
+    "rating": 4.6,
+    "reviewCount": 263,
+    "warranty": "12 meses",
+    "createdAt": "2026-02-22",
+    "status": "activo"
+  },
+  {
+    "id": "p051",
+    "sku": "TD-4071",
+    "slug": "monitor-24-full-hd-ips-75hz",
+    "name": "Monitor 24\" Full HD IPS 75Hz",
+    "brand": "LG",
+    "categoryId": "informatica",
+    "subcategoryId": "monitores",
+    "price": 1190000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 17,
+    "shortDescription": "LG · 24\" · IPS · 75 Hz",
+    "description": "Monitor 24\" Full HD IPS 75Hz de LG. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Tamaño: 24\"; Panel: IPS; Frecuencia: 75 Hz; Resolución: Full HD.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Tamaño": "24\"",
+      "Panel": "IPS",
+      "Frecuencia": "75 Hz",
+      "Resolución": "Full HD"
+    },
+    "highlights": ["Tamaño: 24\"", "Panel: IPS", "Frecuencia: 75 Hz", "Resolución: Full HD"],
+    "tags": ["envio-gratis"],
+    "rating": 3.9,
+    "reviewCount": 20,
+    "warranty": "12 meses",
+    "createdAt": "2026-04-26",
+    "status": "activo"
+  },
+  {
+    "id": "p052",
+    "sku": "TD-4072",
+    "slug": "monitor-gamer-curvo-27-165hz",
+    "name": "Monitor Gamer Curvo 27\" 165Hz",
+    "brand": "Samsung",
+    "categoryId": "informatica",
+    "subcategoryId": "monitores",
+    "price": 2390000,
+    "oldPrice": 2690000,
+    "installments": {
+      "count": 10,
+      "interestFree": true
+    },
+    "stock": 4,
+    "shortDescription": "Samsung · 27\" · VA curvo · 165 Hz",
+    "description": "Monitor Gamer Curvo 27\" 165Hz de Samsung. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Tamaño: 27\"; Panel: VA curvo; Frecuencia: 165 Hz; Resolución: Full HD.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Tamaño": "27\"",
+      "Panel": "VA curvo",
+      "Frecuencia": "165 Hz",
+      "Resolución": "Full HD"
+    },
+    "highlights": ["Tamaño: 27\"", "Panel: VA curvo", "Frecuencia: 165 Hz", "Resolución: Full HD"],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 4.7,
+    "reviewCount": 212,
+    "warranty": "12 meses",
+    "createdAt": "2026-03-02",
+    "status": "activo"
+  },
+  {
+    "id": "p053",
+    "sku": "TD-4073",
+    "slug": "teclado-mecanico-rgb-switch-rojo",
+    "name": "Teclado Mecánico RGB Switch Rojo",
+    "brand": "Redragon",
+    "categoryId": "informatica",
+    "subcategoryId": "teclados-y-mouses",
+    "price": 459000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 40,
+    "shortDescription": "Redragon · Rojo lineal · RGB · TKL",
+    "description": "Teclado Mecánico RGB Switch Rojo de Redragon. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Switch: Rojo lineal; Iluminación: RGB; Formato: TKL.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Rojo Fuego",
+        "hex": "#B91C1C",
+        "sku": "TD-4073-ROJ",
+        "stock": 25
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4073-NEG",
+        "stock": 15
+      }
+    ],
+    "specs": {
+      "Switch": "Rojo lineal",
+      "Iluminación": "RGB",
+      "Formato": "TKL"
+    },
+    "highlights": ["Switch: Rojo lineal", "Iluminación: RGB", "Formato: TKL"],
+    "tags": [],
+    "rating": 4.2,
+    "reviewCount": 27,
+    "warranty": "12 meses",
+    "createdAt": "2026-03-24",
+    "status": "activo"
+  },
+  {
+    "id": "p054",
+    "sku": "TD-4074",
+    "slug": "disco-ssd-1tb-nvme-m-2",
+    "name": "Disco SSD 1TB NVMe M.2",
+    "brand": "Kingston",
+    "categoryId": "informatica",
+    "subcategoryId": "discos-y-ssd",
+    "price": 590000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 3,
+    "shortDescription": "Kingston · 1 TB · NVMe PCIe 4.0 · 3500 MB/s",
+    "description": "Disco SSD 1TB NVMe M.2 de Kingston. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Capacidad: 1 TB; Interfaz: NVMe PCIe 4.0; Lectura: 3500 MB/s.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Capacidad": "1 TB",
+      "Interfaz": "NVMe PCIe 4.0",
+      "Lectura": "3500 MB/s"
+    },
+    "highlights": ["Capacidad: 1 TB", "Interfaz: NVMe PCIe 4.0", "Lectura: 3500 MB/s"],
+    "tags": ["envio-gratis"],
+    "rating": 4.4,
+    "reviewCount": 283,
+    "warranty": "12 meses",
+    "createdAt": "2026-05-29",
+    "status": "activo"
+  },
+  {
+    "id": "p055",
+    "sku": "TD-4075",
+    "slug": "memoria-ram-ddr4-16gb-3200mhz",
+    "name": "Memoria RAM DDR4 16GB 3200MHz",
+    "brand": "Corsair",
+    "categoryId": "informatica",
+    "subcategoryId": "memorias-ram",
+    "price": 390000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 16,
+    "shortDescription": "Corsair · 16 GB · DDR4 · 3200 MHz",
+    "description": "Memoria RAM DDR4 16GB 3200MHz de Corsair. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Capacidad: 16 GB; Tipo: DDR4; Velocidad: 3200 MHz.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Capacidad": "16 GB",
+      "Tipo": "DDR4",
+      "Velocidad": "3200 MHz"
+    },
+    "highlights": ["Capacidad: 16 GB", "Tipo: DDR4", "Velocidad: 3200 MHz"],
+    "tags": [],
+    "rating": 3.8,
+    "reviewCount": 384,
+    "warranty": "12 meses",
+    "createdAt": "2026-07-23",
+    "status": "activo"
+  },
+  {
+    "id": "p056",
+    "sku": "TD-4076",
+    "slug": "impresora-multifuncion-tanque-de-tinta",
+    "name": "Impresora Multifunción Tanque de Tinta",
+    "brand": "Epson",
+    "categoryId": "informatica",
+    "subcategoryId": "impresoras",
+    "price": 1390000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 30,
+    "shortDescription": "Epson · Imprime, copia y escanea · Wi-Fi · Tanque de tinta",
+    "description": "Impresora Multifunción Tanque de Tinta de Epson. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Funciones: Imprime, copia y escanea; Conectividad: Wi-Fi; Sistema: Tanque de tinta.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Funciones": "Imprime, copia y escanea",
+      "Conectividad": "Wi-Fi",
+      "Sistema": "Tanque de tinta"
+    },
+    "highlights": [
+      "Funciones: Imprime, copia y escanea",
+      "Conectividad: Wi-Fi",
+      "Sistema: Tanque de tinta"
+    ],
+    "tags": ["envio-gratis"],
+    "rating": 4.1,
+    "reviewCount": 175,
+    "warranty": "12 meses",
+    "createdAt": "2026-03-15",
+    "status": "activo"
+  },
+  {
+    "id": "p057",
+    "sku": "TD-4077",
+    "slug": "silla-gamer-ergonomica-reclinable",
+    "name": "Silla Gamer Ergonómica Reclinable",
+    "brand": "Cougar",
+    "categoryId": "informatica",
+    "subcategoryId": "sillas-gamer",
+    "price": 1490000,
+    "oldPrice": 1690000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 6,
+    "shortDescription": "Cougar · Cuero sintético · 180° · 120 kg",
+    "description": "Silla Gamer Ergonómica Reclinable de Cougar. Pensado para trabajar, estudiar y divertirte con un rendimiento confiable.\n\nCaracterísticas principales: Material: Cuero sintético; Reclinación: 180°; Peso máximo: 120 kg.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Rojo Fuego",
+        "hex": "#B91C1C",
+        "sku": "TD-4077-ROJ",
+        "stock": 6
+      }
+    ],
+    "specs": {
+      "Material": "Cuero sintético",
+      "Reclinación": "180°",
+      "Peso máximo": "120 kg"
+    },
+    "highlights": ["Material: Cuero sintético", "Reclinación: 180°", "Peso máximo: 120 kg"],
+    "tags": ["oferta", "envio-gratis"],
+    "rating": 4.9,
+    "reviewCount": 206,
+    "warranty": "12 meses",
+    "createdAt": "2026-04-21",
+    "status": "activo"
+  },
+  {
+    "id": "p058",
+    "sku": "TD-4078",
+    "slug": "camara-mirrorless-24mp-lente-18-55mm",
+    "name": "Cámara Mirrorless 24MP + Lente 18-55mm",
+    "brand": "Canon",
+    "categoryId": "fotografia-y-filmacion",
+    "subcategoryId": "camaras-mirrorless",
+    "price": 6450000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 17,
+    "shortDescription": "Canon · 24 MP APS-C · 4K · 18-55 mm",
+    "description": "Cámara Mirrorless 24MP + Lente 18-55mm de Canon. Capturá cada momento con calidad profesional.\n\nCaracterísticas principales: Sensor: 24 MP APS-C; Video: 4K; Lente: 18-55 mm; Conectividad: Wi-Fi, Bluetooth.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Gris",
+        "hex": "#6B7280",
+        "sku": "TD-4078-GRI",
+        "stock": 8
+      },
+      {
+        "name": "Blanco",
+        "hex": "#F3F4F6",
+        "sku": "TD-4078-BLA",
+        "stock": 9
+      }
+    ],
+    "specs": {
+      "Sensor": "24 MP APS-C",
+      "Video": "4K",
+      "Lente": "18-55 mm",
+      "Conectividad": "Wi-Fi, Bluetooth"
+    },
+    "highlights": [
+      "Sensor: 24 MP APS-C",
+      "Video: 4K",
+      "Lente: 18-55 mm",
+      "Conectividad: Wi-Fi, Bluetooth"
+    ],
+    "tags": ["destacado", "envio-gratis"],
+    "rating": 4.5,
+    "reviewCount": 14,
+    "warranty": "12 meses",
+    "createdAt": "2026-08-04",
+    "status": "activo"
+  },
+  {
+    "id": "p059",
+    "sku": "TD-4079",
+    "slug": "tripode-profesional-de-aluminio-160cm",
+    "name": "Trípode Profesional de Aluminio 160cm",
+    "brand": "Manfrotto",
+    "categoryId": "fotografia-y-filmacion",
+    "subcategoryId": "tripodes",
+    "price": 290000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 27,
+    "shortDescription": "Manfrotto · 160 cm · Aluminio · 4 kg",
+    "description": "Trípode Profesional de Aluminio 160cm de Manfrotto. Capturá cada momento con calidad profesional.\n\nCaracterísticas principales: Altura: 160 cm; Material: Aluminio; Carga máxima: 4 kg.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Altura": "160 cm",
+      "Material": "Aluminio",
+      "Carga máxima": "4 kg"
+    },
+    "highlights": ["Altura: 160 cm", "Material: Aluminio", "Carga máxima: 4 kg"],
+    "tags": [],
+    "rating": 4.1,
+    "reviewCount": 127,
+    "warranty": "12 meses",
+    "createdAt": "2026-08-06",
+    "status": "activo"
+  },
+  {
+    "id": "p060",
+    "sku": "TD-4080",
+    "slug": "set-de-perfumeria-femenina-edicion-limitada",
+    "name": "Set de Perfumería Femenina Edición Limitada",
+    "brand": "Carolina Herrera",
+    "categoryId": "perfumeria-y-belleza",
+    "subcategoryId": "perfumes-femeninos",
+    "price": 890000,
+    "oldPrice": 1050000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 14,
+    "shortDescription": "Carolina Herrera · Perfume 80 ml + body lotion · Floral · Estuche regalo",
+    "description": "Set de Perfumería Femenina Edición Limitada de Carolina Herrera. Una fragancia que deja huella, ideal para regalar.\n\nCaracterísticas principales: Contenido: Perfume 80 ml + body lotion; Familia: Floral; Presentación: Estuche regalo.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Contenido": "Perfume 80 ml + body lotion",
+      "Familia": "Floral",
+      "Presentación": "Estuche regalo"
+    },
+    "highlights": [
+      "Contenido: Perfume 80 ml + body lotion",
+      "Familia: Floral",
+      "Presentación: Estuche regalo"
+    ],
+    "tags": ["destacado", "oferta", "envio-gratis"],
+    "rating": 4.2,
+    "reviewCount": 320,
+    "warranty": "12 meses",
+    "createdAt": "2026-06-05",
+    "status": "activo"
+  },
+  {
+    "id": "p061",
+    "sku": "TD-4081",
+    "slug": "perfume-masculino-eau-de-toilette-100ml",
+    "name": "Perfume Masculino Eau de Toilette 100ml",
+    "brand": "Paco Rabanne",
+    "categoryId": "perfumeria-y-belleza",
+    "subcategoryId": "perfumes-masculinos",
+    "price": 450000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 9,
+    "shortDescription": "Paco Rabanne · 100 ml · Amaderado · Eau de Toilette",
+    "description": "Perfume Masculino Eau de Toilette 100ml de Paco Rabanne. Una fragancia que deja huella, ideal para regalar.\n\nCaracterísticas principales: Contenido: 100 ml; Familia: Amaderado; Concentración: Eau de Toilette.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Contenido": "100 ml",
+      "Familia": "Amaderado",
+      "Concentración": "Eau de Toilette"
+    },
+    "highlights": ["Contenido: 100 ml", "Familia: Amaderado", "Concentración: Eau de Toilette"],
+    "tags": [],
+    "rating": 3.9,
+    "reviewCount": 71,
+    "warranty": "12 meses",
+    "createdAt": "2026-08-20",
+    "status": "activo"
+  },
+  {
+    "id": "p062",
+    "sku": "TD-4082",
+    "slug": "cortadora-de-cesped-a-gasolina-4t",
+    "name": "Cortadora de Césped a Gasolina 4T",
+    "brand": "Husqvarna",
+    "categoryId": "hogar-y-jardin",
+    "subcategoryId": "cortadoras-de-cesped",
+    "price": 2190000,
+    "installments": {
+      "count": 10,
+      "interestFree": true
+    },
+    "stock": 14,
+    "shortDescription": "Husqvarna · 4 tiempos 140cc · 46 cm · Colectora incluida",
+    "description": "Cortadora de Césped a Gasolina 4T de Husqvarna. Todo lo que necesitás para disfrutar tu casa y tu jardín.\n\nCaracterísticas principales: Motor: 4 tiempos 140cc; Ancho de corte: 46 cm; Bolsa: Colectora incluida.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Motor": "4 tiempos 140cc",
+      "Ancho de corte": "46 cm",
+      "Bolsa": "Colectora incluida"
+    },
+    "highlights": ["Motor: 4 tiempos 140cc", "Ancho de corte: 46 cm", "Bolsa: Colectora incluida"],
+    "tags": ["destacado", "envio-gratis"],
+    "rating": 4.3,
+    "reviewCount": 143,
+    "warranty": "12 meses",
+    "createdAt": "2026-08-15",
+    "status": "activo"
+  },
+  {
+    "id": "p063",
+    "sku": "TD-4083",
+    "slug": "juego-de-sabanas-queen-4-piezas",
+    "name": "Juego de Sábanas Queen 4 Piezas",
+    "brand": "Hogar Plus",
+    "categoryId": "hogar-y-jardin",
+    "subcategoryId": "ropa-de-cama",
+    "price": 290000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 4,
+    "shortDescription": "Hogar Plus · Queen · Algodón 200 hilos · 4",
+    "description": "Juego de Sábanas Queen 4 Piezas de Hogar Plus. Todo lo que necesitás para disfrutar tu casa y tu jardín.\n\nCaracterísticas principales: Medida: Queen; Material: Algodón 200 hilos; Piezas: 4.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Marrón",
+        "hex": "#6B4F3A",
+        "sku": "TD-4083-MAR",
+        "stock": 4
+      }
+    ],
+    "specs": {
+      "Medida": "Queen",
+      "Material": "Algodón 200 hilos",
+      "Piezas": "4"
+    },
+    "highlights": ["Medida: Queen", "Material: Algodón 200 hilos", "Piezas: 4"],
+    "tags": [],
+    "rating": 4.5,
+    "reviewCount": 156,
+    "warranty": "12 meses",
+    "createdAt": "2026-02-03",
+    "status": "activo"
+  },
+  {
+    "id": "p064",
+    "sku": "TD-4084",
+    "slug": "taladro-percutor-inalambrico-20v-maletin",
+    "name": "Taladro Percutor Inalámbrico 20V + Maletín",
+    "brand": "Bosch",
+    "categoryId": "ferreteria-y-construccion",
+    "subcategoryId": "taladros-y-atornilladores",
+    "price": 780000,
+    "oldPrice": 920000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 30,
+    "shortDescription": "Bosch · 20 V · 13 mm · 2 baterías, cargador y maletín",
+    "description": "Taladro Percutor Inalámbrico 20V + Maletín de Bosch. Herramientas resistentes para cada trabajo.\n\nCaracterísticas principales: Voltaje: 20 V; Mandril: 13 mm; Incluye: 2 baterías, cargador y maletín.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Voltaje": "20 V",
+      "Mandril": "13 mm",
+      "Incluye": "2 baterías, cargador y maletín"
+    },
+    "highlights": ["Voltaje: 20 V", "Mandril: 13 mm", "Incluye: 2 baterías, cargador y maletín"],
+    "tags": ["destacado", "oferta", "envio-gratis"],
+    "rating": 4.8,
+    "reviewCount": 52,
+    "warranty": "12 meses",
+    "createdAt": "2026-07-05",
+    "status": "activo"
+  },
+  {
+    "id": "p065",
+    "sku": "TD-4085",
+    "slug": "juego-de-herramientas-manuales-120-piezas",
+    "name": "Juego de Herramientas Manuales 120 Piezas",
+    "brand": "Stanley",
+    "categoryId": "ferreteria-y-construccion",
+    "subcategoryId": "herramientas-manuales",
+    "price": 540000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 17,
+    "shortDescription": "Stanley · 120 · Acero cromo vanadio · Maletín",
+    "description": "Juego de Herramientas Manuales 120 Piezas de Stanley. Herramientas resistentes para cada trabajo.\n\nCaracterísticas principales: Piezas: 120; Material: Acero cromo vanadio; Incluye: Maletín.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Piezas": "120",
+      "Material": "Acero cromo vanadio",
+      "Incluye": "Maletín"
+    },
+    "highlights": ["Piezas: 120", "Material: Acero cromo vanadio", "Incluye: Maletín"],
+    "tags": ["envio-gratis"],
+    "rating": 4,
+    "reviewCount": 255,
+    "warranty": "12 meses",
+    "createdAt": "2026-05-30",
+    "status": "activo"
+  },
+  {
+    "id": "p066",
+    "sku": "TD-4086",
+    "slug": "casco-integral-para-moto-con-visor",
+    "name": "Casco Integral para Moto con Visor",
+    "brand": "LS2",
+    "categoryId": "automotriz-y-motos",
+    "subcategoryId": "cascos-y-protecciones",
+    "price": 590000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 43,
+    "shortDescription": "LS2 · Integral · ECE 22.06 · Anti-rayaduras",
+    "description": "Casco Integral para Moto con Visor de LS2. Seguridad y practicidad en cada viaje.\n\nCaracterísticas principales: Tipo: Integral; Certificación: ECE 22.06; Visor: Anti-rayaduras.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Azul",
+        "hex": "#2563EB",
+        "sku": "TD-4086-AZU",
+        "stock": 24
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4086-NEG",
+        "stock": 19
+      },
+      {
+        "name": "Blanco",
+        "hex": "#F9FAFB",
+        "sku": "TD-4086-BLA",
+        "stock": 0
+      }
+    ],
+    "specs": {
+      "Tipo": "Integral",
+      "Certificación": "ECE 22.06",
+      "Visor": "Anti-rayaduras"
+    },
+    "highlights": ["Tipo: Integral", "Certificación: ECE 22.06", "Visor: Anti-rayaduras"],
+    "tags": ["envio-gratis"],
+    "rating": 3.9,
+    "reviewCount": 274,
+    "warranty": "12 meses",
+    "createdAt": "2026-04-24",
+    "status": "activo"
+  },
+  {
+    "id": "p067",
+    "sku": "TD-4087",
+    "slug": "compresor-de-aire-portatil-12v",
+    "name": "Compresor de Aire Portátil 12V",
+    "brand": "Michelin",
+    "categoryId": "automotriz-y-motos",
+    "subcategoryId": "accesorios-para-autos",
+    "price": 320000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 30,
+    "shortDescription": "Michelin · 12 V · 120 PSI · Digital",
+    "description": "Compresor de Aire Portátil 12V de Michelin. Seguridad y practicidad en cada viaje.\n\nCaracterísticas principales: Alimentación: 12 V; Presión máxima: 120 PSI; Pantalla: Digital.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [],
+    "specs": {
+      "Alimentación": "12 V",
+      "Presión máxima": "120 PSI",
+      "Pantalla": "Digital"
+    },
+    "highlights": ["Alimentación: 12 V", "Presión máxima: 120 PSI", "Pantalla: Digital"],
+    "tags": [],
+    "rating": 4.7,
+    "reviewCount": 124,
+    "warranty": "12 meses",
+    "createdAt": "2026-07-06",
+    "status": "activo"
+  },
+  {
+    "id": "p068",
+    "sku": "TD-4088",
+    "slug": "zapatillas-running-livianas",
+    "name": "Zapatillas Running Livianas",
+    "brand": "Adidas",
+    "categoryId": "moda",
+    "subcategoryId": "zapatillas",
+    "price": 490000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 31,
+    "shortDescription": "Adidas · Running · Amortiguada · 260 g",
+    "description": "Zapatillas Running Livianas de Adidas. Comodidad y estilo para todos los días.\n\nCaracterísticas principales: Uso: Running; Suela: Amortiguada; Peso: 260 g.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Blanco",
+        "hex": "#F9FAFB",
+        "sku": "TD-4088-BLA",
+        "stock": 25
+      },
+      {
+        "name": "Rojo",
+        "hex": "#DC2626",
+        "sku": "TD-4088-ROJ",
+        "stock": 6
+      },
+      {
+        "name": "Azul",
+        "hex": "#2563EB",
+        "sku": "TD-4088-AZU",
+        "stock": 0
+      }
+    ],
+    "specs": {
+      "Uso": "Running",
+      "Suela": "Amortiguada",
+      "Peso": "260 g"
+    },
+    "highlights": ["Uso: Running", "Suela: Amortiguada", "Peso: 260 g"],
+    "tags": [],
+    "rating": 4.4,
+    "reviewCount": 355,
+    "warranty": "12 meses",
+    "createdAt": "2026-04-26",
+    "status": "activo"
+  },
+  {
+    "id": "p069",
+    "sku": "TD-4089",
+    "slug": "campera-impermeable-cortaviento",
+    "name": "Campera Impermeable Cortaviento",
+    "brand": "Columbia",
+    "categoryId": "moda",
+    "subcategoryId": "camperas",
+    "price": 390000,
+    "oldPrice": 450000,
+    "installments": {
+      "count": 3,
+      "interestFree": true
+    },
+    "stock": 28,
+    "shortDescription": "Columbia · Poliéster impermeable · Ajustable · Outdoor",
+    "description": "Campera Impermeable Cortaviento de Columbia. Comodidad y estilo para todos los días.\n\nCaracterísticas principales: Material: Poliéster impermeable; Capucha: Ajustable; Uso: Outdoor.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Azul",
+        "hex": "#2563EB",
+        "sku": "TD-4089-AZU",
+        "stock": 19
+      },
+      {
+        "name": "Negro",
+        "hex": "#111827",
+        "sku": "TD-4089-NEG",
+        "stock": 9
+      },
+      {
+        "name": "Blanco",
+        "hex": "#F9FAFB",
+        "sku": "TD-4089-BLA",
+        "stock": 0,
+        "priceDelta": 100000
+      }
+    ],
+    "specs": {
+      "Material": "Poliéster impermeable",
+      "Capucha": "Ajustable",
+      "Uso": "Outdoor"
+    },
+    "highlights": ["Material: Poliéster impermeable", "Capucha: Ajustable", "Uso: Outdoor"],
+    "tags": ["oferta"],
+    "rating": 4,
+    "reviewCount": 66,
+    "warranty": "12 meses",
+    "createdAt": "2026-03-10",
+    "status": "activo"
+  },
+  {
+    "id": "p070",
+    "sku": "TD-4090",
+    "slug": "sillon-reclinable-de-living-tapizado",
+    "name": "Sillón Reclinable de Living Tapizado",
+    "brand": "Confort",
+    "categoryId": "muebles",
+    "subcategoryId": "sillones",
+    "price": 2890000,
+    "installments": {
+      "count": 12,
+      "interestFree": true
+    },
+    "stock": 54,
+    "shortDescription": "Confort · Tela tapizada · Manual · 1 persona",
+    "description": "Sillón Reclinable de Living Tapizado de Confort. Diseño y confort para cada ambiente.\n\nCaracterísticas principales: Material: Tela tapizada; Reclinación: Manual; Capacidad: 1 persona.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Gris",
+        "hex": "#6B7280",
+        "sku": "TD-4090-GRI",
+        "stock": 21
+      },
+      {
+        "name": "Beige",
+        "hex": "#D6C7A9",
+        "sku": "TD-4090-BEI",
+        "stock": 12
+      },
+      {
+        "name": "Marrón",
+        "hex": "#6B4F3A",
+        "sku": "TD-4090-MAR",
+        "stock": 21
+      }
+    ],
+    "specs": {
+      "Material": "Tela tapizada",
+      "Reclinación": "Manual",
+      "Capacidad": "1 persona"
+    },
+    "highlights": ["Material: Tela tapizada", "Reclinación: Manual", "Capacidad: 1 persona"],
+    "tags": ["destacado", "envio-gratis"],
+    "rating": 4.3,
+    "reviewCount": 332,
+    "warranty": "12 meses",
+    "createdAt": "2026-02-04",
+    "status": "activo"
+  },
+  {
+    "id": "p071",
+    "sku": "TD-4091",
+    "slug": "escritorio-de-oficina-120cm-con-cajonera",
+    "name": "Escritorio de Oficina 120cm con Cajonera",
+    "brand": "Confort",
+    "categoryId": "muebles",
+    "subcategoryId": "escritorios",
+    "price": 790000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 10,
+    "shortDescription": "Confort · 120 x 60 cm · MDF melamínico · 2",
+    "description": "Escritorio de Oficina 120cm con Cajonera de Confort. Diseño y confort para cada ambiente.\n\nCaracterísticas principales: Medidas: 120 x 60 cm; Material: MDF melamínico; Cajones: 2.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Beige",
+        "hex": "#D6C7A9",
+        "sku": "TD-4091-BEI",
+        "stock": 10
+      }
+    ],
+    "specs": {
+      "Medidas": "120 x 60 cm",
+      "Material": "MDF melamínico",
+      "Cajones": "2"
+    },
+    "highlights": ["Medidas: 120 x 60 cm", "Material: MDF melamínico", "Cajones: 2"],
+    "tags": ["envio-gratis"],
+    "rating": 4.1,
+    "reviewCount": 364,
+    "warranty": "12 meses",
+    "createdAt": "2026-07-23",
+    "status": "activo"
+  },
+  {
+    "id": "p072",
+    "sku": "TD-4092",
+    "slug": "rack-para-tv-hasta-65-con-puertas",
+    "name": "Rack para TV hasta 65\" con Puertas",
+    "brand": "Confort",
+    "categoryId": "muebles",
+    "subcategoryId": "racks-y-mesas-tv",
+    "price": 1190000,
+    "installments": {
+      "count": 6,
+      "interestFree": true
+    },
+    "stock": 7,
+    "shortDescription": "Confort · 160 x 40 cm · MDF · 60 kg",
+    "description": "Rack para TV hasta 65\" con Puertas de Confort. Diseño y confort para cada ambiente.\n\nCaracterísticas principales: Medidas: 160 x 40 cm; Material: MDF; Carga máxima: 60 kg.\n\nIncluye garantía oficial y envío a todo el país. Consultá disponibilidad de colores y financiación con tu banco o cooperativa.",
+    "images": [],
+    "colors": [
+      {
+        "name": "Beige",
+        "hex": "#D6C7A9",
+        "sku": "TD-4092-BEI",
+        "stock": 7
+      }
+    ],
+    "specs": {
+      "Medidas": "160 x 40 cm",
+      "Material": "MDF",
+      "Carga máxima": "60 kg"
+    },
+    "highlights": ["Medidas: 160 x 40 cm", "Material: MDF", "Carga máxima: 60 kg"],
+    "tags": ["envio-gratis"],
+    "rating": 4.5,
+    "reviewCount": 320,
+    "warranty": "12 meses",
+    "createdAt": "2026-07-18",
+    "status": "borrador"
+  }
+]

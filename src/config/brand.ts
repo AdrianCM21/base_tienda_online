@@ -19,7 +19,11 @@ export const brand = {
     /** Tasa mock: 1 USD = usdRate Gs. */
     usdRate: 7300,
   },
+  /** URL de la imagen del hero de la Home; vacío = ilustración por defecto. */
+  heroImage: '' as string,
   freeShippingThreshold: 500_000,
+  /** Costo de envío a domicilio por debajo del umbral de envío gratis. */
+  shippingFee: 25_000,
 } as const
 
 export type Brand = typeof brand

@@ -1,14 +1,27 @@
-import { brand } from '@/config/brand'
+import { CategorySidebar } from '@/components/catalog/CategorySidebar'
+import { BankBenefits } from '@/components/home/BankBenefits'
+import { CategoriesDrawer } from '@/components/home/CategoriesDrawer'
+import { FeaturedProducts } from '@/components/home/FeaturedProducts'
+import { Hero } from '@/components/home/Hero'
+import { Newsletter } from '@/components/home/Newsletter'
+import { ShippingStrip } from '@/components/home/ShippingStrip'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 
-/** Provisorio (Fase 4). */
 export default function Home() {
   useDocumentTitle()
   return (
-    <section className="mx-auto max-w-[1200px] px-6 py-12">
-      <p className="text-xs font-bold tracking-wide text-subtle uppercase">Fase 4</p>
-      <h1 className="mt-1 text-[28px] font-bold">{brand.name}</h1>
-      <p className="mt-2 text-sm text-muted">{brand.tagline}</p>
-    </section>
+    <>
+      <CategoriesDrawer />
+      <div className="flex items-start">
+        <CategorySidebar className="hidden min-[900px]:block" />
+        <div className="min-w-0 flex-1">
+          <Hero />
+          <BankBenefits />
+        </div>
+      </div>
+      <FeaturedProducts />
+      <ShippingStrip />
+      <Newsletter />
+    </>
   )
 }
