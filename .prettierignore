@@ -3,3 +3,5 @@ node_modules
 reference
 docs
 package-lock.json
+playwright-report
+test-results

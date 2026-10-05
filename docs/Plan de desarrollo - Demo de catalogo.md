@@ -313,7 +313,7 @@ Cada fase termina en algo ejecutable y verificable. Estimaciones orientativas pa
 - Revisión visual lado a lado contra `/reference`.
 - **Hecho cuando:** Lighthouse ≥ 90 en performance y accesibilidad en Home y Producto.
 
-### Fase 10 — QA y entrega (1 día)
+### Fase 10 — QA y entrega (1 día) ✅ completa (falta solo publicar en el hosting elegido)
 - Playwright: flujo Home → categoría → filtro → producto → color → carrito → checkout → confirmación; flujo admin → importar plantilla.
 - Build de producción, despliegue en Vercel/Netlify, README con cómo cambiar marca, tema, datos e imágenes.
 - **Hecho cuando:** URL pública funcionando y checklist de §13 completo.
@@ -326,17 +326,18 @@ Imprescindible: Fases 0–7 y la 7B (barra de demo, porque es lo que se usa al p
 
 ## 13. Checklist final de la demo
 
-- [ ] No aparece la palabra "Voltia" en ningún archivo (`grep -ri voltia`).
-- [ ] La marca se cambia en un solo archivo.
-- [ ] Filtros, orden, paginación y búsqueda funcionan combinados.
-- [ ] Variantes de color en tarjeta, detalle, filtro y carrito.
-- [ ] Gs ↔ USD en todas las pantallas, incluido el carrito.
-- [ ] Carrito persiste al recargar.
-- [ ] Checkout simulado con aviso claro de demostración.
-- [ ] Admin con aviso "Modo demo" y `noindex`.
-- [ ] Plantilla XLSX descargable, validación con errores precisos.
-- [ ] Barra de demo: salta a las 8 pantallas, ninguna queda vacía, se oculta con ✕ y con `?demo=0`, y "Reiniciar demo" limpia todo.
-- [ ] Sin errores en consola; build de producción limpio.
+- [x] No aparece la palabra "Voltia" en el código (un test lo vigila; `docs/` y `reference/` conservan el nombre original porque son material de origen).
+- [x] La marca se cambia en un solo archivo.
+- [x] Filtros, orden, paginación y búsqueda funcionan combinados.
+- [x] Variantes de color en tarjeta, detalle, filtro y carrito.
+- [x] Gs ↔ USD en todas las pantallas, incluido el carrito.
+- [x] Carrito persiste al recargar.
+- [x] Checkout simulado con aviso claro de demostración.
+- [x] Admin con aviso "Modo demo" y `noindex`.
+- [x] Plantilla XLSX descargable, validación con errores precisos.
+- [x] Barra de demo: salta a las 8 pantallas, ninguna queda vacía, se oculta con ✕ y con `?demo=0`, y "Reiniciar demo" limpia todo.
+- [x] Sin errores en consola; build de producción limpio.
+- [ ] URL pública funcionando: pendiente de elegir hosting y publicar (el `Dockerfile`, `vercel.json` y `netlify.toml` ya están listos y probados; con `E2E_BASE_URL` se corre toda la suite contra la URL pública).
 
 ## 14. Riesgos
 

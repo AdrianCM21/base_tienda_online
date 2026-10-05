@@ -1,4 +1,10 @@
-import { useId, type InputHTMLAttributes, type ReactNode, type SelectHTMLAttributes } from 'react'
+import {
+  useId,
+  type InputHTMLAttributes,
+  type ReactNode,
+  type SelectHTMLAttributes,
+  type TextareaHTMLAttributes,
+} from 'react'
 
 const control =
   'w-full rounded-control border bg-white px-3 py-[11px] text-sm text-text outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary placeholder:text-subtle'
@@ -71,6 +77,27 @@ export function SelectField({
       >
         {children}
       </select>
+    </Wrapper>
+  )
+}
+
+export function TextAreaField({
+  label,
+  error,
+  hint,
+  className,
+  ...area
+}: Common & TextareaHTMLAttributes<HTMLTextAreaElement>) {
+  const id = useId()
+  return (
+    <Wrapper id={id} label={label} error={error} hint={hint} className={className}>
+      <textarea
+        id={id}
+        aria-invalid={!!error}
+        aria-describedby={error ? `${id}-error` : undefined}
+        className={`${control} min-h-[110px] resize-y ${error ? 'border-red-600' : 'border-light'}`}
+        {...area}
+      />
     </Wrapper>
   )
 }

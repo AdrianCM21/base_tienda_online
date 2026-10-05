@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { AppRoutes } from '@/App'
 import { sampleCartItems } from '@/services/demoService'
@@ -70,6 +70,133 @@ describe('accesibilidad (axe) de las pantallas de la tienda', () => {
     expect(await a11yViolations()).toEqual([])
     await user.keyboard('{Escape}')
     await user.click(screen.getByRole('button', { name: /^Carrito, \d/ }))
+    expect(await a11yViolations()).toEqual([])
+  })
+})
+
+describe('accesibilidad (axe) de las pantallas nuevas del panel', () => {
+  it('editor de producto: todas las pestañas', { timeout: 40_000 }, async () => {
+    const user = userEvent.setup()
+    login()
+    renderWithProviders(<AppRoutes />, '/admin/productos/p001')
+    await screen.findByRole('heading', { level: 1, name: /IdeaPad/ }, { timeout: 15_000 })
+    for (const tab of [
+      'General',
+      'Precios y ofertas',
+      'Inventario',
+      'Variantes',
+      'Imágenes',
+      'Especificaciones',
+      'SEO',
+    ]) {
+      await user.click(screen.getByRole('tab', { name: tab }))
+      expect(await a11yViolations(), `pestaña ${tab}`).toEqual([])
+    }
+  })
+
+  it('detalle de un pedido y selección en la tabla de productos', { timeout: 40_000 }, async () => {
+    const user = userEvent.setup()
+    login()
+    const { unmount } = renderWithProviders(<AppRoutes />, '/admin/pedidos')
+    await screen.findByRole('heading', { level: 1, name: 'Pedidos' }, { timeout: 15_000 })
+    await user.click(screen.getAllByRole('button', { name: /^Ver pedido / })[0])
+    expect(await a11yViolations()).toEqual([])
+    unmount()
+
+    renderWithProviders(<AppRoutes />, '/admin/productos')
+    await screen.findByRole('heading', { level: 1, name: 'Productos' }, { timeout: 15_000 })
+    await user.click(screen.getByRole('checkbox', { name: 'Seleccionar todos los de esta página' }))
+    expect(await a11yViolations()).toEqual([])
+  })
+})
+
+describe('accesibilidad (axe) de la Etapa C', () => {
+  it.each([
+    ['Cupones', '/admin/marketing/cupones'],
+    ['Beneficios con bancos', '/admin/marketing/bancos'],
+    ['Banners y destacados', '/admin/marketing/banners'],
+    ['Apariencia', '/admin/apariencia'],
+  ])('%s no tiene violaciones', { timeout: 30_000 }, async (_n, path) => {
+    login()
+    renderWithProviders(<AppRoutes />, path)
+    await screen.findByRole('heading', { level: 1 }, { timeout: 15_000 })
+    expect(await a11yViolations()).toEqual([])
+  })
+
+  it(
+    'banners: pestaña de destacados; cupones: formulario; bancos: formulario',
+    { timeout: 40_000 },
+    async () => {
+      const user = userEvent.setup()
+      login()
+      let view = renderWithProviders(<AppRoutes />, '/admin/marketing/banners')
+      await screen.findByRole(
+        'heading',
+        { level: 1, name: 'Banners y destacados' },
+        { timeout: 15_000 },
+      )
+      await user.click(screen.getByRole('tab', { name: 'Productos destacados' }))
+      expect(await a11yViolations()).toEqual([])
+      view.unmount()
+
+      view = renderWithProviders(<AppRoutes />, '/admin/marketing/cupones')
+      await screen.findByRole('heading', { level: 1, name: 'Cupones' }, { timeout: 15_000 })
+      await user.click(screen.getByRole('button', { name: 'Nuevo cupón' }))
+      await user.click(screen.getByRole('button', { name: 'Crear cupón' })) // con errores visibles
+      expect(await a11yViolations()).toEqual([])
+      view.unmount()
+
+      renderWithProviders(<AppRoutes />, '/admin/marketing/bancos')
+      await screen.findByRole(
+        'heading',
+        { level: 1, name: 'Beneficios con bancos' },
+        { timeout: 15_000 },
+      )
+      await user.click(screen.getByRole('button', { name: 'Agregar beneficio' }))
+      expect(await a11yViolations()).toEqual([])
+    },
+  )
+
+  it('configuración: cada pestaña, y el buscador global abierto', { timeout: 60_000 }, async () => {
+    const user = userEvent.setup()
+    login()
+    const view = renderWithProviders(<AppRoutes />, '/admin/configuracion')
+    await screen.findByRole('heading', { level: 1, name: 'Configuración' }, { timeout: 15_000 })
+    for (const tab of ['General', 'Envíos', 'Pagos', 'Impuestos', 'Usuarios y roles']) {
+      await user.click(screen.getByRole('tab', { name: tab }))
+      expect(await a11yViolations(), `pestaña ${tab}`).toEqual([])
+    }
+    await user.keyboard('{Control>}k{/Control}')
+    await user.type(screen.getByRole('combobox', { name: 'Buscar en el panel' }), 'lenovo')
+    expect(await a11yViolations()).toEqual([])
+    view.unmount()
+  })
+})
+
+describe('accesibilidad (axe) de la Etapa B', () => {
+  it.each([
+    ['Clientes', '/admin/clientes'],
+    ['Inventario', '/admin/inventario'],
+  ])('%s no tiene violaciones', { timeout: 30_000 }, async (_n, path) => {
+    login()
+    renderWithProviders(<AppRoutes />, path)
+    await screen.findByRole('heading', { level: 1 }, { timeout: 15_000 })
+    expect(await a11yViolations()).toEqual([])
+  })
+
+  it('reportes: cada pestaña y detalle de cliente', { timeout: 40_000 }, async () => {
+    const user = userEvent.setup()
+    login()
+    const { unmount } = renderWithProviders(<AppRoutes />, '/admin/reportes')
+    await screen.findByRole('heading', { level: 1, name: 'Reportes' }, { timeout: 15_000 })
+    for (const tab of ['Ventas', 'Productos', 'Categorías y pagos']) {
+      await user.click(screen.getByRole('tab', { name: tab }))
+      expect(await a11yViolations(), `pestaña ${tab}`).toEqual([])
+    }
+    unmount()
+    renderWithProviders(<AppRoutes />, '/admin/clientes')
+    await screen.findByRole('heading', { level: 1, name: 'Clientes' }, { timeout: 15_000 })
+    await user.click(within(screen.getAllByRole('row')[1]).getAllByRole('button')[0])
     expect(await a11yViolations()).toEqual([])
   })
 })

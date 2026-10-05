@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { AppLayout } from '@/components/layout/AppLayout'
 import { CheckoutLayout } from '@/components/layout/CheckoutLayout'
 import { AppProviders } from '@/context/AppProviders'
@@ -21,6 +21,13 @@ const LoginPage = lazy(() => import('@/admin/LoginPage'))
 const DashboardPage = lazy(() => import('@/admin/DashboardPage'))
 const ProductsPage = lazy(() => import('@/admin/ProductsPage'))
 const ImportPage = lazy(() => import('@/admin/ImportPage'))
+const ProductEditorPage = lazy(() => import('@/admin/ProductEditorPage'))
+const CustomersPage = lazy(() => import('@/admin/CustomersPage'))
+const InventoryPage = lazy(() => import('@/admin/InventoryPage'))
+const ReportsPage = lazy(() => import('@/admin/ReportsPage'))
+const CouponsPage = lazy(() => import('@/admin/CouponsPage'))
+const BanksPage = lazy(() => import('@/admin/BanksPage'))
+const BannersPage = lazy(() => import('@/admin/BannersPage'))
 const OrdersPage = lazy(() => import('@/admin/OrdersPage'))
 const CategoriesPage = lazy(() => import('@/admin/CategoriesPage'))
 const AppearancePage = lazy(() => import('@/admin/AppearancePage'))
@@ -66,62 +73,22 @@ export function AppRoutes() {
           </Suspense>
         }
       >
-        <Route
-          index
-          element={
-            <Suspense fallback={<AdminFallback />}>
-              <DashboardPage />
-            </Suspense>
-          }
-        />
-        <Route
-          path="productos"
-          element={
-            <Suspense fallback={<AdminFallback />}>
-              <ProductsPage />
-            </Suspense>
-          }
-        />
-        <Route
-          path="importar"
-          element={
-            <Suspense fallback={<AdminFallback />}>
-              <ImportPage />
-            </Suspense>
-          }
-        />
-        <Route
-          path="pedidos"
-          element={
-            <Suspense fallback={<AdminFallback />}>
-              <OrdersPage />
-            </Suspense>
-          }
-        />
-        <Route
-          path="categorias"
-          element={
-            <Suspense fallback={<AdminFallback />}>
-              <CategoriesPage />
-            </Suspense>
-          }
-        />
-        <Route
-          path="apariencia"
-          element={
-            <Suspense fallback={<AdminFallback />}>
-              <AppearancePage />
-            </Suspense>
-          }
-        />
-        <Route
-          path="configuracion"
-          element={
-            <Suspense fallback={<AdminFallback />}>
-              <SettingsPage />
-            </Suspense>
-          }
-        />
+        <Route index element={<DashboardPage />} />
+        <Route path="productos" element={<ProductsPage />} />
+        <Route path="productos/nuevo" element={<ProductEditorPage />} />
+        <Route path="productos/importar" element={<ImportPage />} />
+        <Route path="productos/:id" element={<ProductEditorPage />} />
+        <Route path="importar" element={<Navigate to="/admin/productos/importar" replace />} />
+        <Route path="pedidos" element={<OrdersPage />} />
+        <Route path="clientes" element={<CustomersPage />} />
+        <Route path="inventario" element={<InventoryPage />} />
+        <Route path="reportes" element={<ReportsPage />} />
+        <Route path="marketing/cupones" element={<CouponsPage />} />
+        <Route path="marketing/bancos" element={<BanksPage />} />
+        <Route path="marketing/banners" element={<BannersPage />} />
+        <Route path="categorias" element={<CategoriesPage />} />
+        <Route path="apariencia" element={<AppearancePage />} />
+        <Route path="configuracion" element={<SettingsPage />} />
       </Route>
     </Routes>
   )

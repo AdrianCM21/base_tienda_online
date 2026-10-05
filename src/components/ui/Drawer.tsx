@@ -17,6 +17,12 @@ const FOCUSABLE =
 export function Drawer({ open, onClose, title, side = 'left', children }: Props) {
   const titleId = useId()
   const panelRef = useRef<HTMLDivElement>(null)
+  // Siempre se llama a la versión más reciente de onClose sin reiniciar el efecto: si el padre pasa
+  // una función nueva en cada render, reiniciarlo le robaría el foco al campo que se está escribiendo.
+  const onCloseRef = useRef(onClose)
+  useEffect(() => {
+    onCloseRef.current = onClose
+  })
 
   useEffect(() => {
     if (!open) return
@@ -26,7 +32,7 @@ export function Drawer({ open, onClose, title, side = 'left', children }: Props)
     panelRef.current?.focus()
 
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') return onClose()
+      if (e.key === 'Escape') return onCloseRef.current()
       if (e.key !== 'Tab' || !panelRef.current) return
       const items = [...panelRef.current.querySelectorAll<HTMLElement>(FOCUSABLE)]
       if (!items.length) return
@@ -49,7 +55,7 @@ export function Drawer({ open, onClose, title, side = 'left', children }: Props)
       document.body.style.overflow = overflow
       previous?.focus()
     }
-  }, [open, onClose])
+  }, [open])
 
   if (!open) return null
   return (

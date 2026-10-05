@@ -10,7 +10,8 @@ export type OrderLine = {
   lineTotal: number
 }
 
-export type OrderStatus = 'pendiente' | 'confirmado' | 'enviado' | 'entregado'
+export type OrderStatus =
+  'pendiente' | 'confirmado' | 'preparando' | 'enviado' | 'entregado' | 'cancelado'
 
 export type Order = {
   id: string

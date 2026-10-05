@@ -32,7 +32,7 @@ describe('acceso', () => {
     renderWithProviders(<AppRoutes />, '/admin/productos')
     expect(await h1('Panel administrador')).toBeInTheDocument()
     await user.click(screen.getByRole('button', { name: 'Entrar como demo' }))
-    expect(await h1('Dashboard')).toBeInTheDocument()
+    expect(await h1('Inicio')).toBeInTheDocument()
     expect(JSON.parse(window.localStorage.getItem('tienda-demo:admin-session')!)).toBe(true)
 
     await user.click(screen.getByRole('button', { name: 'Cerrar sesión' }))
@@ -41,7 +41,7 @@ describe('acceso', () => {
 
   it('el panel es noindex y muestra el aviso de modo demo', async () => {
     open('/admin')
-    await h1('Dashboard')
+    await h1('Inicio')
     expect(document.head.querySelector('meta[name=robots]')).toHaveAttribute(
       'content',
       expect.stringContaining('noindex'),
@@ -49,35 +49,30 @@ describe('acceso', () => {
     expect(screen.getByRole('note')).toHaveTextContent('Modo demo — los cambios no se guardan')
   })
 
-  it('la navegación lateral lleva a cada sección', { timeout: 30_000 }, async () => {
+  it('la navegación está agrupada y lleva a cada sección', { timeout: 30_000 }, async () => {
     const user = userEvent.setup()
     open('/admin')
-    await h1('Dashboard')
-    const nav = screen.getByRole('navigation', { name: 'Panel administrador', hidden: false })
+    await h1('Inicio')
+    const nav = screen.getByRole('navigation', { name: 'Panel administrador' })
+    for (const group of ['Ventas', 'Catálogo', 'Reportes', 'Tienda'])
+      expect(within(nav).getByText(group, { selector: 'p' })).toBeInTheDocument()
+    expect(within(nav).queryByRole('link', { name: /Importar/ })).not.toBeInTheDocument() // vive dentro de Productos
     for (const [label, heading] of [
       ['Productos', 'Productos'],
-      ['Importar XLSX', 'Importar productos desde XLSX'],
       ['Pedidos', 'Pedidos'],
       ['Categorías', 'Categorías'],
       ['Apariencia', 'Apariencia'],
       ['Configuración', 'Configuración'],
+      ['Inicio', 'Inicio'],
     ] as const) {
       await user.click(within(nav).getByRole('link', { name: label }))
       expect(await h1(heading)).toBeInTheDocument()
     }
   })
-})
 
-describe('dashboard', () => {
-  it('muestra KPIs, gráfico accesible, más vendidos y stock bajo', async () => {
-    open('/admin')
-    await h1('Dashboard')
-    const main = within(screen.getByRole('main'))
-    for (const k of ['Ventas', 'Pedidos', 'Ticket promedio', 'Productos activos'])
-      expect(main.getByText(k)).toBeInTheDocument()
-    expect(screen.getByRole('img', { name: 'Ventas de los últimos 14 días' })).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: 'Productos más vendidos' })).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: 'Stock bajo' })).toBeInTheDocument()
+  it('la ruta anterior del importador redirige a Productos › Importar', async () => {
+    open('/admin/importar')
+    expect(await h1('Importar productos desde XLSX')).toBeInTheDocument()
   })
 })
 
@@ -100,7 +95,7 @@ describe('productos', () => {
     await user.clear(screen.getByRole('searchbox'))
     await user.type(screen.getByRole('searchbox'), 'lenovo')
     await user.click(
-      within(screen.getAllByRole('row')[1]).getByRole('button', { name: /^Editar / }),
+      within(screen.getAllByRole('row')[1]).getByRole('button', { name: /^Eliminar / }),
     )
     expect(screen.getAllByText('Esta acción no está disponible en la demo').length).toBeGreaterThan(
       0,
@@ -123,11 +118,11 @@ describe('pedidos', () => {
     expect(within(dialog).getByText(/María Fernández/)).toBeInTheDocument()
   })
 
-  it('filtra por estado', async () => {
+  it('filtra por estado con los chips', async () => {
     const user = userEvent.setup()
     open('/admin/pedidos')
     await h1('Pedidos')
-    await user.selectOptions(screen.getByLabelText('Estado:'), 'entregado')
+    await user.click(screen.getByRole('button', { name: /^Entregado/ }))
     const rows = screen.getAllByRole('row').slice(1)
     expect(rows.length).toBeGreaterThan(0)
     for (const r of rows) expect(within(r).getByText('Entregado')).toBeInTheDocument()

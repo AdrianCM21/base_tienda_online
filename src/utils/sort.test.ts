@@ -1,4 +1,4 @@
-import { sortProducts } from './sort'
+import { compareValues, sortProducts } from './sort'
 import { makeProduct as mk } from './testProducts'
 
 const a = mk({
@@ -43,5 +43,16 @@ describe('sortProducts', () => {
     const list = [a, b]
     sortProducts(list, 'menor-precio')
     expect(ids(list)).toEqual(['a', 'b'])
+  })
+})
+
+describe('compareValues', () => {
+  it('ordena números como números y textos de forma natural', () => {
+    expect([10, 2, 33].sort(compareValues)).toEqual([2, 10, 33])
+    expect(['Item 10', 'item 2', 'Árbol'].sort(compareValues)).toEqual([
+      'Árbol',
+      'item 2',
+      'Item 10',
+    ])
   })
 })

@@ -1,6 +1,6 @@
 import { useCurrency } from '@/hooks/useCurrency'
 import { getCategory, getSubcategory } from '@/services/catalogService'
-import type { Product } from '@/types/product'
+import type { ImportPlan, ImportAction } from '@/utils/xlsx/plan'
 import type { ImportIssue, ParsedSheet } from '@/utils/xlsx/types'
 import { StatusBadge } from '../StatusBadge'
 
@@ -60,25 +60,43 @@ export function IssuesTable({ issues }: { issues: ImportIssue[] }) {
   )
 }
 
-export function ProductsPreview({ products }: { products: Product[] }) {
+const ACTION: Record<ImportAction, { label: string; tone: 'green' | 'blue' | 'gray' | 'amber' }> = {
+  nuevo: { label: 'Nuevo', tone: 'green' },
+  actualizado: { label: 'Actualiza', tone: 'blue' },
+  'sin-cambios': { label: 'Sin cambios', tone: 'gray' },
+  omitido: { label: 'Se omite', tone: 'amber' },
+}
+
+/** Productos válidos del archivo, con la acción que tendría cada uno según el modo de importación. */
+export function ProductsPreview({ plan }: { plan: ImportPlan }) {
   const { price } = useCurrency()
-  if (!products.length)
+  if (!plan.items.length)
     return <p className="m-0 text-[13.5px] text-muted">Ningún producto válido para mostrar.</p>
   return (
-    <Wrap total={products.length}>
-      <table className="w-full min-w-[720px] border-collapse text-[13px]">
+    <Wrap total={plan.items.length}>
+      <table className="w-full min-w-[820px] border-collapse text-[13px]">
         <thead>
           <tr className="border-b border-light">
-            {['SKU', 'Nombre', 'Marca', 'Categoría', 'Precio', 'Stock', 'Colores'].map((h) => (
-              <th key={h} scope="col" className={th}>
-                {h}
-              </th>
-            ))}
+            {['Acción', 'SKU', 'Nombre', 'Marca', 'Categoría', 'Precio', 'Stock', 'Colores'].map(
+              (h) => (
+                <th key={h} scope="col" className={th}>
+                  {h}
+                </th>
+              ),
+            )}
           </tr>
         </thead>
         <tbody>
-          {products.slice(0, MAX_ROWS).map((p) => (
+          {plan.items.slice(0, MAX_ROWS).map(({ product: p, action, changes }) => (
             <tr key={p.id} className="border-b border-light last:border-0">
+              <td className={td}>
+                <StatusBadge tone={ACTION[action].tone}>{ACTION[action].label}</StatusBadge>
+                {changes.length > 0 && (
+                  <span className="mt-1 block text-xs text-subtle">
+                    Cambia: {changes.join(', ')}
+                  </span>
+                )}
+              </td>
               <td className={`${td} font-mono text-xs`}>{p.sku}</td>
               <td className={`${td} font-semibold`}>{p.name}</td>
               <td className={td}>{p.brand}</td>

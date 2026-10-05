@@ -30,3 +30,9 @@ export function sortProducts(products: Product[], key: SortKey = DEFAULT_SORT): 
   }
   return [...products].sort(cmp[key])
 }
+
+/** Comparador genérico para columnas de tablas: números como números, textos sin distinguir tildes ni números dentro del texto. */
+export function compareValues(a: string | number, b: string | number): number {
+  if (typeof a === 'number' && typeof b === 'number') return a - b
+  return String(a).localeCompare(String(b), 'es', { numeric: true, sensitivity: 'base' })
+}

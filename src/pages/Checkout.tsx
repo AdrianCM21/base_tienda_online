@@ -130,6 +130,7 @@ export default function Checkout() {
 
   return (
     <>
+      <h1 className="sr-only">Finalizar compra</h1>
       <Stepper step={step} />
       <div className="mx-auto grid max-w-[1100px] gap-7 px-6 pt-9 pb-14 min-[900px]:grid-cols-[minmax(280px,1fr)_minmax(300px,380px)]">
         <div className="flex min-w-0 flex-col gap-5">

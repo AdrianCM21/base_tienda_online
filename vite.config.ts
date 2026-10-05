@@ -23,6 +23,10 @@ export default defineConfig({
     globals: true,
     setupFiles: ['./src/test/setup.ts'],
     css: false,
+    // Con muchas pruebas en paralelo, la primera carga de cada pantalla (lazy) puede tardar.
+    testTimeout: 15_000,
+    // Máquinas con poca RAM: cada worker levanta jsdom. Subir con `--maxWorkers=N` si sobra memoria.
+    maxWorkers: 2,
     exclude: ['e2e/**', 'node_modules/**'],
   },
 })

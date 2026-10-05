@@ -1,184 +1,255 @@
-import { Eye } from 'lucide-react'
+import { Download, Eye, Search } from 'lucide-react'
 import { useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
+import { Button } from '@/components/ui/Button'
+import { DataTable, type Column } from '@/components/ui/DataTable'
 import { Drawer } from '@/components/ui/Drawer'
-import { Pagination } from '@/components/ui/Pagination'
+import { EmptyState } from '@/components/ui/EmptyState'
 import { useAdminOrders } from '@/hooks/useAdminOrders'
 import { useCurrency } from '@/hooks/useCurrency'
-import { getBranch } from '@/services/storeService'
 import type { Order, OrderStatus } from '@/types/order'
+import { buildOrdersCsv } from '@/utils/adminExport'
+import { downloadBlob } from '@/utils/download'
 import { formatDateTime } from '@/utils/format'
-import { paginate } from '@/utils/paginate'
+import { normalizeText } from '@/utils/text'
+import { ORDER_STATUS, ORDER_STATUSES } from '@/utils/orderFlow'
 import { AdminPageHeader } from './AdminPageHeader'
-import { StatusBadge, type Tone } from './StatusBadge'
+import { OrderDetail } from './OrderDetail'
+import { StatusBadge } from './StatusBadge'
 
-const PAGE_SIZE = 10
-const STATUS: Record<OrderStatus, { label: string; tone: Tone }> = {
-  pendiente: { label: 'Pendiente', tone: 'amber' },
-  confirmado: { label: 'Confirmado', tone: 'blue' },
-  enviado: { label: 'Enviado', tone: 'blue' },
-  entregado: { label: 'Entregado', tone: 'green' },
-}
 const PAYMENT = {
   tarjeta: 'Tarjeta',
   transferencia: 'Transferencia',
   efectivo: 'Efectivo',
 } as const
+const PERIODS = [
+  { value: '0', label: 'Todo el período' },
+  { value: '7', label: 'Últimos 7 días' },
+  { value: '30', label: 'Últimos 30 días' },
+] as const
 
-function OrderDetail({ order }: { order: Order }) {
-  const { price } = useCurrency()
-  const s = order.shippingData
-  const branch = getBranch(s.branchId)
-  return (
-    <div className="p-5 text-[13.5px]">
-      <p className="m-0 mb-4 text-muted">
-        {formatDateTime(order.createdAt)} ·{' '}
-        <StatusBadge tone={STATUS[order.status].tone}>{STATUS[order.status].label}</StatusBadge>
-      </p>
-      <h3 className="mb-2 font-sans text-sm font-bold">Productos</h3>
-      <ul className="m-0 mb-4 list-none divide-y divide-light p-0">
-        {order.lines.map((l) => (
-          <li
-            key={`${l.productId}|${l.colorName ?? ''}`}
-            className="flex justify-between gap-3 py-2"
-          >
-            <span>
-              {l.name}
-              <span className="block text-xs text-subtle">
-                {l.quantity} × {price(l.unitPrice)}
-                {l.colorName && ` · ${l.colorName}`}
-              </span>
-            </span>
-            <span className="shrink-0 font-semibold">{price(l.lineTotal)}</span>
-          </li>
-        ))}
-      </ul>
-      <dl className="m-0 mb-4 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-muted">
-        <dt>Subtotal</dt>
-        <dd className="m-0 text-right">{price(order.subtotal)}</dd>
-        <dt>Envío</dt>
-        <dd className="m-0 text-right">
-          {order.shipping === 0 ? 'Gratis' : price(order.shipping)}
-        </dd>
-        <dt className="font-bold text-text">Total</dt>
-        <dd className="m-0 text-right text-base font-bold text-primary">{price(order.total)}</dd>
-      </dl>
-      <h3 className="mb-1 font-sans text-sm font-bold">Cliente y entrega</h3>
-      <p className="m-0 mb-4 leading-relaxed text-muted">
-        {s.fullName} · {s.phone}
-        <br />
-        {s.method === 'retiro' && branch ? `Retiro en ${branch.name}` : `${s.address}, ${s.city}`}
-      </p>
-      <h3 className="mb-1 font-sans text-sm font-bold">Pago</h3>
-      <p className="m-0 text-muted">
-        {PAYMENT[order.payment.method]}
-        {order.payment.cardLast4 && ` ····${order.payment.cardLast4}`}
-        {order.payment.installments > 1 &&
-          ` · ${order.payment.installments} cuotas de ${price(order.payment.installmentAmount)}`}
-      </p>
-    </div>
-  )
-}
+const NO_OVERRIDES: Record<string, OrderStatus> = {}
 
 export default function OrdersPage() {
   const { price } = useCurrency()
-  const { orders, realIds } = useAdminOrders()
-  const [status, setStatus] = useState<'todos' | OrderStatus>('todos')
-  const [page, setPage] = useState(1)
-  const [selected, setSelected] = useState<Order | null>(null)
+  const { orders, realIds, now } = useAdminOrders()
+  const [params, setParams] = useSearchParams()
+  const [q, setQ] = useState('')
+  // Un enlace (p. ej. desde "Por hacer") puede abrir la lista ya filtrada: ?estado=pendiente
+  const [status, setStatus] = useState<'todos' | OrderStatus>(() => {
+    const e = params.get('estado')
+    return ORDER_STATUSES.includes(e as OrderStatus) ? (e as OrderStatus) : 'todos'
+  })
+  const [payment, setPayment] = useState('')
+  const [period, setPeriod] = useState('0')
+  // Estados y notas editados en pantalla: no se guardan (se pierden al recargar).
+  const [overrides, setOverrides] = useState<Record<string, OrderStatus>>({})
+  const [notes, setNotes] = useState<Record<string, string>>({})
 
-  const filtered = useMemo(
-    () => orders.filter((o) => status === 'todos' || o.status === status),
-    [orders, status],
-  )
-  const view = paginate(filtered, page, PAGE_SIZE)
+  const statusOf = (o: Order): OrderStatus => overrides[o.id] ?? o.status
+  const selected = orders.find((o) => o.id === params.get('pedido')) ?? null
+  const open = (o: Order | null) => setParams(o ? { pedido: o.id } : {}, { replace: true })
+
+  // Los estados editados solo cambian la lista cuando se filtra por estado; si no, la tabla
+  // conserva su página y orden mientras se mueve un pedido por sus estados.
+  const filterOverrides = status === 'todos' ? NO_OVERRIDES : overrides
+  const filtered = useMemo(() => {
+    const nq = normalizeText(q)
+    const since = Number(period) ? now.getTime() - Number(period) * 86_400_000 : 0
+    return orders.filter(
+      (o) =>
+        (status === 'todos' || (filterOverrides[o.id] ?? o.status) === status) &&
+        (!payment || o.payment.method === payment) &&
+        new Date(o.createdAt).getTime() >= since &&
+        (!nq || normalizeText(`${o.id} ${o.shippingData.fullName}`).includes(nq)),
+    )
+  }, [orders, filterOverrides, q, status, payment, period, now])
+
+  const counts = useMemo(() => {
+    const c: Record<string, number> = { todos: orders.length }
+    for (const o of orders)
+      c[overrides[o.id] ?? o.status] = (c[overrides[o.id] ?? o.status] ?? 0) + 1
+    return c
+  }, [orders, overrides])
+
+  const exportCsv = () =>
+    downloadBlob(buildOrdersCsv(filtered, statusOf), 'pedidos.csv', 'text/csv;charset=utf-8')
+
+  const columns: Column<Order>[] = [
+    {
+      key: 'id',
+      header: 'Pedido',
+      sortValue: (o) => o.id,
+      cell: (o) => (
+        <span className="font-semibold whitespace-nowrap">
+          {o.id}
+          {realIds.has(o.id) && (
+            <span className="ml-2 rounded-[4px] bg-primary px-1.5 py-0.5 text-[10.5px] font-bold text-white">
+              TU PEDIDO
+            </span>
+          )}
+        </span>
+      ),
+    },
+    {
+      key: 'date',
+      header: 'Fecha',
+      sortValue: (o) => o.createdAt,
+      cell: (o) => (
+        <span className="whitespace-nowrap text-muted">{formatDateTime(o.createdAt)}</span>
+      ),
+    },
+    {
+      key: 'customer',
+      header: 'Cliente',
+      sortValue: (o) => o.shippingData.fullName,
+      cell: (o) => o.shippingData.fullName,
+    },
+    {
+      key: 'total',
+      header: 'Total',
+      sortValue: (o) => o.total,
+      cell: (o) => <span className="font-semibold whitespace-nowrap">{price(o.total)}</span>,
+    },
+    {
+      key: 'payment',
+      header: 'Pago',
+      sortValue: (o) => PAYMENT[o.payment.method],
+      cell: (o) => <span className="text-muted">{PAYMENT[o.payment.method]}</span>,
+    },
+    {
+      key: 'status',
+      header: 'Estado',
+      sortValue: (o) => ORDER_STATUS[statusOf(o)].label,
+      cell: (o) => (
+        <StatusBadge tone={ORDER_STATUS[statusOf(o)].tone}>
+          {ORDER_STATUS[statusOf(o)].label}
+        </StatusBadge>
+      ),
+    },
+    {
+      key: 'view',
+      header: 'Detalle',
+      align: 'right',
+      mobileLabel: false,
+      cell: (o) => (
+        <button
+          type="button"
+          onClick={() => open(o)}
+          aria-label={`Ver pedido ${o.id}`}
+          className="rounded-control p-1.5 text-muted hover:bg-light hover:text-dark"
+        >
+          <Eye size={16} aria-hidden="true" />
+        </button>
+      ),
+    },
+  ]
 
   return (
     <>
       <AdminPageHeader
         title="Pedidos"
-        description={`Los pedidos que hagas en el checkout de esta demo aparecen acá, junto a pedidos de ejemplo.`}
+        description="Los pedidos que hagas en el checkout de esta demo aparecen acá, junto a pedidos de ejemplo. Podés mover un pedido por sus estados, pero los cambios no se guardan."
+        actions={
+          <Button variant="outline" size="sm" onClick={exportCsv}>
+            <Download size={16} aria-hidden="true" />
+            Exportar CSV
+          </Button>
+        }
       />
 
-      <div className="mb-4 flex items-center gap-2 text-[13.5px]">
-        <label htmlFor="estado-pedido" className="text-muted">
-          Estado:
-        </label>
-        <select
-          id="estado-pedido"
-          value={status}
-          onChange={(e) => {
-            setStatus(e.target.value as typeof status)
-            setPage(1)
-          }}
-          className="rounded-control border border-light bg-white px-3 py-2 font-semibold"
-        >
-          <option value="todos">Todos</option>
-          {(Object.keys(STATUS) as OrderStatus[]).map((s) => (
-            <option key={s} value={s}>
-              {STATUS[s].label}
-            </option>
-          ))}
-        </select>
+      <div role="group" aria-label="Filtrar por estado" className="mb-4 flex flex-wrap gap-1.5">
+        {(['todos', ...ORDER_STATUSES] as const).map((s) => (
+          <button
+            key={s}
+            type="button"
+            aria-pressed={status === s}
+            onClick={() => setStatus(s)}
+            className={`rounded-pill border px-3 py-1.5 text-[12.5px] font-semibold ${status === s ? 'border-primary bg-primary text-white' : 'border-light bg-white text-dark hover:bg-light'}`}
+          >
+            {s === 'todos' ? 'Todos' : ORDER_STATUS[s].label}{' '}
+            <span className="opacity-70">({counts[s] ?? 0})</span>
+          </button>
+        ))}
       </div>
 
-      <div className="overflow-x-auto rounded-card border border-light bg-white">
-        <table className="w-full min-w-[720px] border-collapse text-[13px]">
-          <thead>
-            <tr className="border-b border-light text-left text-xs text-muted">
-              {['Pedido', 'Fecha', 'Cliente', 'Total', 'Pago', 'Estado'].map((h) => (
-                <th key={h} scope="col" className="px-4 py-3 font-semibold">
-                  {h}
-                </th>
-              ))}
-              <th scope="col" className="px-4 py-3 text-right font-semibold">
-                Detalle
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {view.items.map((o) => (
-              <tr key={o.id} className="border-b border-light last:border-0">
-                <td className="px-4 py-2.5 font-semibold whitespace-nowrap">
-                  {o.id}
-                  {realIds.has(o.id) && (
-                    <span className="ml-2 rounded-[4px] bg-primary px-1.5 py-0.5 text-[10.5px] font-bold text-white">
-                      TU PEDIDO
-                    </span>
-                  )}
-                </td>
-                <td className="px-4 py-2.5 whitespace-nowrap text-muted">
-                  {formatDateTime(o.createdAt)}
-                </td>
-                <td className="px-4 py-2.5">{o.shippingData.fullName}</td>
-                <td className="px-4 py-2.5 font-semibold whitespace-nowrap">{price(o.total)}</td>
-                <td className="px-4 py-2.5 text-muted">{PAYMENT[o.payment.method]}</td>
-                <td className="px-4 py-2.5">
-                  <StatusBadge tone={STATUS[o.status].tone}>{STATUS[o.status].label}</StatusBadge>
-                </td>
-                <td className="px-4 py-2.5 text-right">
-                  <button
-                    type="button"
-                    onClick={() => setSelected(o)}
-                    aria-label={`Ver pedido ${o.id}`}
-                    className="rounded-control p-1.5 text-muted hover:bg-light hover:text-dark"
-                  >
-                    <Eye size={16} aria-hidden="true" />
-                  </button>
-                </td>
-              </tr>
+      <div className="mb-4 flex flex-wrap items-center gap-3">
+        <label className="relative min-w-[220px] flex-1">
+          <span className="sr-only">Buscar pedidos</span>
+          <Search
+            size={16}
+            aria-hidden="true"
+            className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-subtle"
+          />
+          <input
+            type="search"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="Buscar por número de pedido o cliente"
+            className="w-full rounded-control border border-light bg-white py-2.5 pr-3 pl-9 text-[13.5px]"
+          />
+        </label>
+        <label className="flex items-center gap-2 text-[13px]">
+          <span className="text-muted">Pago:</span>
+          <select
+            value={payment}
+            onChange={(e) => setPayment(e.target.value)}
+            className="rounded-control border border-light bg-white px-3 py-2.5 font-semibold"
+          >
+            <option value="">Todos</option>
+            {Object.entries(PAYMENT).map(([v, l]) => (
+              <option key={v} value={v}>
+                {l}
+              </option>
             ))}
-          </tbody>
-        </table>
+          </select>
+        </label>
+        <label className="flex items-center gap-2 text-[13px]">
+          <span className="text-muted">Período:</span>
+          <select
+            value={period}
+            onChange={(e) => setPeriod(e.target.value)}
+            className="rounded-control border border-light bg-white px-3 py-2.5 font-semibold"
+          >
+            {PERIODS.map((p) => (
+              <option key={p.value} value={p.value}>
+                {p.label}
+              </option>
+            ))}
+          </select>
+        </label>
       </div>
-      <Pagination page={view.page} pageCount={view.pageCount} onPageChange={setPage} />
+
+      <DataTable
+        rows={filtered}
+        columns={columns}
+        getRowId={(o) => o.id}
+        caption="Pedidos"
+        noun="pedidos"
+        initialSort={{ key: 'date', dir: 'desc' }}
+        onRowClick={open}
+        empty={
+          <EmptyState icon={<Search size={26} aria-hidden="true" />} title="Ningún pedido coincide">
+            Probá con otra búsqueda o cambiá los filtros.
+          </EmptyState>
+        }
+      />
 
       <Drawer
         open={selected !== null}
-        onClose={() => setSelected(null)}
+        onClose={() => open(null)}
         side="right"
         title={selected ? `Pedido ${selected.id}` : 'Pedido'}
       >
-        {selected && <OrderDetail order={selected} />}
+        {selected && (
+          <OrderDetail
+            order={selected}
+            status={statusOf(selected)}
+            note={notes[selected.id] ?? ''}
+            onStatusChange={(s) => setOverrides((cur) => ({ ...cur, [selected.id]: s }))}
+            onNoteChange={(n) => setNotes((cur) => ({ ...cur, [selected.id]: n }))}
+          />
+        )}
       </Drawer>
     </>
   )
