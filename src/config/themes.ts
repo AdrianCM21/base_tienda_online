@@ -35,7 +35,7 @@ export const themes = [
       bg: '#F4F8FC',
       text: '#101B2D',
       muted: '#3C5578',
-      subtle: '#8A97AA',
+      subtle: '#687281',
       'on-dark': '#C9D9EF',
       'on-dark-muted': '#9FB4D6',
       'on-dark-link': '#9FC1EE',
@@ -54,12 +54,12 @@ export const themes = [
       bg: '#F3F9F6',
       text: '#0F2018',
       muted: '#3B5A4B',
-      subtle: '#7A8F84',
+      subtle: '#64756C',
       'on-dark': '#C6E6D5',
       'on-dark-muted': '#9CC7B0',
       'on-dark-link': '#9EE0BC',
       'footer-copy': '#8FBBA3',
-      'hero-text': '#D3EEDF',
+      'hero-text': '#E6F7EE',
     },
   },
   {
@@ -73,12 +73,12 @@ export const themes = [
       bg: '#FDF5F5',
       text: '#2A1012',
       muted: '#6B3F44',
-      subtle: '#A08A8C',
+      subtle: '#7C6B6D',
       'on-dark': '#F1CDD0',
       'on-dark-muted': '#D9A3A8',
       'on-dark-link': '#FFB3B9',
       'footer-copy': '#C98F95',
-      'hero-text': '#F8DADD',
+      'hero-text': '#FFEEF0',
     },
   },
   {
@@ -92,7 +92,7 @@ export const themes = [
       bg: '#F8F5FD',
       text: '#1B1230',
       muted: '#504070',
-      subtle: '#9A90AD',
+      subtle: '#756D83',
       'on-dark': '#DDD0F5',
       'on-dark-muted': '#B8A5E0',
       'on-dark-link': '#C9B2FF',
@@ -111,7 +111,7 @@ export const themes = [
       bg: '#F5F6F8',
       text: '#0F172A',
       muted: '#475569',
-      subtle: '#94A3B8',
+      subtle: '#66707E',
       'on-dark': '#D1D7E0',
       'on-dark-muted': '#A3ADBD',
       'on-dark-link': '#B8C7E0',
@@ -135,4 +135,7 @@ export function applyTheme(theme: Theme, root: HTMLElement = document.documentEl
     root.style.setProperty(`--color-${token}`, theme.colors[token])
   }
   root.dataset.theme = theme.id
+  if (root === document.documentElement) {
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme.colors.dark)
+  }
 }

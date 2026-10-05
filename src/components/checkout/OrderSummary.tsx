@@ -28,7 +28,7 @@ export function OrderSummary({
   return (
     <aside
       aria-label="Resumen del pedido"
-      className="self-start rounded-card border border-light bg-white p-[22px] min-[900px]:sticky min-[900px]:top-6"
+      className="self-start rounded-card border border-light bg-white p-[22px] min-[900px]:sticky min-[900px]:top-[calc(var(--demo-bar-h,0px)+24px)]"
     >
       <h2 className="mb-4 font-sans text-[15px] font-bold">Resumen del pedido</h2>
       <ul className="m-0 mb-[18px] flex list-none flex-col gap-3.5 p-0">

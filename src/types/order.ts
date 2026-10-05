@@ -10,6 +10,8 @@ export type OrderLine = {
   lineTotal: number
 }
 
+export type OrderStatus = 'pendiente' | 'confirmado' | 'enviado' | 'entregado'
+
 export type Order = {
   id: string
   /** ISO 8601 */
@@ -28,5 +30,5 @@ export type Order = {
     /** Sucursal donde se paga (solo método "efectivo"). */
     branchId?: string
   }
-  status: 'confirmado'
+  status: OrderStatus
 }

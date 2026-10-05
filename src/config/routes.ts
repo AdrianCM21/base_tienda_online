@@ -13,3 +13,14 @@ export const paths = {
   order: (id: string) => `/pedido/${id}`,
   admin: '/admin',
 } as const
+
+/** Rutas del panel administrador demo. */
+export const adminPaths = {
+  login: '/admin/login',
+  products: '/admin/productos',
+  import: '/admin/importar',
+  orders: '/admin/pedidos',
+  categories: '/admin/categorias',
+  appearance: '/admin/apariencia',
+  settings: '/admin/configuracion',
+} as const

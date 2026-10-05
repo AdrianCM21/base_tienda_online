@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { CartProvider } from './CartContext'
 import { CurrencyProvider } from './CurrencyContext'
+import { DemoBarProvider } from './DemoBarContext'
 import { ThemeProvider } from './ThemeContext'
 import { ToastProvider } from './ToastContext'
 
@@ -9,9 +10,11 @@ export function AppProviders({ children }: { children: ReactNode }) {
   return (
     <ThemeProvider>
       <CurrencyProvider>
-        <ToastProvider>
-          <CartProvider>{children}</CartProvider>
-        </ToastProvider>
+        <DemoBarProvider>
+          <ToastProvider>
+            <CartProvider>{children}</CartProvider>
+          </ToastProvider>
+        </DemoBarProvider>
       </CurrencyProvider>
     </ThemeProvider>
   )

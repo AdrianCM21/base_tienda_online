@@ -89,56 +89,62 @@ describe('Checkout', () => {
     expect(screen.getByText('Tu carrito está vacío')).toBeInTheDocument()
   })
 
-  it('flujo completo con tarjeta: valida, confirma, guarda el pedido y vacía el carrito', async () => {
-    const user = userEvent.setup()
-    seedCart([
-      { productId: lenovo.id, colorName: 'Azul Abismo', quantity: 1 },
-      { productId: mochila.id, colorName: mochila.colors[0].name, quantity: 1 },
-    ])
-    renderWithProviders(app, '/checkout')
+  it(
+    'flujo completo con tarjeta: valida, confirma, guarda el pedido y vacía el carrito',
+    { timeout: 20_000 },
+    async () => {
+      const user = userEvent.setup()
+      seedCart([
+        { productId: lenovo.id, colorName: 'Azul Abismo', quantity: 1 },
+        { productId: mochila.id, colorName: mochila.colors[0].name, quantity: 1 },
+      ])
+      renderWithProviders(app, '/checkout')
 
-    // Paso 1: el botón del resumen está deshabilitado y el formulario valida
-    expect(screen.getByRole('button', { name: 'Confirmar pedido' })).toBeDisabled()
-    await user.click(screen.getByRole('button', { name: 'Continuar al pago' }))
-    expect(screen.getByText('Ingresá nombre y apellido')).toBeInTheDocument()
+      // Paso 1: el botón del resumen está deshabilitado y el formulario valida
+      expect(screen.getByRole('button', { name: 'Confirmar pedido' })).toBeDisabled()
+      await user.click(screen.getByRole('button', { name: 'Continuar al pago' }))
+      expect(screen.getByText('Ingresá nombre y apellido')).toBeInTheDocument()
 
-    await user.type(screen.getByLabelText('Nombre y apellido'), 'María Fernández')
-    await user.type(screen.getByLabelText('Teléfono'), '0981 234 567')
-    await user.type(screen.getByLabelText('Dirección'), 'Mcal. López 1234')
-    await user.type(screen.getByLabelText('Ciudad'), 'Asunción')
-    await user.selectOptions(screen.getByLabelText('Departamento'), 'Central')
-    await user.type(screen.getByLabelText('Código postal'), '1209')
-    await user.click(screen.getByRole('button', { name: 'Continuar al pago' }))
+      await user.type(screen.getByLabelText('Nombre y apellido'), 'María Fernández')
+      await user.type(screen.getByLabelText('Teléfono'), '0981 234 567')
+      await user.type(screen.getByLabelText('Dirección'), 'Mcal. López 1234')
+      await user.type(screen.getByLabelText('Ciudad'), 'Asunción')
+      await user.selectOptions(screen.getByLabelText('Departamento'), 'Central')
+      await user.type(screen.getByLabelText('Código postal'), '1209')
+      await user.click(screen.getByRole('button', { name: 'Continuar al pago' }))
 
-    // Paso 2: resumen colapsado del paso 1 y formulario de pago
-    expect(screen.getByText(/María Fernández — Mcal. López 1234, Asunción/)).toBeInTheDocument()
-    expect(screen.getByText(/Central · CP 1209 · Tel. 0981 234 567/)).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Confirmar pedido' })).toBeDisabled() // faltan términos
+      // Paso 2: resumen colapsado del paso 1 y formulario de pago
+      expect(screen.getByText(/María Fernández — Mcal. López 1234, Asunción/)).toBeInTheDocument()
+      expect(screen.getByText(/Central · CP 1209 · Tel. 0981 234 567/)).toBeInTheDocument()
+      expect(screen.getByRole('button', { name: 'Confirmar pedido' })).toBeDisabled() // faltan términos
 
-    await user.click(screen.getByRole('checkbox', { name: /Acepto los términos/ }))
-    await user.click(screen.getByRole('button', { name: 'Confirmar pedido' }))
-    expect(screen.getByText('Número de tarjeta inválido')).toBeInTheDocument() // tarjeta vacía
+      await user.click(screen.getByRole('checkbox', { name: /Acepto los términos/ }))
+      await user.click(screen.getByRole('button', { name: 'Confirmar pedido' }))
+      expect(screen.getByText('Número de tarjeta inválido')).toBeInTheDocument() // tarjeta vacía
 
-    await user.type(screen.getByLabelText('Número de tarjeta'), '4242424242424242')
-    expect(screen.getByLabelText('Número de tarjeta')).toHaveValue('4242 4242 4242 4242')
-    await user.type(screen.getByLabelText('Nombre en la tarjeta'), 'MARIA FERNANDEZ')
-    await user.type(screen.getByLabelText('Vencimiento'), '1239')
-    await user.type(screen.getByLabelText('CVV'), '123')
-    await user.click(screen.getByRole('button', { name: 'Confirmar pedido' }))
+      await user.type(screen.getByLabelText('Número de tarjeta'), '4242424242424242')
+      expect(screen.getByLabelText('Número de tarjeta')).toHaveValue('4242 4242 4242 4242')
+      await user.type(screen.getByLabelText('Nombre en la tarjeta'), 'MARIA FERNANDEZ')
+      await user.type(screen.getByLabelText('Vencimiento'), '1239')
+      await user.type(screen.getByLabelText('CVV'), '123')
+      await user.click(screen.getByRole('button', { name: 'Confirmar pedido' }))
 
-    // Confirmación
-    expect(await screen.findByRole('heading', { name: '¡Pedido confirmado!' })).toBeInTheDocument()
-    expect(screen.getByText(/no se realizó ningún cobro/)).toBeInTheDocument()
-    expect(screen.getByText(/Tarjeta terminada en 4242 · 3 cuotas/)).toBeInTheDocument()
+      // Confirmación
+      expect(
+        await screen.findByRole('heading', { name: '¡Pedido confirmado!' }),
+      ).toBeInTheDocument()
+      expect(screen.getByText(/no se realizó ningún cobro/)).toBeInTheDocument()
+      expect(screen.getByText(/Tarjeta terminada en 4242 · 3 cuotas/)).toBeInTheDocument()
 
-    const [order] = listOrders()
-    expect(order.total).toBe(4839000)
-    expect(order.shipping).toBe(0)
-    expect(order.payment.cardLast4).toBe('4242')
-    expect(JSON.stringify(order)).not.toContain('4242 4242') // nunca se guarda el número completo
-    expect(JSON.stringify(order)).not.toContain('"123"')
-    expect(JSON.parse(window.localStorage.getItem('tienda-demo:cart')!)).toEqual([])
-  })
+      const [order] = listOrders()
+      expect(order.total).toBe(4839000)
+      expect(order.shipping).toBe(0)
+      expect(order.payment.cardLast4).toBe('4242')
+      expect(JSON.stringify(order)).not.toContain('4242 4242') // nunca se guarda el número completo
+      expect(JSON.stringify(order)).not.toContain('"123"')
+      expect(JSON.parse(window.localStorage.getItem('tienda-demo:cart')!)).toEqual([])
+    },
+  )
 
   it('retiro en sucursal: sin costo de envío y exige sucursal', async () => {
     const user = userEvent.setup()

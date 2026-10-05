@@ -21,11 +21,15 @@ export function CategorySidebar({
   const categories = getCategories()
   const [open, setOpen] = useState<string | null>(defaultOpen)
 
+  // Embebido (dentro del drawer) no es un landmark propio: el diálogo ya tiene nombre.
+  const Root = embedded ? 'div' : 'aside'
   return (
-    <aside
-      aria-label="Categorías"
+    <Root
+      {...(embedded ? {} : { 'aria-label': 'Categorías' })}
       className={`bg-white py-[18px] ${
-        embedded ? '' : 'sticky top-0 w-[264px] shrink-0 self-start border-r border-light'
+        embedded
+          ? ''
+          : 'sticky top-[var(--demo-bar-h,0px)] w-[264px] shrink-0 self-start border-r border-light'
       } ${className}`}
     >
       {!embedded && (
@@ -79,6 +83,6 @@ export function CategorySidebar({
           )
         })}
       </ul>
-    </aside>
+    </Root>
   )
 }

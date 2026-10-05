@@ -11,6 +11,7 @@ import { EmptyState } from '@/components/ui/EmptyState'
 import { paths } from '@/config/routes'
 import { useCart } from '@/hooks/useCart'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
+import { useNoIndex } from '@/hooks/useNoIndex'
 import { getCategory } from '@/services/catalogService'
 import { getBranch } from '@/services/storeService'
 import type { CardData, PaymentMethod, ShippingData } from '@/types/checkout'
@@ -28,6 +29,7 @@ import { createOrderId, saveOrder, toOrderLines } from '@/utils/orders'
 
 export default function Checkout() {
   useDocumentTitle('Checkout')
+  useNoIndex()
   const navigate = useNavigate()
   const { lines, subtotal, clear } = useCart()
 

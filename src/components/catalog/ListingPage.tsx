@@ -129,6 +129,7 @@ export function ListingPage({
             </EmptyState>
           ) : (
             <>
+              <h2 className="sr-only">Resultados</h2>
               <ProductGrid>
                 {result.items.map((p) => (
                   <ProductCard key={p.id} product={p} showBrand />

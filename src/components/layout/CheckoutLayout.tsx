@@ -1,12 +1,16 @@
 import { Lock } from 'lucide-react'
+import { Suspense } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import { brand } from '@/config/brand'
 import { paths } from '@/config/routes'
+import { DemoBar } from '../demo/DemoBar'
+import { PageSkeleton } from '../ui/Skeleton'
 
 /** Layout simplificado del checkout: sin buscador, categorías ni footer completo. */
 export function CheckoutLayout() {
   return (
     <div className="flex min-h-screen flex-col">
+      <DemoBar />
       <header className="flex items-center justify-between bg-dark px-6 py-4">
         <Link
           to={paths.home}
@@ -20,7 +24,9 @@ export function CheckoutLayout() {
         </span>
       </header>
       <main className="flex-1">
-        <Outlet />
+        <Suspense fallback={<PageSkeleton />}>
+          <Outlet />
+        </Suspense>
       </main>
       <footer className="border-t border-light bg-white px-6 py-4 text-center text-[12.5px] text-subtle">
         © 2026 {brand.name}. Todos los derechos reservados.

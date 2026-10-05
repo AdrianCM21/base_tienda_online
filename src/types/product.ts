@@ -34,6 +34,8 @@ export type Product = {
   specs: Record<string, string>
   highlights?: string[]
   tags?: ProductTag[]
+  /** Palabras clave extra que mejoran la búsqueda (no se muestran). */
+  keywords?: string[]
   rating?: number
   reviewCount?: number
   warranty?: string

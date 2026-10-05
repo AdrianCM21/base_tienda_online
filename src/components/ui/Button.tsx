@@ -1,7 +1,7 @@
-import type { ButtonHTMLAttributes } from 'react'
+import type { ComponentProps } from 'react'
 import { buttonClasses, type ButtonSize, type ButtonVariant } from './button-styles'
 
-type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
+type Props = ComponentProps<'button'> & {
   variant?: ButtonVariant
   size?: ButtonSize
   block?: boolean

@@ -27,3 +27,24 @@ describe('storage', () => {
     expect(() => writeStorage('x', 1)).not.toThrow()
   })
 })
+
+import { clearStorageByPrefix, readSession, writeSession } from './storage'
+
+describe('storage: sesión y limpieza por prefijo', () => {
+  it('sessionStorage lee, escribe y borra', () => {
+    expect(readSession('s')).toBeNull()
+    writeSession('s', '1')
+    expect(readSession('s')).toBe('1')
+    writeSession('s', null)
+    expect(readSession('s')).toBeNull()
+  })
+  it('clearStorageByPrefix borra solo el prefijo y respeta las excepciones', () => {
+    window.localStorage.setItem('app:a', '1')
+    window.localStorage.setItem('app:b', '2')
+    window.localStorage.setItem('otra', '3')
+    clearStorageByPrefix('app:', ['app:b'])
+    expect(window.localStorage.getItem('app:a')).toBeNull()
+    expect(window.localStorage.getItem('app:b')).toBe('2')
+    expect(window.localStorage.getItem('otra')).toBe('3')
+  })
+})

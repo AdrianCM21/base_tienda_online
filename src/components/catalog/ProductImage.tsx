@@ -48,8 +48,8 @@ export function ProductImage({
   const iconColor = tint && luminance(tint) > 0.45 ? '#101B2D' : '#FFFFFF'
   return (
     <div
-      role="img"
-      aria-label={alt}
+      // Decorativa (alt vacío) → oculta a lectores de pantalla; con alt → imagen con nombre.
+      {...(alt ? { role: 'img', 'aria-label': alt } : { 'aria-hidden': true })}
       className={`flex h-full w-full items-center justify-center bg-light ${className}`}
     >
       <div

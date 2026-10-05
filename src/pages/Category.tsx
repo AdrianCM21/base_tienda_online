@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { ListingPage } from '@/components/catalog/ListingPage'
 import { SubcategoryChips } from '@/components/catalog/SubcategoryChips'
+import { brand } from '@/config/brand'
 import { paths } from '@/config/routes'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import { resolveListing } from '@/services/catalogService'
@@ -9,7 +10,12 @@ import NotFound from './NotFound'
 export default function Category() {
   const { slug = '', sub } = useParams()
   const resolved = resolveListing(slug, sub)
-  useDocumentTitle(resolved ? (resolved.subcategory ?? resolved.category).name : undefined)
+  const name = resolved ? (resolved.subcategory ?? resolved.category).name : undefined
+  useDocumentTitle(
+    name,
+    name &&
+      `Mirá ${name} en ${brand.name}: filtrá por marca, precio y color, y pagá en hasta 18 cuotas.`,
+  )
   if (!resolved) return <NotFound />
 
   const { category, subcategory } = resolved

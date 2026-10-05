@@ -1,4 +1,5 @@
 import {
+  formatDateTime,
   formatGs,
   formatInstallments,
   formatNumber,
@@ -34,5 +35,11 @@ describe('format', () => {
   it('formatInstallments devuelve null para pago único', () => {
     expect(formatInstallments(100000, 1, 'Gs')).toBeNull()
     expect(formatInstallments(4590000, 12, 'Gs')).toBe('12 cuotas de Gs. 382.500')
+  })
+})
+
+describe('formatDateTime', () => {
+  it('formatea en hora local con ceros a la izquierda', () => {
+    expect(formatDateTime(new Date(2026, 9, 5, 9, 7).toISOString())).toBe('05/10/2026 09:07')
   })
 })

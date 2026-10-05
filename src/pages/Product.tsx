@@ -13,7 +13,7 @@ export default function Product() {
   const { slug = '' } = useParams()
   const [searchParams, setSearchParams] = useSearchParams()
   const product = getProduct(slug)
-  useDocumentTitle(product?.name)
+  useDocumentTitle(product?.name, product?.shortDescription)
   if (!product) return <NotFound />
 
   const category = getCategory(product.categoryId)

@@ -5,9 +5,15 @@ import { normalizeText } from './text'
 
 function haystack(p: Product): string {
   return normalizeText(
-    [p.name, p.brand, p.sku, p.shortDescription, ...(p.tags ?? []), ...Object.values(p.specs)].join(
-      ' ',
-    ),
+    [
+      p.name,
+      p.brand,
+      p.sku,
+      p.shortDescription,
+      ...(p.tags ?? []),
+      ...(p.keywords ?? []),
+      ...Object.values(p.specs),
+    ].join(' '),
   )
 }
 

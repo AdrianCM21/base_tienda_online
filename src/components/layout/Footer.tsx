@@ -17,7 +17,7 @@ export function Footer() {
   return (
     <footer className="bg-dark px-6 pt-12">
       <div className="mx-auto grid max-w-[1200px] grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-7 pb-9 md:grid-cols-4">
-        <nav aria-label="Categorías">
+        <nav aria-label="Categorías del pie de página">
           <h2 className={title}>Categorías</h2>
           {categories.map((c) => (
             <Link key={c.slug} to={paths.category(c.slug)} className={link}>

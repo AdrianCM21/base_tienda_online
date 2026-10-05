@@ -6,6 +6,7 @@ import { EmptyState } from '@/components/ui/EmptyState'
 import { paths } from '@/config/routes'
 import { useCurrency } from '@/hooks/useCurrency'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
+import { useNoIndex } from '@/hooks/useNoIndex'
 import { getBranch } from '@/services/storeService'
 import type { Order } from '@/types/order'
 import { getOrder } from '@/utils/orders'
@@ -27,6 +28,7 @@ export default function OrderDone() {
   const { price } = useCurrency()
   const order = useMemo(() => getOrder(id), [id])
   useDocumentTitle(order ? 'Pedido confirmado' : 'Pedido no encontrado')
+  useNoIndex()
 
   if (!order) {
     return (

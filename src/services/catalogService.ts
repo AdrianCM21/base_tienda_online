@@ -17,8 +17,9 @@ import { normalizeText } from '@/utils/text'
 export const PAGE_SIZE = 9
 
 const categories = categoriesData as Category[]
+const allProducts = productsData as unknown as Product[]
 /** Solo productos publicados. */
-const products = (productsData as unknown as Product[]).filter((p) => p.status === 'activo')
+const products = allProducts.filter((p) => p.status === 'activo')
 
 export const getBanks = (): Bank[] => banksData
 
@@ -60,6 +61,9 @@ export function resolveListing(
 
 // ---------- productos ----------
 export const getAllProducts = (): Product[] => products
+
+/** Todos los productos, incluidos los borradores (panel admin). */
+export const getAllProductsIncludingDrafts = (): Product[] => allProducts
 
 export const getProductById = (id: string): Product | undefined => products.find((p) => p.id === id)
 

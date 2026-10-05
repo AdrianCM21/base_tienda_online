@@ -35,6 +35,19 @@ describe('themes', () => {
         'footer-copy sobre dark',
       ).toBeGreaterThanOrEqual(4.5)
       expect(contrastRatio('#FFFFFF', c.dark), 'blanco sobre dark').toBeGreaterThanOrEqual(7)
+      expect(contrastRatio(c.subtle, '#FFFFFF'), 'subtle sobre blanco').toBeGreaterThanOrEqual(4.5)
+      expect(contrastRatio(c.subtle, c.bg), 'subtle sobre bg').toBeGreaterThanOrEqual(4.5)
+      expect(contrastRatio(c.primary, c.light), 'primary sobre light').toBeGreaterThanOrEqual(4.5)
+      expect(contrastRatio(c.primary, c.bg), 'primary sobre bg').toBeGreaterThanOrEqual(4.5)
+      expect(contrastRatio(c.muted, c.light), 'muted sobre light').toBeGreaterThanOrEqual(4.5)
+      expect(
+        contrastRatio(c['on-dark-link'], c.dark),
+        'on-dark-link sobre dark',
+      ).toBeGreaterThanOrEqual(4.5)
+      expect(
+        contrastRatio(c['hero-text'], c.primary),
+        'hero-text sobre primary',
+      ).toBeGreaterThanOrEqual(4.5)
     },
   )
 
@@ -48,6 +61,15 @@ describe('themes', () => {
   it('getTheme cae en el tema por defecto si el id no existe', () => {
     expect(getTheme('nope').id).toBe('azul')
     expect(getTheme(null).id).toBe('azul')
+  })
+
+  it('applyTheme sobre el documento actualiza theme-color', () => {
+    const meta = document.createElement('meta')
+    meta.name = 'theme-color'
+    document.head.appendChild(meta)
+    applyTheme(getTheme('rojo'))
+    expect(meta.content).toBe(getTheme('rojo').colors.dark)
+    meta.remove()
   })
 
   it('applyTheme escribe variables CSS y data-theme', () => {

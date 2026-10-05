@@ -9,9 +9,11 @@ import { paths } from '@/config/routes'
 import { useCart } from '@/hooks/useCart'
 import { useCurrency } from '@/hooks/useCurrency'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
+import { useNoIndex } from '@/hooks/useNoIndex'
 
 export default function Cart() {
   useDocumentTitle('Carrito')
+  useNoIndex()
   const { lines, count, subtotal, clear } = useCart()
   const { price } = useCurrency()
   const missing = Math.max(0, brand.freeShippingThreshold - subtotal)
@@ -58,7 +60,7 @@ export default function Cart() {
 
             <aside
               aria-label="Resumen"
-              className="rounded-card border border-light bg-white p-[22px] min-[900px]:sticky min-[900px]:top-6"
+              className="rounded-card border border-light bg-white p-[22px] min-[900px]:sticky min-[900px]:top-[calc(var(--demo-bar-h,0px)+24px)]"
             >
               <h2 className="mb-4 font-sans text-[15px] font-bold">Resumen</h2>
               <div className="mb-3.5 flex items-start gap-2.5 rounded-card bg-light px-3.5 py-3 text-[12.5px] text-dark">

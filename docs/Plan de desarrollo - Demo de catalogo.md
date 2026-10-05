@@ -18,6 +18,7 @@ Una aplicación web **demo de catálogo de productos**, totalmente navegable y c
 | Selector de moneda Gs / USD | |
 | Panel administrador **demo** (solo visual) con **importador XLSX** | |
 | Marca y paleta **configurables** (sin "Voltia") | |
+| **Barra de demo** para saltar entre pantallas (§8B) | |
 
 ## 2. Decisiones ya tomadas
 
@@ -46,14 +47,14 @@ Una aplicación web **demo de catálogo de productos**, totalmente navegable y c
 
 ```
 src/
-  config/        brand.ts, themes.ts, site.ts
+  config/        brand.ts, themes.ts, routes.ts, demoScreens.ts
   data/          products.json, categories.json, banks.json, orders.demo.json
   types/         product.ts, cart.ts, admin.ts
   services/      catalogService.ts   (getProducts, getProduct, getRelated, search…)
   utils/         format.ts (precios/moneda), filters.ts, sort.ts, slug.ts, storage.ts, xlsx/
   context/       CartContext, CurrencyContext, ThemeContext
   hooks/         useCatalogQuery (filtros ↔ URL), useMediaQuery, useDebounce
-  components/    layout/, catalog/, product/, cart/, checkout/, ui/
+  components/    layout/, catalog/, product/, cart/, checkout/, demo/, ui/
   pages/         Home, Category, Search, Product, Cart, Checkout, OrderDone, NotFound
   admin/         AdminLayout, Dashboard, Products, ImportXlsx, Orders, Categories, Appearance, Settings
 scripts/         generate-products.ts, build-xlsx-template.ts
@@ -123,6 +124,41 @@ Visualmente completo y creíble, pero **sin funciones reales**. Aviso fijo "Modo
 | Categorías | Árbol de categorías, solo lectura. |
 | Apariencia | Selector de tema/paleta y nombre de la marca con vista previa (usa `ThemeContext`). |
 | Configuración | Formularios ficticios (datos de la tienda, envío, medios de pago). |
+
+## 8B. Barra de demo (navegación entre pantallas)
+
+Como el objetivo es **mostrar** la aplicación, una barra superior permite saltar a cualquier pantalla con un clic, sin tener que armar el recorrido a mano (agregar al carrito, completar el checkout, etc.).
+
+**Ubicación y comportamiento**
+- Franja delgada (40 px) **por encima** de la TopBar, en todos los layouts (tienda, checkout y admin). Es *sticky* arriba; los elementos sticky de la tienda (sidebar de categorías, resumen del checkout) toman su `top` de una variable CSS `--demo-bar-h`, que vale 0 cuando la barra está oculta.
+- Estilo propio y neutro (no usa los colores de la marca) para que se note que es herramienta de demo y no parte de la tienda.
+- Móvil: los botones se desplazan horizontalmente (scroll lateral), sin romper el ancho de página.
+- **Se puede ocultar**: botón ✕ (se recuerda en `localStorage`) y una pestaña flotante "Demo" para volver a mostrarla. Para presentaciones limpias: `?demo=0` en la URL, y a nivel de build `VITE_DEMO_BAR=false` la elimina por completo.
+
+**Pantallas que ofrece** (definidas en un único archivo, `config/demoScreens.ts`)
+
+| Botón | Destino | Preparación automática |
+|---|---|---|
+| Inicio | `/` | — |
+| Categoría | `/categoria/notebooks` | — |
+| Búsqueda | `/buscar?q=lenovo` | — |
+| Producto | un producto con varios colores y oferta | — |
+| Carrito | `/carrito` | Si el carrito está vacío, lo llena con 2 productos de ejemplo |
+| Checkout | `/checkout` | Igual que Carrito, para que no abra vacío |
+| Confirmación | `/pedido/:id` | Crea un pedido de ejemplo si todavía no hay ninguno |
+| Admin | `/admin` | — |
+
+- La pantalla actual aparece resaltada (por coincidencia de ruta).
+- Las preparaciones usan los mismos contextos y utilidades de carrito/pedidos que la tienda; no hay datos falsos aparte.
+
+**Extras de la barra**
+- Selector rápido de **paleta** (los 5 temas), reutilizando `ThemeContext`.
+- Botón **"Reiniciar demo"**: borra carrito, pedidos, moneda y tema guardados y vuelve al Inicio (deja la demo lista para el próximo cliente).
+- *Opcional, a decidir*: **simulador de dispositivo** (Escritorio / Tablet / Móvil) que muestra la app dentro de un marco con ese ancho, útil para enseñar el responsive sin tocar el navegador.
+
+**Accesibilidad:** es un `<nav aria-label="Navegación de la demo">`, con foco visible y el destino actual marcado con `aria-current="page"`.
+
+**Pruebas:** que cada botón navegue al destino correcto, que "Checkout" y "Confirmación" nunca queden vacíos, que ocultar/mostrar persista, que `?demo=0` oculte la barra y que "Reiniciar demo" limpie el almacenamiento.
 
 ## 9. Importador XLSX (detalle)
 
@@ -205,6 +241,8 @@ Descripción de columnas, ejemplos y lista de categorías/subcategorías válida
 | `/admin/*` | Panel demo |
 | `*` | 404 |
 
+El parámetro `?demo=0` oculta la barra de demo (§8B).
+
 Filtros, orden y página viven en la **URL** (`?marca=lenovo&precio=…&orden=menor-precio&pagina=2`): se pueden compartir y funciona el botón Atrás.
 
 ---
@@ -257,13 +295,20 @@ Cada fase termina en algo ejecutable y verificable. Estimaciones orientativas pa
 - "Confirmar pedido" → pantalla `/pedido/:id` con número de pedido, resumen y aviso "Esto es una demostración, no se realizó ningún cobro". El pedido se guarda en `localStorage`.
 - **Hecho cuando:** se puede ir de la tarjeta a la confirmación con el carrito real y el carrito se vacía al final.
 
-### Fase 8 — Panel admin demo + importador XLSX (3 días)
+### Fase 7B — Barra de demo (0,5–1 día) ✅ completa
+- `config/demoScreens.ts` con la lista de pantallas y sus destinos/preparaciones.
+- `components/demo/DemoBar` (navegación, selector de paleta, "Reiniciar demo", ocultar/mostrar) integrada en `AppLayout`, `CheckoutLayout` y `AdminLayout`.
+- Variable CSS `--demo-bar-h` para los elementos sticky; soporte de `?demo=0` y `VITE_DEMO_BAR`.
+- Tests de navegación, preparación automática, persistencia y reinicio.
+- **Hecho cuando:** desde cualquier pantalla se puede saltar a las otras 7 con un clic y ninguna aparece vacía.
+
+### Fase 8 — Panel admin demo + importador XLSX (3 días) ✅ completa
 - Layout, login falso, Dashboard, Productos, Pedidos, Categorías, Apariencia, Configuración.
 - Módulo `utils/xlsx/`: `parseWorkbook`, `validateRows`, `buildTemplate`, `buildErrorReport`; UI de carga con arrastrar-soltar, vista previa por pestañas y resumen de errores.
 - Tests del validador con archivos de ejemplo válidos e inválidos (`tests/fixtures/`).
 - **Hecho cuando:** la plantilla descargada se vuelve a subir y valida sin errores, y un archivo roto muestra cada error con hoja/fila/columna.
 
-### Fase 9 — Pulido (1,5–2 días)
+### Fase 9 — Pulido (1,5–2 días) ✅ completa
 - Responsive en 360 / 768 / 1280 px, a11y (teclado, `aria-*`, contraste en todos los temas), skeletons de carga, `<title>` y meta por ruta, 404, favicon genérico, selector de tema, rendimiento (lazy routes, imágenes diferidas).
 - Revisión visual lado a lado contra `/reference`.
 - **Hecho cuando:** Lighthouse ≥ 90 en performance y accesibilidad en Home y Producto.
@@ -273,11 +318,11 @@ Cada fase termina en algo ejecutable y verificable. Estimaciones orientativas pa
 - Build de producción, despliegue en Vercel/Netlify, README con cómo cambiar marca, tema, datos e imágenes.
 - **Hecho cuando:** URL pública funcionando y checklist de §13 completo.
 
-**Total estimado: ~16–19 días de trabajo** (menos si se recortan Opiniones, temas o el dashboard con gráficos).
+**Total estimado: ~16,5–20 días de trabajo** (menos si se recortan Opiniones, temas o el dashboard con gráficos).
 
 ## 12. Orden recomendado si hay que recortar
 
-Imprescindible: Fases 0–7. Después, por impacto en demo: importador XLSX (parte de la 8), selector de color en tarjetas, resto del admin, temas de la tienda, Playwright.
+Imprescindible: Fases 0–7 y la 7B (barra de demo, porque es lo que se usa al presentar). Después, por impacto en demo: importador XLSX (parte de la 8), selector de color en tarjetas, resto del admin, temas de la tienda, Playwright.
 
 ## 13. Checklist final de la demo
 
@@ -290,6 +335,7 @@ Imprescindible: Fases 0–7. Después, por impacto en demo: importador XLSX (par
 - [ ] Checkout simulado con aviso claro de demostración.
 - [ ] Admin con aviso "Modo demo" y `noindex`.
 - [ ] Plantilla XLSX descargable, validación con errores precisos.
+- [ ] Barra de demo: salta a las 8 pantallas, ninguna queda vacía, se oculta con ✕ y con `?demo=0`, y "Reiniciar demo" limpia todo.
 - [ ] Sin errores en consola; build de producción limpio.
 
 ## 14. Riesgos
@@ -301,6 +347,7 @@ Imprescindible: Fases 0–7. Después, por impacto en demo: importador XLSX (par
 | Deriva visual respecto a los mockups | Comparar cada pantalla con `/reference` al cerrar cada fase. |
 | Tamaño del bundle por SheetJS | Cargarlo con `import()` dinámico solo en `/admin/importar`. |
 | Confusión de la gente con una tienda real | Avisos de "demostración" en checkout y admin. |
+| La barra de demo tapa contenido o aparece en una presentación donde no se quiere | Es sticky pero con altura fija y variable CSS para los sticky de la tienda; se oculta con ✕, `?demo=0` o `VITE_DEMO_BAR=false`. |
 
 ## 15. Decisiones confirmadas
 
@@ -309,3 +356,9 @@ Imprescindible: Fases 0–7. Después, por impacto en demo: importador XLSX (par
 3. **Importador XLSX:** valida, previsualiza y **simula** la importación; no modifica el catálogo (constante para activarlo más adelante).
 4. **Idioma y moneda:** español, Gs / USD.
 5. **Imágenes:** placeholders por ahora; la fuente de fotos reales queda para antes de la Fase 9.
+
+### Decisiones confirmadas (barra de demo)
+
+1. Visible por defecto al abrir la demo, con opción de ocultarla (✕, `?demo=0`, `VITE_DEMO_BAR=false`).
+2. El **simulador de dispositivo** (Escritorio / Tablet / Móvil) queda como opcional para el final (no se hizo en la 7B).
+3. "Reiniciar demo" pide confirmación antes de borrar.
