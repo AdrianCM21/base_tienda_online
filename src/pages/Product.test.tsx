@@ -32,7 +32,7 @@ describe('Detalle de producto', () => {
     expect(detail.getByText('12 cuotas de Gs. 382.500 sin interés')).toBeInTheDocument()
     expect(detail.getByText(/En stock — Envío en 24 a 48hs/)).toBeInTheDocument()
     expect(screen.getByRole('navigation', { name: 'Migas de pan' })).toHaveTextContent(
-      'Inicio›Informática›Notebooks›Notebook Lenovo',
+      'Inicio›Computación›Notebooks›Notebook Lenovo',
     )
     expect(screen.getAllByRole('article')).toHaveLength(4) // relacionados
     expect(document.title).toMatch(/^Notebook Lenovo IdeaPad 3/)

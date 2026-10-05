@@ -243,7 +243,7 @@ describe('importador XLSX', () => {
             'X-1',
             'Producto con precio malo',
             'Acme',
-            'Informática',
+            'Computación',
             'Notebooks',
             'abc',
             '3',

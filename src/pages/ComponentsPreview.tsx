@@ -26,7 +26,7 @@ export default function ComponentsPreview() {
         <Breadcrumb
           items={[
             { label: 'Inicio', to: '/' },
-            { label: 'Informática', to: '/' },
+            { label: 'Computación', to: '/' },
             { label: 'Notebooks' },
           ]}
         />

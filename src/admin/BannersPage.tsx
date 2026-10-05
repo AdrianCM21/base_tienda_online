@@ -14,7 +14,7 @@ const MAX_FEATURED = 8
 const DESTINATIONS = [
   { value: '/buscar?ofertas=1', label: 'Ofertas' },
   { value: '/buscar', label: 'Todo el catálogo' },
-  { value: '/categoria/informatica', label: 'Una categoría (Informática)' },
+  { value: '/categoria/informatica', label: 'Una categoría (Computación)' },
 ]
 
 function HeroTab() {

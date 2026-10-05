@@ -2,7 +2,7 @@
   {
     "id": "informatica",
     "slug": "informatica",
-    "name": "Informática",
+    "name": "Computación",
     "icon": "Laptop",
     "groups": [
       {
@@ -97,7 +97,7 @@
   {
     "id": "electronica",
     "slug": "electronica",
-    "name": "Electrónica",
+    "name": "Celulares y Entretenimiento",
     "icon": "Tv",
     "groups": [
       {
@@ -160,9 +160,47 @@
     ]
   },
   {
+    "id": "fotografia-y-filmacion",
+    "slug": "fotografia-y-filmacion",
+    "name": "Foto y Video",
+    "icon": "Camera",
+    "groups": [
+      {
+        "title": "Cámaras",
+        "items": [
+          {
+            "id": "camaras-mirrorless",
+            "slug": "camaras-mirrorless",
+            "name": "Cámaras Mirrorless"
+          },
+          {
+            "id": "camaras-compactas",
+            "slug": "camaras-compactas",
+            "name": "Cámaras Compactas"
+          }
+        ]
+      },
+      {
+        "title": "Accesorios",
+        "items": [
+          {
+            "id": "tripodes",
+            "slug": "tripodes",
+            "name": "Trípodes"
+          },
+          {
+            "id": "lentes",
+            "slug": "lentes",
+            "name": "Lentes"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "electrodomesticos",
     "slug": "electrodomesticos",
-    "name": "Electrodomésticos",
+    "name": "Electro para el Hogar",
     "icon": "Refrigerator",
     "groups": [
       {
@@ -230,76 +268,38 @@
     ]
   },
   {
-    "id": "fotografia-y-filmacion",
-    "slug": "fotografia-y-filmacion",
-    "name": "Fotografía y Filmación",
-    "icon": "Camera",
+    "id": "muebles",
+    "slug": "muebles",
+    "name": "Muebles y Oficina",
+    "icon": "Sofa",
     "groups": [
       {
-        "title": "Cámaras",
+        "title": "Living",
         "items": [
           {
-            "id": "camaras-mirrorless",
-            "slug": "camaras-mirrorless",
-            "name": "Cámaras Mirrorless"
+            "id": "sillones",
+            "slug": "sillones",
+            "name": "Sillones"
           },
           {
-            "id": "camaras-compactas",
-            "slug": "camaras-compactas",
-            "name": "Cámaras Compactas"
+            "id": "racks-y-mesas-tv",
+            "slug": "racks-y-mesas-tv",
+            "name": "Racks y Mesas TV"
           }
         ]
       },
       {
-        "title": "Accesorios",
+        "title": "Oficina",
         "items": [
           {
-            "id": "tripodes",
-            "slug": "tripodes",
-            "name": "Trípodes"
+            "id": "escritorios",
+            "slug": "escritorios",
+            "name": "Escritorios"
           },
           {
-            "id": "lentes",
-            "slug": "lentes",
-            "name": "Lentes"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "perfumeria-y-belleza",
-    "slug": "perfumeria-y-belleza",
-    "name": "Perfumería y Belleza",
-    "icon": "Sparkles",
-    "groups": [
-      {
-        "title": "Perfumería",
-        "items": [
-          {
-            "id": "perfumes-femeninos",
-            "slug": "perfumes-femeninos",
-            "name": "Perfumes Femeninos"
-          },
-          {
-            "id": "perfumes-masculinos",
-            "slug": "perfumes-masculinos",
-            "name": "Perfumes Masculinos"
-          }
-        ]
-      },
-      {
-        "title": "Cuidado personal",
-        "items": [
-          {
-            "id": "cuidado-de-la-piel",
-            "slug": "cuidado-de-la-piel",
-            "name": "Cuidado de la Piel"
-          },
-          {
-            "id": "cuidado-del-cabello",
-            "slug": "cuidado-del-cabello",
-            "name": "Cuidado del Cabello"
+            "id": "sillas-de-oficina",
+            "slug": "sillas-de-oficina",
+            "name": "Sillas de Oficina"
           }
         ]
       }
@@ -308,7 +308,7 @@
   {
     "id": "hogar-y-jardin",
     "slug": "hogar-y-jardin",
-    "name": "Hogar y Jardín",
+    "name": "Casa y Jardín",
     "icon": "House",
     "groups": [
       {
@@ -346,7 +346,7 @@
   {
     "id": "ferreteria-y-construccion",
     "slug": "ferreteria-y-construccion",
-    "name": "Ferretería y Construcción",
+    "name": "Herramientas y Obra",
     "icon": "Hammer",
     "groups": [
       {
@@ -384,7 +384,7 @@
   {
     "id": "automotriz-y-motos",
     "slug": "automotriz-y-motos",
-    "name": "Automotriz y Motos",
+    "name": "Movilidad",
     "icon": "Car",
     "groups": [
       {
@@ -417,7 +417,7 @@
   {
     "id": "moda",
     "slug": "moda",
-    "name": "Moda",
+    "name": "Moda y Calzado",
     "icon": "Shirt",
     "groups": [
       {
@@ -448,38 +448,38 @@
     ]
   },
   {
-    "id": "muebles",
-    "slug": "muebles",
-    "name": "Muebles",
-    "icon": "Sofa",
+    "id": "perfumeria-y-belleza",
+    "slug": "perfumeria-y-belleza",
+    "name": "Belleza y Cuidado Personal",
+    "icon": "Sparkles",
     "groups": [
       {
-        "title": "Living",
+        "title": "Perfumería",
         "items": [
           {
-            "id": "sillones",
-            "slug": "sillones",
-            "name": "Sillones"
+            "id": "perfumes-femeninos",
+            "slug": "perfumes-femeninos",
+            "name": "Perfumes Femeninos"
           },
           {
-            "id": "racks-y-mesas-tv",
-            "slug": "racks-y-mesas-tv",
-            "name": "Racks y Mesas TV"
+            "id": "perfumes-masculinos",
+            "slug": "perfumes-masculinos",
+            "name": "Perfumes Masculinos"
           }
         ]
       },
       {
-        "title": "Oficina",
+        "title": "Cuidado personal",
         "items": [
           {
-            "id": "escritorios",
-            "slug": "escritorios",
-            "name": "Escritorios"
+            "id": "cuidado-de-la-piel",
+            "slug": "cuidado-de-la-piel",
+            "name": "Cuidado de la Piel"
           },
           {
-            "id": "sillas-de-oficina",
-            "slug": "sillas-de-oficina",
-            "name": "Sillas de Oficina"
+            "id": "cuidado-del-cabello",
+            "slug": "cuidado-del-cabello",
+            "name": "Cuidado del Cabello"
           }
         ]
       }

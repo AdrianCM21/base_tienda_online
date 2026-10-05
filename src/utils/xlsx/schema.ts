@@ -29,7 +29,7 @@ export const PRODUCT_COLUMNS: ColumnDef[] = [
     'Notebook Acme Air 14" Ryzen 5 16GB 512GB SSD',
   ),
   col('marca', true, 'Marca.', 'Acme'),
-  col('categoria', true, 'Nombre de una categoría existente (ver lista abajo).', 'Informática'),
+  col('categoria', true, 'Nombre de una categoría existente (ver lista abajo).', 'Computación'),
   col('subcategoria', true, 'Subcategoría que pertenezca a esa categoría.', 'Notebooks'),
   col('precio', true, 'Precio en Gs: número entero mayor a 0.', '5490000'),
   col(

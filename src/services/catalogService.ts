@@ -11,6 +11,7 @@ import type { Category, Subcategory } from '@/types/category'
 import type { Product } from '@/types/product'
 import { computeFacets, filterProducts, matchesQuery } from '@/utils/filters'
 import { paginate } from '@/utils/paginate'
+import { isOnSale } from '@/utils/product'
 import { sortProducts } from '@/utils/sort'
 import { normalizeText } from '@/utils/text'
 
@@ -72,6 +73,15 @@ export const getProduct = (slug: string): Product | undefined =>
 
 export function getFeatured(limit = 8): Product[] {
   return products.filter((p) => p.tags?.includes('destacado')).slice(0, limit)
+}
+
+/** Productos con precio rebajado, los de mayor ahorro porcentual primero. */
+export function getOnSale(limit = 8, skip = 0): Product[] {
+  const pct = (p: Product) => (p.oldPrice! - p.price) / p.oldPrice!
+  return products
+    .filter(isOnSale)
+    .sort((a, b) => pct(b) - pct(a))
+    .slice(skip, skip + limit)
 }
 
 /** Misma subcategoría primero, luego misma categoría. */

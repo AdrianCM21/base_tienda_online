@@ -18,9 +18,10 @@ test('la Home carga con la marca y sin errores de consola', async ({ page }) => 
 test('compra completa: Home → categoría → filtro → producto → color → carrito → checkout → confirmación', async ({
   page,
 }) => {
-  // Categoría desde el menú lateral
+  // Categoría desde el menú "Categorías" del encabezado
+  await page.getByRole('button', { name: 'Categorías' }).click()
   await page
-    .getByRole('complementary', { name: 'Categorías' })
+    .getByRole('navigation', { name: 'Todas las categorías' })
     .getByRole('link', { name: 'Notebooks', exact: true })
     .click()
   await expect(page).toHaveURL(/\/categoria\/notebooks$/)

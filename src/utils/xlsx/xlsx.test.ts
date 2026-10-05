@@ -18,7 +18,7 @@ const ok = {
   sku: 'A-1',
   nombre: 'Notebook de prueba 15"',
   marca: 'Acme',
-  categoria: 'Informática',
+  categoria: 'Computación',
   subcategoria: 'Notebooks',
   precio: '1000000',
   stock: '5',
@@ -194,7 +194,7 @@ describe('validateWorkbook', () => {
         'Productos:4:slug',
       ]),
     )
-    expect(errors(r).find((i) => i.column === 'categoria')!.message).toMatch(/Informática/)
+    expect(errors(r).find((i) => i.column === 'categoria')!.message).toMatch(/Computación/)
     expect(r.products).toEqual([])
   })
 
@@ -304,7 +304,7 @@ describe('validateWorkbook', () => {
           ...ok,
           sku: 'A-2',
           nombre: 'Otro notebook gamer',
-          categoria: 'Electrónica',
+          categoria: 'Celulares y Entretenimiento',
           subcategoria: 'smart-tv',
         },
       ]),

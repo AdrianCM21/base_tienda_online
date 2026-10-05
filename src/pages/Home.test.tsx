@@ -33,6 +33,31 @@ describe('Home', () => {
     ).toBeInTheDocument()
   })
 
+  it('muestra las categorías como accesos en la portada (sin barra lateral)', () => {
+    renderWithProviders(<Home />)
+    const nav = screen.getByRole('navigation', { name: 'Comprar por categoría' })
+    expect(within(nav).getAllByRole('link')).toHaveLength(10)
+    expect(within(nav).getByRole('link', { name: 'Herramientas y Obra' })).toHaveAttribute(
+      'href',
+      '/categoria/ferreteria-y-construccion',
+    )
+    expect(screen.queryByRole('complementary', { name: 'Categorías' })).toBeNull()
+  })
+
+  it('muestra ofertas en el banner y en "Ofertas de la semana" sin repetir productos', () => {
+    renderWithProviders(<Home />)
+    const row = screen.getByRole('heading', { name: 'Ofertas de la semana' }).closest('section')!
+    const rowNames = within(row)
+      .getAllByRole('article')
+      .map((a) => within(a).getAllByRole('link')[0].textContent)
+    expect(rowNames).toHaveLength(4)
+    const hero = screen.getByRole('heading', { level: 1 }).closest('section')!
+    const heroLinks = within(hero).getAllByRole('link', { name: /Gs\./ })
+    expect(heroLinks).toHaveLength(3)
+    for (const l of heroLinks)
+      for (const n of rowNames) expect(l.textContent).not.toContain(n ?? '')
+  })
+
   it('el envío gratis sigue la moneda elegida', () => {
     window.localStorage.setItem('tienda-demo:currency', '"USD"')
     renderWithProviders(<Home />)

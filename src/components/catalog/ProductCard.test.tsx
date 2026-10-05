@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Header } from '@/components/layout/Header'
-import { TopBar } from '@/components/layout/TopBar'
+import { CurrencySwitch } from '@/components/layout/CurrencySwitch'
 import { renderWithProviders } from '@/test/renderWithProviders'
 import { getProduct } from '@/services/catalogService'
 import { ProductCard } from './ProductCard'
@@ -52,11 +52,11 @@ describe('ProductCard', () => {
     expect(screen.getByRole('button', { name: 'Sin stock' })).toBeDisabled()
   })
 
-  it('cambia de moneda desde la TopBar y reformatea precios', async () => {
+  it('cambia de moneda desde el selector de moneda y reformatea precios', async () => {
     const user = userEvent.setup()
     renderWithProviders(
       <>
-        <TopBar />
+        <CurrencySwitch />
         <ProductCard product={lenovo} />
       </>,
     )

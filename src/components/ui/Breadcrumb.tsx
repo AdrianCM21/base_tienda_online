@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export type Crumb = { label: string; to?: string }
 
-/** Inicio › Informática › **Notebooks**: el último elemento es la página actual. */
+/** Inicio › Computación › **Notebooks**: el último elemento es la página actual. */
 export function Breadcrumb({ items }: { items: Crumb[] }) {
   return (
     <nav aria-label="Migas de pan" className="px-6 pt-4 text-[13px] text-muted">

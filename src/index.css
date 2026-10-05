@@ -1,6 +1,6 @@
-@import '@fontsource/space-grotesk/latin-500.css';
-@import '@fontsource/space-grotesk/latin-600.css';
-@import '@fontsource/space-grotesk/latin-700.css';
+@import '@fontsource/plus-jakarta-sans/latin-600.css';
+@import '@fontsource/plus-jakarta-sans/latin-700.css';
+@import '@fontsource/plus-jakarta-sans/latin-800.css';
 @import '@fontsource/public-sans/latin-400.css';
 @import '@fontsource/public-sans/latin-500.css';
 @import '@fontsource/public-sans/latin-600.css';
@@ -27,16 +27,16 @@
   --color-footer-copy: #8fa6c9;
   --color-hero-text: #d6e4f7;
 
-  --font-heading: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Public Sans', ui-sans-serif, system-ui, sans-serif;
 
-  --radius-card: 8px;
-  --radius-control: 6px;
-  --radius-search: 8px;
-  --radius-pill: 20px;
-  --radius-hero: 14px;
+  --radius-card: 16px;
+  --radius-control: 10px;
+  --radius-search: 999px;
+  --radius-pill: 999px;
+  --radius-hero: 28px;
 
-  --shadow-card-hover: 0 8px 20px rgba(12, 40, 81, 0.1);
+  --shadow-card-hover: 0 10px 28px rgba(12, 40, 81, 0.12);
 }
 
 @layer base {
@@ -141,6 +141,12 @@
 }
 
 .admin-theme {
+  /* El panel conserva formas más compactas que la tienda. */
+  --radius-card: 8px;
+  --radius-control: 6px;
+  --radius-search: 8px;
+  --radius-pill: 20px;
+  --radius-hero: 14px;
   --admin-surface: #ffffff;
   --admin-sidebar: #111827;
   --color-bg: #f4f5f7;

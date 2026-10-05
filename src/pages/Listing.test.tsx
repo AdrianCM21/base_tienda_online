@@ -28,7 +28,7 @@ describe('Listado de categoría', () => {
     renderWithProviders(app, '/categoria/notebooks')
     expect(screen.getByRole('heading', { level: 1, name: 'Notebooks' })).toBeInTheDocument()
     expect(screen.getByRole('navigation', { name: 'Migas de pan' })).toHaveTextContent(
-      'Inicio›Informática›Notebooks',
+      'Inicio›Computación›Notebooks',
     )
     expect(screen.getAllByRole('article')).toHaveLength(9)
     expect(results()).toMatch(/^Mostrando 1-9 de 19 resultados$/)
@@ -126,7 +126,7 @@ describe('Listado de categoría', () => {
     )
     expect(
       screen
-        .getAllByRole('link', { name: 'Informática' })
+        .getAllByRole('link', { name: 'Computación' })
         .some((l) => l.getAttribute('aria-current') === 'page'),
     ).toBe(true)
   })
