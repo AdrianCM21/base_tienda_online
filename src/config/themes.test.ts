@@ -76,6 +76,7 @@ describe('themes', () => {
     const root = document.createElement('div')
     applyTheme(getTheme('verde'), root)
     expect(root.style.getPropertyValue('--color-primary')).toBe(getTheme('verde').colors.primary)
+    expect(root.style.getPropertyValue('--brand-primary')).toBe(getTheme('verde').colors.primary)
     expect(root.dataset.theme).toBe('verde')
   })
 })

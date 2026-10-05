@@ -1,5 +1,4 @@
 import { Navigate, useNavigate } from 'react-router-dom'
-import { DemoBar } from '@/components/demo/DemoBar'
 import { Button } from '@/components/ui/Button'
 import { TextField } from '@/components/ui/FormField'
 import { brand } from '@/config/brand'
@@ -19,7 +18,6 @@ export default function LoginPage() {
 
   return (
     <AdminShell>
-      <DemoBar />
       <AdminDemoNotice />
       <div className="mx-auto flex max-w-[400px] flex-col px-6 py-14">
         <div className="mb-6 text-center">

@@ -134,6 +134,8 @@ export function applyTheme(theme: Theme, root: HTMLElement = document.documentEl
   for (const token of THEME_TOKENS) {
     root.style.setProperty(`--color-${token}`, theme.colors[token])
   }
+  // Copia del color de marca: el panel en modo oscuro lo aclara a partir de esta variable.
+  root.style.setProperty('--brand-primary', theme.colors.primary)
   root.dataset.theme = theme.id
   if (root === document.documentElement) {
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme.colors.dark)

@@ -1,5 +1,6 @@
 import {
   ChartColumn,
+  History,
   ClipboardList,
   FolderTree,
   Image,
@@ -116,6 +117,12 @@ export const NAV_GROUPS = [
         label: 'Configuración',
         icon: Settings,
         keywords: 'envíos pagos impuestos usuarios horarios whatsapp',
+      },
+      {
+        to: adminPaths.activity,
+        label: 'Actividad',
+        icon: History,
+        keywords: 'historial registro cambios auditoría',
       },
     ],
   },

@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react'
+import { appendActivity } from '@/utils/activityLog'
 import { readStorage, writeStorage } from '@/utils/storage'
 
 export const ADMIN_SESSION_KEY = 'tienda-demo:admin-session'
@@ -10,9 +11,11 @@ export function useAdminSession() {
   )
   const login = useCallback(() => {
     writeStorage(ADMIN_SESSION_KEY, true)
+    appendActivity({ kind: 'sesion', message: 'Inició sesión' })
     setLoggedIn(true)
   }, [])
   const logout = useCallback(() => {
+    appendActivity({ kind: 'sesion', message: 'Cerró sesión' })
     writeStorage(ADMIN_SESSION_KEY, false)
     setLoggedIn(false)
   }, [])

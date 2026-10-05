@@ -2,7 +2,7 @@ import { Check, ImagePlus, Search, ShoppingBag, Trash2 } from 'lucide-react'
 import { useEffect, useId, useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { brand } from '@/config/brand'
-import { themes } from '@/config/themes'
+import { THEME_TOKENS, themes } from '@/config/themes'
 import { useTheme } from '@/hooks/useTheme'
 import { useVisitedPage } from '@/hooks/useVisitedPage'
 import { describeContrast } from '@/utils/color'
@@ -24,6 +24,11 @@ export default function AppearancePage() {
   const shownName = name || brand.logoText
   const color = custom ?? theme.colors.primary
   const message = describeContrast(color)
+  // La vista previa muestra la tienda, no el panel: se aísla de los colores del admin (claro u oscuro).
+  const previewStyle = {
+    ...Object.fromEntries(THEME_TOKENS.map((token) => [`--color-${token}`, theme.colors[token]])),
+    '--color-primary': color,
+  } as React.CSSProperties
 
   return (
     <>
@@ -173,8 +178,8 @@ export default function AppearancePage() {
         <div
           role="group"
           aria-label="Vista previa"
-          style={custom ? ({ '--color-primary': custom } as React.CSSProperties) : undefined}
-          className="overflow-hidden rounded-card border border-light bg-bg"
+          style={previewStyle}
+          className="store-preview overflow-hidden rounded-card border border-light bg-bg"
         >
           <div className="flex items-center gap-4 bg-dark px-5 py-3.5">
             {logo ? (

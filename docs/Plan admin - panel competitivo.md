@@ -1,7 +1,7 @@
 # Plan del panel administrador — hacerlo competitivo y atractivo
 
 > Complementa `Plan de desarrollo - Demo de catalogo.md` (§8 y §9). Parte del análisis del panel construido en las Fases 8 y 9.
-> Estado: **Etapas A, B y C completas**. Siguiente: Etapa D (a confirmar).
+> Estado: **Etapas A, B, C y D completas**.
 
 ## 1. Objetivo y principios
 
@@ -53,7 +53,7 @@ Inicio v2 (selector de período, variación contra el período anterior, ventas 
 ### Etapa C — Crecimiento y configuración ✅ completa
 **Marketing** (cupones, beneficios con bancos editables, banners y destacados), **Configuración real** (zonas y tarifas de envío, medios de pago, impuestos, horarios, WhatsApp, usuarios y roles de muestra), **buscador global** (Ctrl+K), checklist de inicio y vista previa de marca más completa.
 
-### Etapa D — Productividad
+### Etapa D — Productividad ✅ completa
 Acciones en lote completas, exportaciones adicionales, registro de actividad, atajos de teclado, modo oscuro y estilo propio del admin (neutro, con la paleta de la marca solo como acento).
 
 ## 5. Decisiones confirmadas
@@ -100,3 +100,12 @@ Acciones en lote completas, exportaciones adicionales, registro de actividad, at
 - **Apariencia más completa**: color principal propio con aviso de contraste del texto blanco, subida de logo (vista previa) y vista previa de la tienda con encabezado, banner y tarjeta de producto.
 - Todo es **de muestra**: se edita en pantalla y no se guarda; "Reiniciar demo" borra el avance de la guía.
 - **Calidad**: unitarias de cupones, buscador, impuestos, roles y contraste; pruebas de cada pantalla; axe en jsdom y en navegador real (con contraste) para las pantallas nuevas.
+
+## 10. Resultado de la Etapa D
+
+- **Acciones en lote reales** (solo en pantalla): en Productos (activar, pasar a borrador, cambiar precio en % con validación entre -90 y +200, eliminar con confirmación, exportar selección) y en Pedidos (marcar confirmado, preparando, enviado, entregado o cancelar, exportar selección). Todas avisan con un toast que incluye **Deshacer**.
+- **Exportaciones** a CSV real: lista filtrada y selección de Productos, selección de Pedidos, Cupones, Categorías y resumen de Inicio (KPIs y serie diaria), además de las que ya existían.
+- **Registro de actividad** (`/admin/actividad`): quién hizo qué y cuándo; mezcla acciones de ejemplo con las tuyas (login, lotes, cambios de estado, cupones, exportaciones), con filtros por tipo, buscador, exportación a CSV y "Borrar mis acciones". Se guarda en el navegador y "Reiniciar demo" lo borra.
+- **Atajos de teclado**: Ctrl+K busca; `?` abre la ayuda; `g` + letra navega (i Inicio, p Productos, c Clientes, o Pedidos, n Inventario, m Cupones, r Reportes, a Actividad, s Configuración). Se ignoran al escribir y con diálogos abiertos, y se pueden desactivar (WCAG 2.1.4).
+- **Estilo propio del admin**: scope `.admin-theme` en gris neutro con la paleta de la tienda solo como acento, y **modo oscuro** (botón en la barra superior, se recuerda). En oscuro el acento se aclara y los colores de estado tienen tonos propios; un test verifica el contraste AA parseando `index.css`. La vista previa de Apariencia queda aislada del tema del panel.
+- **Calidad**: unitarias de lotes (`bulkProducts`), actividad, atajos y contraste oscuro; pruebas de pantalla en `stageD.test.tsx`.

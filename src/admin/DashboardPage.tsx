@@ -1,5 +1,6 @@
 import {
   Boxes,
+  Download,
   CircleCheck,
   FilePenLine,
   PackageX,
@@ -13,6 +14,8 @@ import {
 import { useMemo, useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { adminPaths } from '@/config/routes'
+import { Button } from '@/components/ui/Button'
+import { useActivity } from '@/hooks/useActivity'
 import { useAdminOrders } from '@/hooks/useAdminOrders'
 import { useCurrency } from '@/hooks/useCurrency'
 import { getAllProductsIncludingDrafts, getCategory } from '@/services/catalogService'
@@ -26,6 +29,8 @@ import {
   salesByCategory,
   salesByPayment,
 } from '@/utils/adminStats'
+import { toCsv } from '@/utils/adminExport'
+import { downloadBlob } from '@/utils/download'
 import { formatNumber } from '@/utils/format'
 import { buildInventoryRows } from '@/utils/inventory'
 import { AdminPageHeader } from './AdminPageHeader'
@@ -80,6 +85,7 @@ function Task({
 export default function DashboardPage() {
   const { price } = useCurrency()
   const { orders, now, realIds } = useAdminOrders()
+  const { log } = useActivity()
   const [period, setPeriod] = useState<Period>(30)
 
   const products = useMemo(() => getAllProductsIncludingDrafts(), [])
@@ -104,12 +110,37 @@ export default function DashboardPage() {
   const nothingPending = Object.values(tasks).every((n) => n === 0)
   const { current, delta } = cmp
 
+  const exportSummary = () => {
+    downloadBlob(
+      toCsv([
+        ['Indicador', 'Valor', 'Variación'],
+        ['Ventas', current.sales, `${delta.sales ?? 0}%`],
+        ['Pedidos', current.orders, `${delta.orders ?? 0}%`],
+        ['Ticket promedio', current.averageTicket, `${delta.averageTicket ?? 0}%`],
+        [],
+        ['Día', 'Ventas', 'Pedidos'],
+        ...daily.map((d) => [d.date, d.total, d.orders]),
+      ]),
+      `resumen-ultimos-${period}-dias.csv`,
+      'text/csv;charset=utf-8',
+    )
+    log('exportacion', `Exportó el resumen de los últimos ${period} días`)
+  }
+
   return (
     <>
       <AdminPageHeader
         title="Inicio"
         description="Cómo viene tu negocio. Los datos son de ejemplo, más los pedidos que hagas en esta demo."
-        actions={<PeriodSelect value={period} onChange={setPeriod} />}
+        actions={
+          <>
+            <PeriodSelect value={period} onChange={setPeriod} />
+            <Button variant="outline" size="sm" onClick={exportSummary}>
+              <Download size={16} aria-hidden="true" />
+              Exportar resumen
+            </Button>
+          </>
+        }
       />
       <SetupChecklist
         productCount={products.filter((p) => p.status === 'activo').length}

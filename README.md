@@ -68,9 +68,10 @@ Acceso con el botón "Entrar como demo" (no hay cuentas reales). Es una **vitrin
 | **Catálogo › Inventario** | Stock por producto y variante, valor del inventario, umbral de stock bajo configurable, exportar CSV |
 | **Reportes** | Ventas por día, ranking de productos, ventas por categoría y por medio de pago; cada uno exportable a CSV |
 | **Marketing** | Cupones (estados, pausar, crear con vista previa), beneficios con bancos (editables, con vista previa de la Home) y banners y destacados |
+| **Tienda › Actividad** | Registro de acciones (de ejemplo y propias), filtros, exportar CSV |
 | **Tienda** | Apariencia (paletas, color propio con aviso de contraste, logo y vista previa) y Configuración en 5 pestañas (general y horarios, envíos, pagos, impuestos, usuarios y roles) |
 
-El **buscador global** (Ctrl+K) encuentra secciones, productos, pedidos y clientes, y la **guía de inicio** de Inicio marca sus pasos al visitar cada pantalla. La campanita de la barra superior avisa de los pedidos hechos en la tienda de la demo y abre su detalle. El plan de evolución del panel está en `docs/Plan admin - panel competitivo.md`.
+**Productividad:** acciones en lote con *Deshacer* (productos y pedidos), exportaciones a CSV, **modo oscuro** y atajos de teclado (`?` muestra la ayuda; `g` + letra navega; se pueden desactivar). El **buscador global** (Ctrl+K) encuentra secciones, productos, pedidos y clientes, y la **guía de inicio** de Inicio marca sus pasos al visitar cada pantalla. La campanita de la barra superior avisa de los pedidos hechos en la tienda de la demo y abre su detalle. El plan de evolución del panel está en `docs/Plan admin - panel competitivo.md`.
 
 ### Importar y exportar productos (XLSX)
 

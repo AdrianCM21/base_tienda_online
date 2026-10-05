@@ -1,10 +1,11 @@
-import { Plus, Ticket, TriangleAlert } from 'lucide-react'
+import { Download, Plus, Ticket, TriangleAlert } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { DataTable, type Column } from '@/components/ui/DataTable'
 import { Drawer } from '@/components/ui/Drawer'
 import { SelectField, TextField } from '@/components/ui/FormField'
 import couponsData from '@/data/coupons.json'
+import { useActivity } from '@/hooks/useActivity'
 import { useCurrency } from '@/hooks/useCurrency'
 import { useToast } from '@/hooks/useToast'
 import { useVisitedPage } from '@/hooks/useVisitedPage'
@@ -20,6 +21,8 @@ import {
   type CouponDraft,
   type CouponErrors,
 } from '@/utils/coupons'
+import { toCsv } from '@/utils/adminExport'
+import { downloadBlob } from '@/utils/download'
 import { formatNumber } from '@/utils/format'
 import { AdminPageHeader } from './AdminPageHeader'
 import { StatCard } from './StatCard'
@@ -42,6 +45,7 @@ export default function CouponsPage() {
   useVisitedPage('cupones')
   const { price } = useCurrency()
   const { toast } = useToast()
+  const { log } = useActivity()
   const [today] = useState(() => new Date().toISOString().slice(0, 10))
   // Los cambios viven solo en esta pantalla (se pierden al recargar).
   const [coupons, setCoupons] = useState<Coupon[]>(couponsData as Coupon[])
@@ -77,10 +81,34 @@ export default function CouponsPage() {
     if (Object.keys(found).length) return
     setCoupons((cur) => [draftToCoupon(draft, `n${cur.length + 1}`), ...cur])
     setOpen(false)
+    log('marketing', `Creó el cupón ${draft.code.trim().toUpperCase()}`)
     toast('Cupón creado (solo en esta pantalla)')
   }
-  const toggle = (id: string, active: boolean) =>
+  const toggle = (id: string, active: boolean) => {
+    const code = coupons.find((c) => c.id === id)?.code
+    if (code) log('marketing', `${active ? 'Activó' : 'Pausó'} el cupón ${code}`)
     setCoupons((cur) => cur.map((c) => (c.id === id ? { ...c, active } : c)))
+  }
+
+  const exportCsv = () => {
+    downloadBlob(
+      toCsv([
+        ['Código', 'Descuento', 'Estado', 'Usos', 'Límite', 'Desde', 'Hasta'],
+        ...coupons.map((c) => [
+          c.code,
+          describeCoupon(c, price, categoryName),
+          STATUS[couponStatus(c, today)].label,
+          c.used,
+          c.usageLimit ?? 'Sin límite',
+          c.startsAt,
+          c.endsAt,
+        ]),
+      ]),
+      'cupones.csv',
+      'text/csv;charset=utf-8',
+    )
+    log('exportacion', `Exportó ${coupons.length} cupones a CSV`)
+  }
 
   const columns: Column<Coupon>[] = [
     {
@@ -174,10 +202,16 @@ export default function CouponsPage() {
         title="Cupones"
         description="Códigos de descuento para tus clientes. Podés crear uno y pausarlo en pantalla; en la demo no se guardan ni se aplican en el checkout."
         actions={
-          <Button size="sm" onClick={openNew}>
-            <Plus size={16} aria-hidden="true" />
-            Nuevo cupón
-          </Button>
+          <>
+            <Button variant="outline" size="sm" onClick={exportCsv}>
+              <Download size={16} aria-hidden="true" />
+              Exportar CSV
+            </Button>
+            <Button size="sm" onClick={openNew}>
+              <Plus size={16} aria-hidden="true" />
+              Nuevo cupón
+            </Button>
+          </>
         }
       />
 

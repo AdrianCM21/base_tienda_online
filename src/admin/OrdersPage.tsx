@@ -5,8 +5,11 @@ import { Button } from '@/components/ui/Button'
 import { DataTable, type Column } from '@/components/ui/DataTable'
 import { Drawer } from '@/components/ui/Drawer'
 import { EmptyState } from '@/components/ui/EmptyState'
+import { useActivity } from '@/hooks/useActivity'
 import { useAdminOrders } from '@/hooks/useAdminOrders'
 import { useCurrency } from '@/hooks/useCurrency'
+import { useToast } from '@/hooks/useToast'
+import { adminPaths } from '@/config/routes'
 import type { Order, OrderStatus } from '@/types/order'
 import { buildOrdersCsv } from '@/utils/adminExport'
 import { downloadBlob } from '@/utils/download'
@@ -28,11 +31,21 @@ const PERIODS = [
   { value: '30', label: 'Últimos 30 días' },
 ] as const
 
+const BULK_STATUSES: OrderStatus[] = [
+  'confirmado',
+  'preparando',
+  'enviado',
+  'entregado',
+  'cancelado',
+]
+
 const NO_OVERRIDES: Record<string, OrderStatus> = {}
 
 export default function OrdersPage() {
   const { price } = useCurrency()
   const { orders, realIds, now } = useAdminOrders()
+  const { toast } = useToast()
+  const { log } = useActivity()
   const [params, setParams] = useSearchParams()
   const [q, setQ] = useState('')
   // Un enlace (p. ej. desde "Por hacer") puede abrir la lista ya filtrada: ?estado=pendiente
@@ -72,8 +85,27 @@ export default function OrdersPage() {
     return c
   }, [orders, overrides])
 
-  const exportCsv = () =>
-    downloadBlob(buildOrdersCsv(filtered, statusOf), 'pedidos.csv', 'text/csv;charset=utf-8')
+  const exportCsv = (rows: Order[] = filtered, filename = 'pedidos.csv') => {
+    downloadBlob(buildOrdersCsv(rows, statusOf), filename, 'text/csv;charset=utf-8')
+    log('exportacion', `Exportó ${rows.length} pedidos a CSV`, adminPaths.orders)
+  }
+
+  const bulkStatus = (ids: string[], next: OrderStatus, clear: () => void) => {
+    const before = overrides
+    setOverrides((cur) => ({ ...cur, ...Object.fromEntries(ids.map((id) => [id, next])) }))
+    clear()
+    const label = ORDER_STATUS[next].label
+    log('pedido', `Pasó ${ids.length} pedidos a «${label}»`, adminPaths.orders)
+    toast(`${ids.length} pedidos pasaron a «${label}» (solo en pantalla)`, {
+      action: {
+        label: 'Deshacer',
+        onClick: () => {
+          setOverrides(before)
+          toast('Cambio deshecho')
+        },
+      },
+    })
+  }
 
   const columns: Column<Order>[] = [
     {
@@ -151,7 +183,7 @@ export default function OrdersPage() {
         title="Pedidos"
         description="Los pedidos que hagas en el checkout de esta demo aparecen acá, junto a pedidos de ejemplo. Podés mover un pedido por sus estados, pero los cambios no se guardan."
         actions={
-          <Button variant="outline" size="sm" onClick={exportCsv}>
+          <Button variant="outline" size="sm" onClick={() => exportCsv()}>
             <Download size={16} aria-hidden="true" />
             Exportar CSV
           </Button>
@@ -228,6 +260,39 @@ export default function OrdersPage() {
         noun="pedidos"
         initialSort={{ key: 'date', dir: 'desc' }}
         onRowClick={open}
+        selectable
+        bulkActions={(ids, clear) => {
+          const btn =
+            'rounded-control border border-subtle bg-white px-3 py-1 text-[12.5px] font-semibold hover:bg-bg'
+          return (
+            <span className="flex flex-wrap gap-2">
+              {BULK_STATUSES.map((st) => (
+                <button
+                  key={st}
+                  type="button"
+                  className={btn}
+                  onClick={() => bulkStatus(ids, st, clear)}
+                >
+                  {st === 'cancelado'
+                    ? 'Cancelar'
+                    : `Marcar ${ORDER_STATUS[st].label.toLowerCase()}`}
+                </button>
+              ))}
+              <button
+                type="button"
+                className={btn}
+                onClick={() =>
+                  exportCsv(
+                    orders.filter((o) => ids.includes(o.id)),
+                    'pedidos-seleccion.csv',
+                  )
+                }
+              >
+                Exportar selección
+              </button>
+            </span>
+          )
+        }}
         empty={
           <EmptyState icon={<Search size={26} aria-hidden="true" />} title="Ningún pedido coincide">
             Probá con otra búsqueda o cambiá los filtros.
@@ -246,7 +311,10 @@ export default function OrdersPage() {
             order={selected}
             status={statusOf(selected)}
             note={notes[selected.id] ?? ''}
-            onStatusChange={(s) => setOverrides((cur) => ({ ...cur, [selected.id]: s }))}
+            onStatusChange={(s) => {
+              setOverrides((cur) => ({ ...cur, [selected.id]: s }))
+              log('pedido', `Pedido ${selected.id}: «${ORDER_STATUS[s].label}»`, adminPaths.orders)
+            }}
             onNoteChange={(n) => setNotes((cur) => ({ ...cur, [selected.id]: n }))}
           />
         )}

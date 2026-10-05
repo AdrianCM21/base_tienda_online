@@ -28,6 +28,7 @@ const ReportsPage = lazy(() => import('@/admin/ReportsPage'))
 const CouponsPage = lazy(() => import('@/admin/CouponsPage'))
 const BanksPage = lazy(() => import('@/admin/BanksPage'))
 const BannersPage = lazy(() => import('@/admin/BannersPage'))
+const ActivityPage = lazy(() => import('@/admin/ActivityPage'))
 const OrdersPage = lazy(() => import('@/admin/OrdersPage'))
 const CategoriesPage = lazy(() => import('@/admin/CategoriesPage'))
 const AppearancePage = lazy(() => import('@/admin/AppearancePage'))
@@ -83,6 +84,7 @@ export function AppRoutes() {
         <Route path="clientes" element={<CustomersPage />} />
         <Route path="inventario" element={<InventoryPage />} />
         <Route path="reportes" element={<ReportsPage />} />
+        <Route path="actividad" element={<ActivityPage />} />
         <Route path="marketing/cupones" element={<CouponsPage />} />
         <Route path="marketing/bancos" element={<BanksPage />} />
         <Route path="marketing/banners" element={<BannersPage />} />

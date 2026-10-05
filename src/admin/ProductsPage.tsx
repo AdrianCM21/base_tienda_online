@@ -5,9 +5,11 @@ import { ProductImage } from '@/components/catalog/ProductImage'
 import { Button } from '@/components/ui/Button'
 import { buttonClasses } from '@/components/ui/button-styles'
 import { DataTable, type Column } from '@/components/ui/DataTable'
+import { ConfirmDialog } from '@/components/ui/ConfirmDialog'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { adminPaths } from '@/config/routes'
 import { useCurrency } from '@/hooks/useCurrency'
+import { useActivity } from '@/hooks/useActivity'
 import { useDemoNotice } from '@/hooks/useDemoNotice'
 import { useToast } from '@/hooks/useToast'
 import {
@@ -16,6 +18,15 @@ import {
   getCategory,
 } from '@/services/catalogService'
 import type { Product } from '@/types/product'
+import { toCsv } from '@/utils/adminExport'
+import {
+  ACTION_LABEL,
+  applyBulk,
+  applyEdits,
+  parsePercent,
+  type BulkAction,
+  type Edits,
+} from '@/utils/bulkProducts'
 import { downloadBlob } from '@/utils/download'
 import { filterProducts } from '@/utils/filters'
 import { isOnSale } from '@/utils/product'
@@ -42,12 +53,19 @@ function matchesStatus(p: Product, f: FilterValue) {
   return true
 }
 
-const BULK = ['Activar', 'Pasar a borrador', 'Cambiar precio (%)', 'Eliminar']
+const CSV_MIME = 'text/csv;charset=utf-8'
+
+type Pending = { ids: string[]; clear: () => void; kind: 'price' | 'remove' }
 
 export default function ProductsPage() {
   const { price } = useCurrency()
   const notice = useDemoNotice()
   const { toast } = useToast()
+  const { log } = useActivity()
+  // Cambios hechos en pantalla (no se guardan: al recargar vuelve el catálogo original).
+  const [edits, setEdits] = useState<Edits>({})
+  const [pending, setPending] = useState<Pending | null>(null)
+  const [percentText, setPercentText] = useState('10')
   const [q, setQ] = useState('')
   const [params] = useSearchParams()
   // ?filtro=borrador abre la lista ya filtrada (enlaces de "Por hacer").
@@ -56,7 +74,8 @@ export default function ProductsPage() {
   )
   const [category, setCategory] = useState('')
 
-  const all = useMemo(() => getAllProductsIncludingDrafts(), [])
+  const base = useMemo(() => getAllProductsIncludingDrafts(), [])
+  const all = useMemo(() => applyEdits(base, edits), [base, edits])
   const filtered = useMemo(
     () =>
       filterProducts(all, { q }).filter(
@@ -71,6 +90,50 @@ export default function ProductsPage() {
       'catalogo-productos.xlsx',
       XLSX_MIME,
     )
+
+  const percent = parsePercent(percentText)
+
+  const run = (ids: string[], action: BulkAction, clear: () => void) => {
+    const before = edits
+    setEdits(applyBulk(before, ids, action, base))
+    clear()
+    const label =
+      action.kind === 'status'
+        ? ACTION_LABEL.status[action.status]
+        : action.kind === 'price'
+          ? `${ACTION_LABEL.price} ${action.percent > 0 ? '+' : ''}${action.percent}%`
+          : ACTION_LABEL.remove
+    log('producto', `${label}: ${ids.length} productos`, adminPaths.products)
+    toast(`${label}: ${ids.length} productos (solo en pantalla)`, {
+      action: {
+        label: 'Deshacer',
+        onClick: () => {
+          setEdits(before)
+          toast('Cambio deshecho')
+        },
+      },
+    })
+  }
+
+  const exportCsv = (rows: Product[], filename: string) => {
+    downloadBlob(
+      toCsv([
+        ['SKU', 'Producto', 'Marca', 'Categoría', 'Precio', 'Stock', 'Estado'],
+        ...rows.map((p) => [
+          p.sku,
+          p.name,
+          p.brand,
+          getCategory(p.categoryId)?.name ?? '',
+          p.price,
+          p.stock,
+          p.status === 'borrador' ? 'Borrador' : 'Activo',
+        ]),
+      ]),
+      filename,
+      CSV_MIME,
+    )
+    log('exportacion', `Exportó ${rows.length} productos a CSV`)
+  }
 
   const columns: Column<Product>[] = [
     {
@@ -181,6 +244,14 @@ export default function ProductsPage() {
         description={`${all.length} productos en el catálogo. Importá y exportá en Excel; la edición es de muestra.`}
         actions={
           <>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => exportCsv(filtered, 'productos-filtrados.csv')}
+            >
+              <Download size={16} aria-hidden="true" />
+              Exportar lista (CSV)
+            </Button>
             <Button variant="outline" size="sm" onClick={exportCatalog}>
               <Download size={16} aria-hidden="true" />
               Exportar catálogo
@@ -250,20 +321,55 @@ export default function ProductsPage() {
         caption="Productos del catálogo"
         noun="productos"
         selectable
-        bulkActions={(ids) => (
-          <span className="flex flex-wrap gap-2">
-            {BULK.map((label) => (
+        bulkActions={(ids, clear) => {
+          const btn =
+            'rounded-control border border-subtle bg-white px-3 py-1 text-[12.5px] font-semibold hover:bg-bg'
+          const byId = new Set(ids)
+          return (
+            <span className="flex flex-wrap gap-2">
               <button
-                key={label}
                 type="button"
-                onClick={() => toast(`${label} (${ids.length}): no se aplica en la demo`)}
-                className="rounded-control border border-subtle bg-white px-3 py-1 text-[12.5px] font-semibold hover:bg-bg"
+                className={btn}
+                onClick={() => run(ids, { kind: 'status', status: 'activo' }, clear)}
               >
-                {label}
+                Activar
               </button>
-            ))}
-          </span>
-        )}
+              <button
+                type="button"
+                className={btn}
+                onClick={() => run(ids, { kind: 'status', status: 'borrador' }, clear)}
+              >
+                Pasar a borrador
+              </button>
+              <button
+                type="button"
+                className={btn}
+                onClick={() => setPending({ ids, clear, kind: 'price' })}
+              >
+                Cambiar precio (%)
+              </button>
+              <button
+                type="button"
+                className={btn}
+                onClick={() =>
+                  exportCsv(
+                    all.filter((p) => byId.has(p.id)),
+                    'productos-seleccion.csv',
+                  )
+                }
+              >
+                Exportar selección
+              </button>
+              <button
+                type="button"
+                className={btn}
+                onClick={() => setPending({ ids, clear, kind: 'remove' })}
+              >
+                Eliminar
+              </button>
+            </span>
+          )
+        }}
         empty={
           <EmptyState
             icon={<Search size={26} aria-hidden="true" />}
@@ -273,6 +379,51 @@ export default function ProductsPage() {
           </EmptyState>
         }
       />
+
+      <ConfirmDialog
+        open={pending?.kind === 'price'}
+        title="Cambiar precio en lote"
+        confirmLabel="Aplicar"
+        confirmDisabled={!percent.ok}
+        onCancel={() => setPending(null)}
+        onConfirm={() => {
+          if (pending && percent.ok)
+            run(pending.ids, { kind: 'price', percent: percent.value }, pending.clear)
+          setPending(null)
+        }}
+      >
+        <p className="mt-0">
+          Se aplica a {pending?.ids.length} productos. Usá un número negativo para bajar el precio.
+        </p>
+        <label className="block text-[13px] font-semibold">
+          Porcentaje (%)
+          <input
+            type="text"
+            inputMode="numeric"
+            value={percentText}
+            onChange={(e) => setPercentText(e.target.value)}
+            aria-invalid={!percent.ok}
+            className="mt-1 block w-full rounded-control border border-light bg-white px-3 py-2"
+          />
+        </label>
+        {!percent.ok && (
+          <p role="alert" className="mt-1 mb-0 text-[12.5px] text-red-700">
+            {percent.error}
+          </p>
+        )}
+      </ConfirmDialog>
+      <ConfirmDialog
+        open={pending?.kind === 'remove'}
+        title="Eliminar productos"
+        confirmLabel="Eliminar"
+        onCancel={() => setPending(null)}
+        onConfirm={() => {
+          if (pending) run(pending.ids, { kind: 'remove' }, pending.clear)
+          setPending(null)
+        }}
+      >
+        Se quitan {pending?.ids.length} productos de la lista (solo en pantalla; podés deshacerlo).
+      </ConfirmDialog>
     </>
   )
 }

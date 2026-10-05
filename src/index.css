@@ -130,3 +130,92 @@
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
+
+/*
+ * Panel administrador: estilo propio, neutro (grises), con la paleta de la marca solo como acento
+ * (--color-primary viene del tema elegido). Se activa con .admin-theme; .admin-dark es el modo oscuro.
+ * Estas reglas van fuera de @layer a propósito: así ganan sobre las utilidades de Tailwind.
+ */
+:root {
+  --brand-primary: #1d5fc1;
+}
+
+.admin-theme {
+  --admin-surface: #ffffff;
+  --admin-sidebar: #111827;
+  --color-bg: #f4f5f7;
+  --color-light: #e8eaee;
+  --color-text: #111827;
+  --color-muted: #4b5563;
+  --color-subtle: #6b7280;
+  --color-dark: #1f2937;
+  --color-on-dark: #d1d5db;
+  --color-on-dark-muted: #9ca3af;
+  --color-on-dark-link: #bfdbfe;
+}
+
+.admin-theme.admin-dark {
+  color-scheme: dark;
+  --admin-surface: #161b22;
+  --admin-sidebar: #010409;
+  --admin-on-primary: #0d1117;
+  --color-bg: #0d1117;
+  --color-light: #2b333d;
+  --color-text: #e6edf3;
+  --color-muted: #aab4c0;
+  --color-subtle: #8b949e;
+  /* "dark" también es el color de texto fuerte y de los botones con borde: en oscuro pasa a ser claro. */
+  --color-dark: #e6edf3;
+  --color-on-dark: #c9d1d9;
+  --color-on-dark-muted: #8b949e;
+  /* El acento se aclara para leerse sobre fondos oscuros; el texto de los botones rellenos se oscurece. */
+  --color-primary: color-mix(in srgb, var(--brand-primary) 45%, white);
+  --color-primary-hover: color-mix(in srgb, var(--brand-primary) 30%, white);
+  /* Colores de estado (verde, rojo, ámbar, celeste) con tonos para fondo oscuro. */
+  --color-emerald-50: #0f2a1f;
+  --color-emerald-100: #133b2a;
+  --color-emerald-700: #6ee7b7;
+  --color-emerald-800: #86efac;
+  --color-red-50: #2d1417;
+  --color-red-100: #3f1a1f;
+  --color-red-700: #fca5a5;
+  --color-red-800: #fecaca;
+  --color-amber-50: #2a2110;
+  --color-amber-100: #3a2d10;
+  --color-amber-300: #854d0e;
+  --color-amber-600: #fbbf24;
+  --color-amber-700: #fcd34d;
+  --color-amber-800: #fcd34d;
+  --color-amber-900: #fde68a;
+  --color-sky-100: #0c2a3d;
+  --color-sky-800: #7dd3fc;
+  --color-neutral-200: #30363d;
+  --color-neutral-300: #484f58;
+  --color-neutral-700: #c9d1d9;
+}
+
+.admin-dark .bg-white {
+  background-color: var(--admin-surface);
+}
+.admin-dark .bg-primary {
+  color: var(--admin-on-primary);
+}
+/* Botones con borde: en oscuro el relleno al pasar el mouse es claro, así que el texto se oscurece. */
+.admin-dark .hover\:bg-dark:hover {
+  color: var(--admin-on-primary);
+}
+.admin-dark .bg-dark\/50,
+.admin-dark .bg-dark\/60 {
+  background-color: rgb(0 0 0 / 0.6);
+}
+.admin-dark input,
+.admin-dark select,
+.admin-dark textarea {
+  color: var(--color-text);
+}
+.admin-dark .store-preview .bg-white {
+  background-color: #ffffff;
+}
+.admin-dark .store-preview .bg-primary {
+  color: #ffffff;
+}

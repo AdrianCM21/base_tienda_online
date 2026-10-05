@@ -58,7 +58,7 @@ describe('productos: acciones y exportación', () => {
     expect(screen.getByRole('tab', { name: 'General' })).toBeInTheDocument()
   })
 
-  it('selección múltiple muestra acciones en lote que solo avisan', async () => {
+  it('selección múltiple muestra acciones en lote (se aplican en pantalla)', async () => {
     const user = userEvent.setup()
     open('/admin/productos')
     await h1('Productos')
@@ -66,7 +66,7 @@ describe('productos: acciones y exportación', () => {
     const bar = screen.getByRole('region', { name: 'Acciones en lote' })
     expect(bar).toHaveTextContent('10 seleccionados')
     await user.click(within(bar).getByRole('button', { name: 'Activar' }))
-    expect(screen.getAllByText('Activar (10): no se aplica en la demo').length).toBeGreaterThan(0)
+    expect(screen.getAllByText(/Activar: 10 productos/).length).toBeGreaterThan(0)
   })
 
   it('filtra por categoría y ordena por precio', async () => {

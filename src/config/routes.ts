@@ -27,6 +27,7 @@ export const adminPaths = {
   customers: '/admin/clientes',
   inventory: '/admin/inventario',
   reports: '/admin/reportes',
+  activity: '/admin/actividad',
   coupons: '/admin/marketing/cupones',
   banks: '/admin/marketing/bancos',
   banners: '/admin/marketing/banners',

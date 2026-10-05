@@ -27,3 +27,11 @@ export function describeContrast(hex: string): { ok: boolean; text: string } {
         text: `Contraste bajo (${value}): el texto blanco de los botones costará leerse. Probá con un tono más oscuro.`,
       }
 }
+
+/** Mezcla un color `#RRGGBB` con blanco (`pct` = % de blanco), igual que `color-mix(in srgb, …)` de CSS. */
+export function mixWithWhite(hex: string, pct: number): string {
+  const n = parseInt(hex.replace('#', ''), 16)
+  const mix = (c: number) => Math.round(c + (255 - c) * (pct / 100))
+  const [r, g, b] = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map(mix)
+  return `#${[r, g, b].map((v) => v.toString(16).padStart(2, '0')).join('')}`.toUpperCase()
+}

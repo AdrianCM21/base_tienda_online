@@ -6,6 +6,8 @@ type Props = {
   title: string
   children: ReactNode
   confirmLabel?: string
+  /** Deshabilita el botón de confirmar (p. ej. mientras el formulario no es válido). */
+  confirmDisabled?: boolean
   cancelLabel?: string
   onConfirm: () => void
   onCancel: () => void
@@ -17,6 +19,7 @@ export function ConfirmDialog({
   title,
   children,
   confirmLabel = 'Confirmar',
+  confirmDisabled = false,
   cancelLabel = 'Cancelar',
   onConfirm,
   onCancel,
@@ -75,7 +78,7 @@ export function ConfirmDialog({
           <Button ref={cancelRef} variant="outline" size="sm" onClick={onCancel}>
             {cancelLabel}
           </Button>
-          <Button ref={confirmRef} size="sm" onClick={onConfirm}>
+          <Button ref={confirmRef} size="sm" onClick={onConfirm} disabled={confirmDisabled}>
             {confirmLabel}
           </Button>
         </div>

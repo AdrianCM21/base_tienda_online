@@ -1,4 +1,4 @@
-import { ExternalLink, LogOut, Menu, Search, Store } from 'lucide-react'
+import { ExternalLink, Keyboard, LogOut, Menu, Moon, Search, Store, Sun } from 'lucide-react'
 import { Suspense, useCallback, useEffect, useState, type ReactNode } from 'react'
 import { Link, NavLink, Navigate, Outlet, useLocation } from 'react-router-dom'
 import { DemoBar } from '@/components/demo/DemoBar'
@@ -6,10 +6,13 @@ import { Drawer } from '@/components/ui/Drawer'
 import { brand } from '@/config/brand'
 import { adminPaths, paths } from '@/config/routes'
 import { NAV_GROUPS } from './navigation'
+import { useAdminMode } from '@/hooks/useAdminMode'
 import { useAdminSession } from '@/hooks/useAdminSession'
+import { useAdminShortcuts, useShortcutsEnabled } from '@/hooks/useShortcuts'
 import { useNoIndex } from '@/hooks/useNoIndex'
 import { CommandPalette } from './CommandPalette'
 import { NotificationsBell } from './NotificationsBell'
+import { ShortcutsDialog } from './ShortcutsDialog'
 
 /** Aviso fijo: todo lo que se haga en el panel es de muestra. */
 export function AdminDemoNotice() {
@@ -94,7 +97,7 @@ function MobileNavInner({ onLogout }: { onLogout: () => void }) {
         <Menu size={24} aria-hidden="true" />
       </button>
       <Drawer open={open} onClose={close} title="Panel administrador">
-        <div className="h-full bg-dark p-3">
+        <div className="h-full bg-[var(--admin-sidebar)] p-3">
           <NavList onLogout={onLogout} />
         </div>
       </Drawer>
@@ -102,16 +105,39 @@ function MobileNavInner({ onLogout }: { onLogout: () => void }) {
   )
 }
 
+/**
+ * Raíz del panel: la barra de demo (con los colores de la tienda) y, debajo, el panel con su propio
+ * estilo neutro. La marca solo aparece como acento; el modo oscuro es solo del panel.
+ */
 export function AdminShell({ children }: { children?: ReactNode }) {
-  return <div className="min-h-screen bg-bg">{children}</div>
+  const { mode } = useAdminMode()
+  return (
+    <>
+      <DemoBar />
+      <div
+        className={`admin-theme min-h-screen bg-bg text-text ${mode === 'dark' ? 'admin-dark' : ''}`}
+      >
+        {children}
+      </div>
+    </>
+  )
 }
 
 /** Layout del panel: exige la sesión falsa, muestra el aviso de demo, la navegación y la barra superior. */
 export function AdminLayout() {
   useNoIndex()
   const { loggedIn, logout } = useAdminSession()
+  const { mode, toggle } = useAdminMode()
+  const { enabled: shortcutsOn, setEnabled: setShortcutsOn } = useShortcutsEnabled()
   const [searchOpen, setSearchOpen] = useState(false)
+  const [helpOpen, setHelpOpen] = useState(false)
   const closeSearch = useCallback(() => setSearchOpen(false), [])
+  const closeHelp = useCallback(() => setHelpOpen(false), [])
+  useAdminShortcuts({
+    enabled: shortcutsOn && loggedIn,
+    onSearch: () => setSearchOpen(true),
+    onHelp: () => setHelpOpen(true),
+  })
 
   // Ctrl+K (o ⌘K) abre el buscador global desde cualquier pantalla del panel.
   useEffect(() => {
@@ -129,10 +155,9 @@ export function AdminLayout() {
 
   return (
     <AdminShell>
-      <DemoBar />
       <AdminDemoNotice />
       <div className="flex items-start">
-        <aside className="sticky top-[var(--demo-bar-h,0px)] hidden h-[calc(100vh-var(--demo-bar-h,0px))] w-[232px] shrink-0 overflow-y-auto bg-dark p-3 min-[900px]:block">
+        <aside className="sticky top-[var(--demo-bar-h,0px)] hidden h-[calc(100vh-var(--demo-bar-h,0px))] w-[232px] shrink-0 overflow-y-auto bg-[var(--admin-sidebar)] p-3 min-[900px]:block">
           <div className="mb-4 px-3 pt-2 font-heading text-lg font-bold tracking-[0.5px] text-white">
             {brand.logoText}
           </div>
@@ -168,6 +193,28 @@ export function AdminLayout() {
                 <ExternalLink size={15} aria-hidden="true" />
                 Ver tienda
               </Link>
+              <button
+                type="button"
+                onClick={() => setHelpOpen(true)}
+                aria-label="Atajos de teclado (?)"
+                aria-haspopup="dialog"
+                className="hidden h-10 w-10 items-center justify-center rounded-full text-muted hover:bg-light hover:text-dark sm:flex"
+              >
+                <Keyboard size={19} aria-hidden="true" />
+              </button>
+              <button
+                type="button"
+                onClick={toggle}
+                aria-pressed={mode === 'dark'}
+                aria-label="Modo oscuro"
+                className="flex h-10 w-10 items-center justify-center rounded-full text-muted hover:bg-light hover:text-dark"
+              >
+                {mode === 'dark' ? (
+                  <Sun size={19} aria-hidden="true" />
+                ) : (
+                  <Moon size={19} aria-hidden="true" />
+                )}
+              </button>
               <NotificationsBell />
               <span
                 aria-hidden="true"
@@ -192,6 +239,12 @@ export function AdminLayout() {
         </div>
       </div>
       <CommandPalette open={searchOpen} onClose={closeSearch} />
+      <ShortcutsDialog
+        open={helpOpen}
+        onClose={closeHelp}
+        enabled={shortcutsOn}
+        onEnabledChange={setShortcutsOn}
+      />
     </AdminShell>
   )
 }
